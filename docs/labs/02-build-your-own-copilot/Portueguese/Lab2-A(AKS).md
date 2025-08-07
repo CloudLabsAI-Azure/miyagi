@@ -19,9 +19,9 @@ Você poderá completar as seguintes tarefas:
 
 Nesta tarefa, irá implementar a recomendação Miyagi e os serviços UI num cluster do Azure Kubernetes Service (AKS). Isto envolve fazer login no portal do Azure, aplicar as definições do Kubernetes e atualizar os ficheiros de configuração com os endereços IP externos dos serviços.
 
-1. Navegue de volta para a janela de código do Visual Studio e navegue até **miyagi/deploy/infrastructure/kubernetes/manifests/50-miyagi**, clique com o botão direito do rato em **50-miyagi** no menu em cascata e seleccione **Abrir no Terminal integrado**.
+1. Navegue de volta para a janela de código do Visual Studio e navegue até **miyagi (1)/deploy (2)/infrastructure (3)/kubernetes (4)/manifests/50-miyagi (5)**, clique com o botão direito do rato em **50-miyagi** no menu em cascata e seleccione **Abrir no Terminal integrado (6)**.
 
-   ![](../Media/aks-01.png)
+   ![](../Media/839.png)
 
 1. Execute o seguinte comando para iniciar sessão no portal Azure.
 
@@ -52,9 +52,9 @@ Nesta tarefa, irá implementar a recomendação Miyagi e os serviços UI num clu
 
     ![](../Media/external-ip.png)
 
-1. De seguida, navegue até **miyagi/services/recommendation-service/dotnet** e abra o ficheiro **appsettings.json**.
+1. De seguida, navegue até **miyagi/services (1)/recommendation-service (2)/dotnet (3)** e abra o ficheiro **appsettings.json (4)**.
 
-   ![](../Media/aks-02.png)
+   ![](../Media/840.png)
 
 1. Copie o endereço IP externo **miyagi-ui** da consola e cole-o na secção **CorsAllowedOrigins** formatada como um endpoint **http://** e guarde o ficheiro por **Ctrl+S**.
 
@@ -73,7 +73,7 @@ Nesta tarefa, irá criar e executar o contentor Miyagi UI Docker localmente. Com
 
 1. Abra a aplicação **Docker** na área de trabalho do Lab VM clicando duas vezes.
 
-   ![](../Media/docker1.png)
+   ![](../Media/841.png)
 
 1. Na janela **Contrato de serviço de subscrição Docker**, clique em **Aceitar**.
 
@@ -177,9 +177,9 @@ Nesta tarefa, irá criar e executar o contentor Miyagi UI Docker localmente. Com
 
 Nesta tarefa, irá enviar imagens de recomendação miyagi para acr.
 
-1. Navegue de volta para a janela **Visual Studio Code** e navegue até **miyagi/services/recommendation-service/dotnet** - clique com o botão direito do rato em dotnet no menu em cascata, seleccione **Abrir no terminal integrado**.
+1. Navegue de volta para a janela **Visual Studio Code** e navegue até **miyagi/services (1)/recommendation-service (2)/dotnet (3)** - clique com o botão direito do rato em dotnet no menu em cascata, seleccione **Abrir no terminal integrado (4)**.
 
-   ![](../Media/aks-04.png)
+   ![](../Media/898.png)
 
 1. Execute o seguinte comando para iniciar sessão no **portal Azure**.
 
@@ -243,9 +243,9 @@ Nesta tarefa, irá enviar imagens de recomendação miyagi para acr.
 
 ### Tarefa 5: Implantar pods AKS
 
-1. Navegue de volta para a janela de código do Visual Studio e navegue até **miyagi/deploy/infrastructure/kubernetes/manifests/50-miyagi** clique em **50-miyagi** no menu em cascata e seleccione **Abrir no Terminal integrado**.
+1. Navegue de volta para a janela de código do Visual Studio e navegue até **miyagi (1)/deploy (2)/infrastructure (3)/kubernetes/manifests (4)/50-miyagi** clique em **50-miyagi (5)** no menu em cascata e seleccione **Abrir no Terminal integrado (6)**.
 
-   ![](../Media/aks-01.png)
+   ![](../Media/899.png)
 
 1. Abra o ficheiro **miyagi-recommendation.yaml** e substitua o ficheiro &lt;ACR-NAME&gt; com **<inject key="acrUsername" enableCopy="true"/>** Nome do registo do contentor Azure e guarde o ficheiro por **Ctrl + S**.
 

@@ -27,13 +27,13 @@ Nesta tarefa, irá configurar a aplicação Miyagi atualizando definições espe
 
    ![](../Media/image-rg-01.png)
 
-1. Em **Visual Studio Code** na barra de menus, seleccione **Ficheiro (1) > abrir pasta (2)**.
+1. Em **Visual Studio Code** na barra de menus, seleccione **Arquivo (1) > abrir pasta (2)**.
 
-   ![](../Media/image-rg-02.png)
+   ![](../Media/831.png)
 
 1. No **File Explorer**, navegue até **C:\LabFiles\miyagi** seleccione **miyagi** **(1)** clique em **Select folder (2)**
 
-   ![](../Media/image-rg(003).png)
+   ![](../Media/832.png)
 
 1. No **Visual Studio Code**, clique em **Sim, confio nos autores** quando a janela **Confia nos autores dos ficheiros desta pasta?** for apresentada.
 
@@ -120,7 +120,7 @@ Nesta tarefa, irá executar o serviço de recomendação localmente utilizando o
 
 1. Abra um novo terminal: navegando **miyagi/services/recommendation-service/dotnet** e clique com o botão direito do rato em **dotnet** no menu em cascata e selecione **Abrir no terminal de intergate**.
 
-   ![](../Media/task4-1.png)
+   ![](../Media/833.png)
 
 1. Execute o seguinte comando para executar o serviço de recomendação localmente
 
@@ -148,7 +148,7 @@ Nesta tarefa, irá executar o frontend miyagi localmente instalando dependência
 
 1. Abra um novo terminal: navegando **miyagi/ui** e clique com o botão direito do rato em **ui/typescript** , no menu em cascata selecione **Open in intergate Terminal**.
 
-   ![](../Media/image-rg-25.png)
+   ![](../Media/834.png)
 
 1. Execute o seguinte comando para instalar as dependências
 
@@ -206,17 +206,17 @@ Nesta tarefa, irá persistir os embeddings no Azure AI Search executando um pedi
 
    ![](../Media/miyagi-image24.png)
 
-1. Navegue de volta para o separador **Portal do Azure**, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, introduza **AI Search** e selecione **AI Search** sob serviços.
+1. Navegue de volta para o separador **Portal do Azure**, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, introduza **AI Foundry**
 
-   ![](../Media/miyagi-image25.png)
+   ![](../Media/838.png)
 
-1. Em **serviços Azure IA | No separador AI Search**, selecione **acs-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Em **AI Foundry | No separador AI Search**, selecione **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![](../Media/miyagi-image26.png)
+   ![](../Media/837.png)
 
 1. No separador **acs-<inject key="DeploymentID" enableCopy="false"/>** Serviço de pesquisa, clique em **Indexes** **(1)** em Gestão de pesquisa e reveja **miyagi-embeddings** **(2)** foi criado.
 
-   ![](../Media/miyagi-image27.png)
+   ![](../Media/836.png)
 
     > **Nota**: Clique no botão Atualizar para visualizar a **Contagem de documentos**.
 

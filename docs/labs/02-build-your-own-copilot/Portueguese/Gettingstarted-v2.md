@@ -1,14 +1,34 @@
-## Introdução ao laboratório
+## Acessando seu ambiente de laboratório
 
-1. Após a configuração do ambiente, o seu browser irá carregar uma máquina virtual (JumpVM), utilize esta máquina virtual durante todo o workshop para realizar o laboratório. Pode ver o número na parte inferior do guia de laboratório para alternar para diferentes exercícios no guia de laboratório.
+Após a configuração do ambiente, o seu browser irá carregar uma máquina virtual (JumpVM), utilize esta máquina virtual durante todo o workshop para realizar o laboratório. Pode ver o número na parte inferior do guia de laboratório para alternar para diferentes exercícios no guia de.
 
-   ![](../Media/gettingstartedpagenew1-v2.png)
+   ![](../Media/801.png)
 
-1. Para obter os detalhes do ambiente de laboratório, pode selecionar o separador **Ambiente**. Além disso, as credenciais também serão enviadas para o seu endereço de e-mail registado. Também pode abrir o Guia do laboratório numa janela separada e completa, selecionando **Janela dividida** no canto inferior direito. Além disso, pode iniciar, parar e reiniciar máquinas virtuais no separador **Recursos**.
+## Explorando os recursos do seu laboratório
 
-   ![](../Media/gettingstartedpagenew2-v2.png)
+Para entender melhor os recursos e credenciais do seu laboratório, navegue até a aba **Ambiente**.
+
+   ![](../Media/802.png)
 
  > Verá o valor SUFFIX no separador **Ambiente**; utilize-o sempre que aparecer SUFFIX ou DeploymentID nas etapas do laboratório.
+
+## Utilizando o recurso de janela dividida
+
+Para sua conveniência, você pode abrir o guia de laboratório em uma janela separada selecionando o botão Dividir janela no canto superior direito.
+
+   ![](../Media/803.png)
+
+## Gerenciando sua máquina virtual
+
+Sinta-se à vontade para iniciar, parar ou reiniciar sua máquina virtual conforme necessário na aba Recursos. Sua experiência está em suas mãos!
+
+   ![](../Media/805.png)
+
+## Guia de laboratório Ampliar/Reduzir
+
+Para ajustar o nível de zoom da página do ambiente, clique no ícone **A↕ : 100%** localizado ao lado do cronômetro no ambiente de laboratório.
+
+   ![](../Media/806.png)
 
 ## Faça login no Portal Azure
 
@@ -28,13 +48,13 @@
 
      * **E-mail/Nome de utilizador**: **<inject key="AzureAdUserEmail"></inject>**
 
-       ![](../Media/miyagi-image2.png)
+       ![](../Media/807.png)
 
 1. Agora digite a seguinte palavra-passe e clique em **Entrar**.
 
     * **Palavra-passe**: **<inject key="AzureAdUserPassword"></inject>**
 
-      ![](../Media/miyagi-image3.png)
+      ![](../Media/808.png)
 
 1. Se vir o pop-up **Permanecer ligado?**, selecione **Não**.
 
@@ -42,19 +62,19 @@
 
 1. Se for apresentada uma janela pop-up **Bem-vindo ao Microsoft Azure**, selecione **Cancelar** para ignorar o tour.
 
-   ![](../Media/miyagi-image5.png)
+   ![](../Media/809.png)
 
 1. Agora que verá o Painel do Portal Azure, clique em **Grupos de recursos** no painel Navegar para ver os grupos de recursos.
 
-   ![](../Media/miyagi-image6.png)
+   ![](../Media/810.png)
 
 1. Em **Grupos de recursos**, clique em **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** grupo de recursos.
 
-   ![](../Media/miyagi-image7.png)
+   ![](../Media/811.png)
 
 1. No grupo de recursos **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, verifique os recursos nele presentes.
 
-   ![](../Media/miyagi-image8.png)
+   ![](../Media/812.png)
 
 
 > [!IMPORTANTE]<br>

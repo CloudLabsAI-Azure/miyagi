@@ -6,49 +6,43 @@ Neste laboratório, irá verificar e recuperar valores específicos, como Endpoi
  - Conta DB do Azure Cosmos: **cosmos-<inject key="DeploymentID" enableCopy="false"/>**
  - Serviço de pesquisa: **acs-<inject key="DeploymentID" enableCopy="false"/>**
 
-1. Para verificar os nomes dos modelos de implementação para "**deploymentOrModelId**" e "**embeddingDeploymentOrModelId**" siga os passos abaixo:
+1. Navegue até a barra de pesquisa e **pesquise Openai** e selecione **Azure Open AI**.
 
-    - Na página inicial do Portal Azure, clique em **Grupos de recursos** no painel **Navegar**.
+      ![](../Media/813.png)
 
-      ![](../Media/miyagi-image6.png)
+1. Selecione **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**
 
-    - Na página Grupos de recursos, clique em **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**.
+      ![](../Media/814.png)
 
-      ![](../Media/miyagi-image7.png)
+1. Na página **Visão geral**, clique com o botão direito do rato em **Go to Azure OpenAI Studio** e clique em **Abrir ligação num novo separador**.
 
-    - Em **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, no separador Overview selecione **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** .
-
-      ![](../Media/openai_serviceupd.png)
-
-    - Na página **OpenAI Overview**, clique com o botão direito do rato em **Ir para Azure OpenAI Studio** e clique em **Abrir ligação num novo separador**.
-
-      ![](../Media/new01.png)
+      ![](../Media/815.png)
 
     - No **Azure AI Studio**, no painel de navegação esquerdo na secção **Gestão**, selecione **Implantações**.
 
-      ![](../Media/miyagi-image119.png)
+      ![](../Media/816.png)
 
-    - Na folha **Implantações (1)** do Azure AI Studio, clique no nome do modelo **gpt-4o** e verifique o **nome da implantação** do modelo gpt-4o **(2)**.
+    - Na folha **Implantações** do Azure AI Studio, clique no nome do modelo **gpt-4o** e verifique o **nome da implantação** do modelo **gpt-4o**.
 
-      ![](../Media/completionmodelnew.png)
+      ![](../Media/817.png)
 
-      ![](../Media/miyagi-image(13).png)
+      ![](../Media/818.png)
 
     - Navegue de volta para a página **Implantação (1)**.
 
     - Na folha Azure AI Studio Deployments, clique em **nome do modelo text-embedding-ada-002** e verifique o **nome da implementação** do modelo **text-embedding-ada-002 (2)**.
 
-      ![](../Media/deployments0909.png)
+      ![](../Media/819.png)
 
-      ![](../Media/miyagi-image(15).png)
+      ![](../Media/820.png)
 
 1. Para verificar os valores de **endpoint** e **apiKey** siga os passos abaixo:
 
     - Navegue de volta para o separador que exibe **portal Azure**.
 
-    - Na folha **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** na secção **Gestão de Recursos**, selecione **Chaves e Endpoint (1)**, verifique a **KEY 1 (2)** e **Ponto final (3)**.
+    - Na folha **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** na secção **Gestão de Recursos**, selecione **Chaves e Endpoint (1)**, verifique a **CHAVE 1 (2)** e **Ponto final (3)**.
 
-      ![](../Media/miyagi-image16.png)
+      ![](../Media/821.png)
 
 1. Para verificar os valores de "azureCognitiveSearchEndpoint", "azureCognitiveSearchApiKey", siga os passos abaixo:
 
@@ -56,39 +50,39 @@ Neste laboratório, irá verificar e recuperar valores específicos, como Endpoi
 
     - On the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** page, select **acs-<inject key="DeploymentID" enableCopy="false"/>** from resources lista.
 
-      ![](../Media/miyagi-image110.png)
+      ![](../Media/822.png)
 
     - Na folha **acs-<inject key="DeploymentID" enableCopy="false"/>**, verifique o **URL**.
 
-      ![](../Media/miyagi-image111.png)
+      ![](../Media/824.png)
 
     - No painel **acs-<inject key="DeploymentID" enableCopy="false"/>**, na secção **Definições**, selecione **Chave (1)** e verifique a **Chave de administração primária (2)** valor.
 
-      ![](../Media/miyagi-image112.png)
+      ![](../Media/825.png)
 
 1. Para verificar os valores de "**cosmosDbUri**" e "**cosmosDbName**", siga os passos abaixo:
 
     - Navegue de volta para o grupo de recursos **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** página do grupo de recursos, selecione **cosmos-<inject key="DeploymentID" enableCopy= "false"/>** da lista de recursos.
 
-      ![](../Media/miyagi-image113.png)
+      ![](../Media/826.png)
 
     - Em **cosmos-<inject key="DeploymentID" enableCopy="false"/>** verifique o **URL**.
 
-      ![](../Media/miyagi-image114.png)
+      ![](../Media/827.png)
 
     - Em **cosmos-<inject key="DeploymentID" enableCopy="false"/>** em **Definições**, seleccione **Chaves** e verifique o valor da **Cadeia de ligação primária do Cosmos DB** .
 
-      ![](../Media/miyagi-image115.png)
+      ![](../Media/828.png)
 
 1. Para obter os valores de **blobServiceUri**, siga os passos abaixo:
 
     - Navegue de volta para o grupo de recursos **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** página do grupo de recursos, selecione **miyagiblobstorge<inject key="DeploymentID" enableCopy=" false"/>** da lista de recursos.
 
-      ![](../Media/miyagi-image116.png)
+      ![](../Media/829.png)
 
-    - Na conta de armazenamento **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** no menu esquerdo, selecione **Endpoints** **(1)** na secção **Definições**, verifique o **Serviço Blob** **(2)** no serviço Blob.
+    - Na conta de armazenamento **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** no menu esquerdo, selecione **Pontos finais** **(1)** na secção **Definições**, verifique o **Serviço Blob** **(2)** no serviço Blob.
 
-      ![](../Media/miyagi-image117.png)
+      ![](../Media/830.png)
 
 ## Resumo
 Neste laboratório, irá verificar e recuperar valores de configuração como Endpoint, Connection String e Key para vários recursos do Azure, como OpenAI Service, Cosmos DB e Cognitive Search. Isto garante uma configuração e conectividade adequadas. Os passos envolvem aceder ao Portal Azure, navegar até grupos de recursos específicos e verificar os valores necessários.

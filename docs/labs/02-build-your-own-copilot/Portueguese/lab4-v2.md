@@ -19,15 +19,17 @@ Nesta tarefa, irá configurar o plug-in do Kernel Semântico no Visual Studio Co
 
 1. Abra o **Visual Studio Code** na área de trabalho do Lab VM, clicando duas vezes sobre o mesmo.
 
-   ![](../Media/vs.png)
+   ![](../Media/900.png)
 
 2. No **Visual Studio Code** no painel esquerdo, selecione **Semantic Kernel** **(1)** plugin, expanda clicando em **AIENDPONTS(OPEN AI)** **(2)**, clique em **Alternar fornecedor de EndPoint** **(3)** e seleccione **AzureOpenAI** **(4)**.
 
-   ![](../Media/miyagi-image92.png)
+   ![](../Media/879.png)
+
+   ![](../Media/880.png)
 
 3. Em **AI ENDPONTS(AZURE OPENAI)**, clique em **entrar no Azure** **(1)**, no pop-up **A extensão 'Semantic Kernel Tools' pretende fazer login utilizando o Microsoft** clique em **Permitir** **(2)**.
 
-   ![](../Media/miyagi-image93.png)
+   ![](../Media/881.png)
 
 4. Isto irá redirecionar para **página de login da Microsoft**, selecione a sua conta do Azure **<inject key="AzureAdUserEmail"></inject>** e navegue de volta para **código do Visual Studio**.
 
@@ -35,7 +37,7 @@ Nesta tarefa, irá configurar o plug-in do Kernel Semântico no Visual Studio Co
 
 5. Navegue de volta para **Visual Studio Code** No **painel Funções**, clique no **ícone Introdução** **(1)** e siga o assistente para **criar a sua aplicação** **(2)** com a função semântica.
 
-   ![](../Media/miyagi-image95.png)
+   ![](../Media/883.png)
 
 6. Escolha **C# Domótica**
 
@@ -47,7 +49,7 @@ Nesta tarefa, irá configurar o plug-in do Kernel Semântico no Visual Studio Co
 
 8. Clique em **Sim, confio nos autores**.
 
-   ![](../Media/miyagi-image98.png)
+   ![](../Media/884.png)
 
 9. Navegue até ao ficheiro **appsettings. json** **(1)** e substitua o **script** **(2)** existente pelo seguinte:
 
@@ -61,7 +63,7 @@ Nesta tarefa, irá configurar o plug-in do Kernel Semântico no Visual Studio Co
    }
    ```
 
-   ![](../Media/replaceappsetting.png)
+   ![](../Media/885.png)
 
 10. No ASP.NET Core, `appsettings. json` é um ficheiro de configuração utilizado para armazenar várias definições de aplicações, tais como terminais de serviço e outras definições específicas de aplicações e guardar o ficheiro **Ctrl+S**.
 
@@ -168,7 +170,7 @@ Nesta tarefa, irá configurar o plug-in do Kernel Semântico no Visual Studio Co
 
 14. Configure um endpoint Azure OpenAI abrindo um novo **Terminal**, clique em **(...) (1)** junto ao menu **View** e seleccione **Terminal(2)** > **Novo Terminal(3)**.
 
-    ![](../Media/semtic-newterminal.png)
+    ![](../Media/886.png)
 
 15. Execute os seguintes comandos para instalar os pacotes necessários.
 
@@ -201,7 +203,7 @@ Nesta tarefa, irá configurar o plug-in do Kernel Semântico no Visual Studio Co
 
 17. Depois de executar `dotnet run`, pode fazer algumas perguntas e rever a resposta. Por exemplo: `Que horas são?`
 
-    ![](../Media/miyagi-image100.png)
+    ![](../Media/887.png)
 
 18. Exemplo 2: `Defina um alarme para as 6h.`
 
@@ -217,45 +219,45 @@ Nesta tarefa, irá configurar o plug-in do Kernel Semântico no Visual Studio Co
 
 Nesta tarefa, irá configurar o Azure Cognitive Search importando dados do CosmosDB para um índice de pesquisa denominado "realestate-us-sample-index". Personaliza o índice e cria um indexador chamado "realestate-us-sample-indexer" para sincronizar os dados. Por fim, verifica a funcionalidade de pesquisa consultando dados de "Seattle".
 
-1. Navegue de volta para o separador **Portal do Azure**, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, introduza **AI Search** e selecione **AI Search** sob serviços.
+1. Navegue de volta para o separador **Portal do Azure**, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, introduza **Pesquisa de IA (1)** e selecione **Pesquisa de IA (2)** sob serviços.
 
-   ![](../Media/miyagi-image25.png)
+   ![](../Media/888.png)
 
 1. Em **serviços Azure IA | No separador AI Search**, selecione **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![](../Media/miyagi-image26.png)
+   ![](../Media/889.png)
 
 1. Na aba de visão geral do serviço de pesquisa, clique em **Importar dados**.
 
-   ![](../Media/miyagi-image103.png)
+   ![](../Media/890.png)
 
 1. No menu suspenso, selecione **Fonte de dados** como **Amostra (1)**, selecione **Amostra de hotéis CosmosDB (2)** e clique em **Seguinte: Adicionar competências cognitivas (opcional) ( 3)**.
 
-   ![](../Media/miyagi-image104.png)
+   ![](../Media/891.png)
 
 1. Em **competências cognitivas** deixe por defeito e clique em **Personalizar índice de destino**.
 
-   ![](../Media/miyagi-image105.png)
+   ![](../Media/892.png)
 
 1. Em **Personalizar índice de destino**, introduza o nome do índice como **realestate-us-sample-index** e clique em **Seguinte:Criar um indexador**.
 
-   ![](../Media/miyagi-image106.png)
+   ![](../Media/894.png)
 
-1. Em **criar um indexador**, altere o nome do indexador para **realestate-us-sample-indexer (1)** e clique em **enviar (2)**.
+1. Em **criar um indexador**, altere o nome do indexador para **realestate-us-sample-indexer (1)** e clique em **Submeter (2)**.
 
-   ![](../Media/miyagi-image107.png)
+   ![](../Media/895.png)
 
 1. Navegue de volta para **Serviços de IA do Azure | No separador AI Search**, selecione **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![](../Media/miyagi-image26.png)
+   ![](../Media/889.png)
 
 1. No painel de navegação esquerdo, em **Gestão de pesquisa**, selecione **Índices (1)** e clique em **realestate-us-sample-index (2)**.
 
-   ![](../Media/miyagi-image108.png)
+   ![](../Media/896.png)
 
 1. Clique em **realestate-us-sample-index** na barra de pesquisa, escreva **Seattle (1)** e clique em **Pesquisar (2)** e veja o **Resultado (3)**.
 
-   ![](../Media/miyagi-image(109).png)
+   ![](../Media/897.png)
 
 ### Resumo
 
