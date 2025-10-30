@@ -1,6 +1,8 @@
-# Lab 3.1: Containerizing Miyagi UI and Recommendation service to Azure Kubernetes Service(AKS) 
+# Lab 3: Containerizing Miyagi UI and Recommendation service to Azure Kubernetes Service(AKS) 
 
 ### Estimated Duration: 60 minutes
+
+### Lab 3.1: Explore and Verify the Containerized Miyagi UI and Recommendation service in AKS
 
 In this lab, you will containerize and deploy the Miyagi UI and recommendation services to Azure Kubernetes Service (AKS). You will start by configuring Kubernetes and building Docker images for both services. The process involves pushing these images to Azure Container Registry (ACR) and then deploying them on an AKS cluster. This ensures that the services are seamlessly integrated and operational within a scalable, containerized environment applying Kubernetes configurations, updating service IP addresses, and verifying the deployment by accessing the services through their respective endpoints.
 
@@ -14,18 +16,13 @@ You will be able to complete the following tasks:
 - Task 4: Push the Docker Image of Recommendation service to the Container registry
 - Task 5: Deploy AKS Pods
 
-### Lab 3.2: Explore and Verify the Containerized Miyagi UI and Recommendation service in AKS
-
-- Task 1: Explore Recommendation service in AKS using Ingress Endpoint
-- Task 2: Explore the Miyagi App in AKS using Ingress Endpoint
-
 ### Task 1: Deploy AKS Services
 
 In this task, you will deploy the Miyagi recommendation and UI services to an Azure Kubernetes Service (AKS) cluster. This involves logging into the Azure portal, applying Kubernetes configurations, and updating configuration files with the services' external IP addresses.
 
 1. Navigate back to the Visual Studio code window and navigate to **miyagi (1)/deploy (2)/infrastructure (3)/kubernetes/manifests (4)/50-miyagi (5)**, right-click on **50-miyagi** in the cascading menu, and select **Open in integrated Terminal (6)**.
 
-    ![](./Media/vs-02.png)
+    ![](./Media/L3T1S1.png)
 
 1. Run the following command to log in to the Azure portal.
 
@@ -35,7 +32,7 @@ In this task, you will deploy the Miyagi recommendation and UI services to an Az
 
 1. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **Visual studio code**.
 
-   ![](./Media/azure-account-select.png)
+   ![](./Media/azurelogin.png)
 
 1. Run the following command to log in to the Azure portal.
 
@@ -213,7 +210,7 @@ In this task, you will push the Docker image of the Miyagi recommendation servic
 
 1. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **Visual studio code**.
 
-   ![](./Media/azure-account-select.png)
+   ![](./Media/azurelogin.png)
 
 1. Run the following command to log in to an **Azure Container Registry (ACR)** using the Azure CLI.
    
@@ -311,7 +308,17 @@ In this task, you will deploy the Miyagi UI and Recommendation services to Azure
 
 In this lab, you'll explore the deployment and verification of the Miyagi UI and Recommendation services on Azure Kubernetes Service (AKS). Tasks involve testing APIs and accessing the UI via Ingress endpoints, ensuring proper functionality within the AKS environment.
 
+## Lab objectives
+
+You will be able to complete the following tasks:
+
+- Task 1: Explore Recommendation service in AKS using Ingress Endpoint
+- Task 2: Explore the Miyagi App in AKS using Ingress Endpoint
+
+
 ### Task 1: Explore Recommendation service in AKS using Ingress Endpoint
+
+In this task, we will be accessing the Recommendations Service API via Ingress endpoint to ensure proper functionality within the AKS environment.
 
 1. To test the API run the below command to get the service IP addresses
 
@@ -328,6 +335,8 @@ In this lab, you'll explore the deployment and verification of the Miyagi UI and
     ![](./Media/miyagi-image52.png)
    
 ### Task 2: Explore Miyagi App in AKS using Ingress Endpoint
+
+In this task, we will be accessing the UI via Ingress endpoint to ensure proper functionality within the AKS environment.
 
 1. To test the UI run the below command to get the service IP addresses
 

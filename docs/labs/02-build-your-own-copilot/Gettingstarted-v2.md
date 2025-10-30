@@ -64,7 +64,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-   ![](./Media/bui22.png)
+   ![](./Media/env.png)
    
    > You will see the SUFFIX value on the **Environment** tab; use it wherever you see SUFFIX or DeploymentID in lab steps.    
  
@@ -72,19 +72,19 @@ To get a better understanding of your lab resources and credentials, navigate to
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
-   ![](./Media/bui3.png) 
+   ![](./Media/split.png) 
    
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
-   ![](./Media/bui4.png) 
+   ![](./Media/resources.png) 
 
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![](./Media/labzoom-2.png)
+   ![](./Media/zoom.png)
 
 ## Let's Get Started with Azure Portal
 
@@ -114,7 +114,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
    
    * **Password**: **<inject key="AzureAdUserPassword"></inject>**
 
-     ![](./Media/miyagi-image3.png)
+     ![](./Media/GS4.png)
 
         > **Note**: If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if Ask Later Option is Not Visible](#steps-to-proceed-with-mfa-setup-if-ask-later-option-is-not-visible)
    
@@ -132,7 +132,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 1. In the **Resource groups**, click on **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group.
 
-   ![](./Media/miyagi-image7.png)
+   ![](./Media/L1S1-ii.png)
 
 1. In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource groups, verify the resources present in it.
 

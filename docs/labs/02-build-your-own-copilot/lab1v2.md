@@ -41,11 +41,11 @@ In this task, you will configure the Miyagi application by updating specific set
    
 1. Expand **miyagi>ui>typescript** directory and verify that **.env.** file is present. 
 
-   ![](./Media/miyagi-image-16.png)
+   ![](./Media/L2T1S5.png)
 
 1. Open **miyagi folder** and expand **services (1)/recommendation-service (2)/dotnet (3)** directory and verify that **appsettings.json (4)** file is present.
 
-   ![](./Media/open-appsettings.png)
+   ![](./Media/L2T1S6.png)
   
 1. Open the **appsettings.json** file and replace the following values for the variables below.
 
@@ -96,7 +96,7 @@ In this task, you will configure the Miyagi application by updating specific set
 
 ### Task 2: Understanding the implementation of the Recommendation service
 
-Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter Notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
+In this task, recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter Notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
 
 1. In the Visual Studio Code, navigate to **miyagi folder (1)** and expand **sandbox (2)/usecases (3)/rag (4)/dotnet (5)** folder and select **Getting-started.ipynb (6)**.
 
@@ -216,11 +216,11 @@ In this task, you will persist embeddings in Azure AI Search by executing a POST
 
 1. In **AI Foundry | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](./Media/miyagi-image26.png)
+    ![](./Media/L2T5S5.png)
    
 1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **miyagi-embeddings** **(2)** has been created.   
 
-   ![](./Media/miyagi-image27.png)
+   ![](./Media/L2T5S6.png)
 
    > **Note**: Please click on the refresh button still you can view the **Document Count**.
 

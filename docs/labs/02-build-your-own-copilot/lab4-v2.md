@@ -32,7 +32,7 @@ In this task, you will configure the Semantic Kernel plugin in Visual Studio Cod
 
 1. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **Visual studio code**.
 
-   ![](./Media/miyagi-image94.png)
+   ![](./Media/azurelogin.png)
 
 1. Navigate back to the **Visual Studio Code** From the **Functions panel**, click on the **Get started icon** **(1)** and follow the wizard to **Create a new app** **(2)** with the semantic function.
 
@@ -224,7 +224,7 @@ In this task, you'll configure Azure AI Search by importing data from CosmosDB i
 
 1. In **AI Foundry | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](./Media/miyagi-image26.png)
+    ![](./Media/L5T2S2.png)
 
 1. In the overview tab of the search service, click on the **Import data**.
 
@@ -245,14 +245,12 @@ In this task, you'll configure Azure AI Search by importing data from CosmosDB i
 1. In the **Create an indexer**, change the indexer name as **realestate-us-sample-indexer (1)** and click on **Submit (2)**.
 
    ![](./Media/miyagi-image107.png)
-
-1. Navigate back to **AI Foundry | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
-
-   ![](./Media/miyagi-image26.png)
    
-1. From the left navigation pane under **Search management** select **Indexes (1)** and click on **realestate-us-sample-index (2)**.
+1. From the left navigation pane under navigate back to **Search management**, and select **Indexes (1)** then click on **realestate-us-sample-index (2)**.
 
-1. ![](./Media/miyagi-image108.png)
+    ![](./Media/L5T2S9.png)
+
+    > **Note**: Please click on **Refresh** if the index is not yet visible.
 
 1. Click on **realestate-us-sample-index** in the search bar enter **Seattle (1)** and click on **Search (2)** then view thw **Result (3)**.
 
@@ -262,4 +260,8 @@ In this task, you'll configure Azure AI Search by importing data from CosmosDB i
 
 In this lab, you learned how to configure and run the Semantic Kernel sample by integrating the SDK into your project, setting up LLM providers, defining plugins, and executing the code. Additionally, you gained knowledge on configuring Azure AI Search, including creating or selecting an index, setting up fields, configuring Semantic Kernel to interact with Azure, defining plugins, and testing the integration for enhanced search capabilities.
 
-### You have completed this lab. 
+### You have successfully completed this lab.
+
+### Conclusion
+
+By completing **Build Intelligent Apps with Microsoft's Copilot stack & Azure OpenAI**, you will gain the knowledge and hands-on experience needed to design and implement AI-powered solutions using Microsoft’s Copilot stack. You will understand how to effectively apply Generative AI, RAG patterns, and Semantic Kernel to real-world business scenarios, enabling you to build intelligent, context-aware Copilots that enhance productivity, streamline workflows, and deliver personalized user experiences. 

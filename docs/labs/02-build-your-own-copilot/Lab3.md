@@ -41,7 +41,7 @@ In this task, you'll be setting up an HTTP API within Azure API Management to in
 
 1. Once API is created, click on **Overview** **(1)** then copy the **Gateway URL** **(2)** of API Management service. Record the **URL** you require in the upcoming task.
 
-    ![](./Media/miyagi-image57.png)
+    ![](./Media/L4T1S4.png)
 
    
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -53,7 +53,7 @@ In this task, you'll be setting up an HTTP API within Azure API Management to in
 
 ### Task 2: Create API Management Policy and Roles
 
-In this lab, you'll be setting up API policies, defining roles and subscriptions, and integrating the Azure OpenAI Service API within Azure API Management. It ensures proper authentication, authorization, and operational testing of the API endpoints
+In this task, you'll be setting up API policies, defining roles and subscriptions, and integrating the Azure OpenAI Service API within Azure API Management. It ensures proper authentication, authorization, and operational testing of the API endpoints
 
 1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, from the left navigation pane under **APIs** section select **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)**, and click on **OpenAPI** **(4)**.
 
@@ -90,7 +90,7 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
 
 1. In the **Add product** window, specify **Display name** as **OpenAi** **(1)**, **Description** as **OpenAI** **(2)**. Under the **APIs** menu click the **Plus sign** **(3)** select the **Azure OpenAI Service API** **(4)** hit enter and click on **Create** **(5)**.
 
-   ![](./Media/aks098.png)
+   ![](./Media/L4T2S7.png)
 
 1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, from the left navigation pane under **APIs** select **Subscriptions** **(1)**  then lick on **+ Add subscription** **(2)**.
 
@@ -108,7 +108,7 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
 
 1. In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
-    ![](./Media/aksiam.png)
+    ![](./Media/L4T2S12.png)
    
 1. In the **Add role assignment** tab, search for **Cognitive Services User (1)** in the search bar, select **Cognitive Services User (2)**, and click on **Next (3)**.
 
@@ -130,7 +130,7 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
     
 1. In the **API Management service**, select **APIs** **(1)**, select the **Azure OpenAI Service API** **(2)** API created in the earlier step, select **All Operations** **(3)** and click on **Policies </>** **(4)** under **Inbound processing**.
 
-    ![](./Media/api9808.png)
+    ![](./Media/L4T2S19.png)
 
 1. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **&lt;&lt;Azure_OpenAI_Endpoint&gt;&gt;** with **<inject key="OpenAIEndpoint" enableCopy="true"/>** **(2)** of API manager which you copied in Task 1 Step 4 and click on **Save** **(3)**.
 
@@ -152,7 +152,7 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
 
 1. In API Management, click on **Test** **(1)**, select Creates a **completion for the chat message** **(2)**, enter the gpt-4 deployment name **<inject key="CompletionModel" enableCopy="true"/>** **(3)** in the deployment-id field, enter **2024-08-01-preview** **(4)** in the API version field.
 
-     ![](./Media/api-08.png)
+     ![](./Media/L4T2S21.png)
 
 1. Scroll down to the **Request body** section **(1)**, replace the existing code with the code below, and click on **Send** **(2)**.
 
@@ -250,7 +250,7 @@ In this task, you'll be setting up Event Hub logging for API Management, configu
    
 1. In the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event hub Namespace tab, from the left menu select **Access control (IAM)** **(1)** , click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
-   ![](./Media/api9857.png)
+   ![](./Media/L4T5S2.png)
 
 1. In the **Add role assignment** tab, search for **Azure Event Hubs Data Sender (1)** in the search bar, select **Azure Event Hubs Data Sender (2)**, and click **Next (3)**.
 
@@ -315,7 +315,7 @@ In this task, you'll be setting up Event Hub logging for API Management, configu
 
 1. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **PowerShell**.
 
-    ![](./Media/azure-account-select.png)
+    ![](./Media/azurelogin.png)
 
 1. Run the following command to change the directory to `miyagi` root folder in the terminal and run the bicep file.
    
@@ -332,7 +332,7 @@ In this task, you'll be setting up Event Hub logging for API Management, configu
 
 1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service for the left menu, click on **APIs** **(1)** and  Select the **Azure OpenAI Service API** **(2)** created in the earlier step, select **All Operations** **(3)** and under **outbound proccessing** click on **Policies (4)** editor.
 
-    ![](./Media/api4782.png)
+    ![](./Media/L4T5S17.png)
 
 1. In the code editor copy the below policy to overwrite the **outbound (1)** tags only and click on **Save (2)**.
 

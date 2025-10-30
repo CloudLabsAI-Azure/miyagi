@@ -16,11 +16,11 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
         
       - From the Resource groups page, click on **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
-         ![](./Media/miyagi-image7.png)
+         ![](./Media/L1S1-ii.png)
 
       - In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the **Overview (1)** tab, select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** **(2)**.
 
-        ![](./Media/openai_service.png)
+        ![](./Media/L1S1-iii.png)
 
       - In the **OpenAI Overview** page, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**
 
@@ -50,7 +50,7 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
 
    -  In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade under **Resource Management** section, select **Keys and Endpoint (1)**, verify the **KEY 1 (2)** and **Endpoint (3)**.
      
-      ![](./Media/miyagi-image16.png)
+      ![](./Media/L1S2-i.png)
 
 1. To verify the values for  "**azureCognitiveSearchEndpoint**", "**azureCognitiveSearchApiKey**", follow below steps:
    
@@ -62,7 +62,7 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
  
    - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, verify the **URL**.
    
-      ![](./Media/miyagi-image111.png)
+      ![](./Media/L1S3-iii.png)
 
    - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, select **Key (1)** and  verify the **Primary admin Key (2)** value.
    
@@ -76,17 +76,17 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
      
    - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** , verify the **URL**.
      
-     ![](./Media/miyagi-image114.png)
+     ![](./Media/L1S4-ii.png)
 
    - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** under **Settings**, select **Keys** **(1)** and verify the value of the **Cosmos DB Primary Connection String** **(2)**.
 
-     ![](./Media/miyagi-image115.png)
+     ![](./Media/L1S4-iii.png)
 
 1. To obtain the values for "**blobServiceUri**", please follow the steps below:
 
    - Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** from resources list.
 
-     ![](./Media/miyagi-image116.png)
+     ![](./Media/L1S5-i.png)
 
    - In the **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** storage account from the left menu select **Endpoints** **(1)** under **Settings** section verify the **Blob service** **(2)** under Blob service.
 
