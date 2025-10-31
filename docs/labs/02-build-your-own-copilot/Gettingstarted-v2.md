@@ -138,34 +138,6 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![](./Media/miyagi-image8.png)
 
-## Steps to Proceed with MFA Setup if Ask Later Option is Not Visible
-
-   > **Note:** Continue with the exercises if MFA is already enabled or the option is unavailable.
-
-1. At the **"More information required"** prompt, select **Next**.
-
-1. On the **"Keep your account secure"** page, select **Next** twice.
-
-1. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
-
-   - Open **Google Play Store** (Android) or **App Store** (iOS).
-   - Search for **Microsoft Authenticator** and tap **Install**.
-   - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
-
-1. A **QR code** will be displayed on your computer screen.
-
-1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
-
-1. After scanning, click **Next** to proceed.
-
-1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
-       
-1. If prompted to stay signed in, you can click **No**.
-
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
- 
-1. Now, click on the **Next** from the lower right corner to move to the next page.
-
 > [!IMPORTANT]<br>
 > **For a smoother experience during the hands-on lab, it's important to thoroughly review both the instructions and the accompanying notes. This will help you navigate through the tasks with ease and confidence.**
 
