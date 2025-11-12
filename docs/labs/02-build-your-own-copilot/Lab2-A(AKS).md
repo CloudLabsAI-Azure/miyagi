@@ -1,8 +1,12 @@
-# Laboratorio 3.1 - Contenedorización de la interfaz de usuario de Miyagi y el servicio de Recomendación en Azure Kubernetes Service (AKS)
+# Laboratorio 3 - Contenedorización de la interfaz de usuario de Miyagi y el servicio de Recomendación en Azure Kubernetes Service (AKS)
 
 ### Duración estimada: 60 minutos
 
-En este laboratorio, contenedorizará e implementará la interfaz de usuario de Miyagi y los servicios de recomendación en Azure Kubernetes Service (AKS). Comenzará configurando Kubernetes y creando imágenes de Docker para ambos servicios. El proceso implica enviar estas imágenes a Azure Container Registry (ACR) y luego implementarlas en un clúster de AKS. Esto garantiza que los servicios se integren y funcionen sin problemas en un entorno escalable y contenedorizado, aplicando las configuraciones de Kubernetes, actualizando las direcciones IP de los servicios y verificando la implementación mediante el acceso a los servicios a través de sus respectivos puntos de conexión.
+## Laboratorio 3.1: Explorar y verificar la interfaz de usuario de Miyagi y el servicio de recomendaciones en AKS
+
+En este laboratorio, containerizarás y desplegarás los servicios de interfaz de usuario (UI) de Miyagi y servicio de recomendaciones en Azure Kubernetes Service (AKS).
+Comenzarás configurando Kubernetes y creando imágenes de Docker para ambos servicios. Luego, empujarás estas imágenes al Azure Container Registry (ACR) y las desplegarás en un clúster de AKS.
+Este proceso garantiza que los servicios estén integrados y operativos dentro de un entorno escalable y containerizado, aplicando configuraciones de Kubernetes, actualizando las direcciones IP de los servicios, y verificando el despliegue accediendo a los servicios mediante sus respectivos endpoints.
 
 ## Objetivos del laboratorio
 Podrá completar las siguientes tareas:
@@ -13,18 +17,13 @@ Podrá completar las siguientes tareas:
 - Tarea 4: Enviar la Imagen Docker del servicio de Recomendación a Azure Container registry
 - Tarea 5: Implementar Pods de AKS
 
-### Laboratorio 3.2: Explorar y Verificar Miyagi UI contenedorizada y el Servicio de Recomendaciones en AKS
-
-- Tarea 1: Explorar el servicio de recomendaciones en AKS con Ingress Endpoint
-- Tarea 2: Explorar la aplicación Miyagi en AKS con Ingress Endpoint
-
-### Tarea 1: Implementar servicios de AKS
+## Tarea 1: Implementar servicios de AKS
 
 En esta tarea, implementará los servicios de recomendación y UI de Miyagi en un clúster de Azure Kubernetes Service (AKS). Esto implica iniciar sesión en Azure Portal, aplicar las configuraciones de Kubernetes y actualizar los archivos de configuración con las direcciones IP externas de los servicios.
 
-1. Vuelva a la ventana de Visual Studio Code y navegue a **miyagi/deploy/infrastructure/kubernetes/manifests/50-miyagi**, haga clic derecho en **50-miyagi** y en el menú contextual seleccione **Abrir en Terminal Integrada**.
+1. Vuelva a la ventana de Visual Studio Code y navegue a **Miyagi/deploy(1)/infrastructure(2)/kubernetes/manifests(3)/50-miyagi(4)**, haga clic derecho en **50-miyagi** y en el menú contextual seleccione **Abrir en Terminal Integrada(5)**.
 
-    ![](./Media/aks-01.png)
+    ![](./Media/sp54.png)
 
 1. Ejecute el siguiente comando para iniciar sesión en el portal de Azure.
 
@@ -34,7 +33,7 @@ En esta tarea, implementará los servicios de recomendación y UI de Miyagi en u
 
 1. Esto lo redirigirá a la **Página de Inicio de sesión de Microsoft Azure**, seleccione su cuenta de Azure **<inject key="AzureAdUserEmail"></inject>**, y regrese a **Visual Studio Code**.
 
-   ![](./Media/azure-account-select.png)
+   ![](./Media/sp23.png)
 
 1. Ejecute el siguiente comando para iniciar sesión en el portal de Azure.
 
@@ -77,7 +76,7 @@ En esta tarea, implementará los servicios de recomendación y UI de Miyagi en u
 
    ![](./Media/miyagi-ui-env.png)
 
-### Tarea 2: Crear una imagen de Docker para la interfaz de usuario de Miyagi
+## Tarea 2: Crear una imagen de Docker para la interfaz de usuario de Miyagi
 
 En esta tarea, creará y ejecutará el contenedor Docker de Miyagi UI localmente. Comience abriendo Docker Desktop y completando la configuración inicial. A continuación, use Visual Studio Code para crear la imagen de Docker para Miyagi UI. Una vez creada la imagen, verifíquela y ejecútela en Docker. Configure el puerto host y acceda a la aplicación localmente mediante la URL proporcionada.
 
@@ -143,13 +142,13 @@ En esta tarea, creará y ejecutará el contenedor Docker de Miyagi UI localmente
    
      ![](./Media/docker-ui.png)
 
-### Tarea 3: Crear Imágenes de Docker para el servicio de Recomendación 
+## Tarea 3: Crear Imágenes de Docker para el servicio de Recomendación 
 
 En esta tarea, creará y ejecutará localmente el contenedor Docker del servicio de recomendaciones Miyagi. Comience abriendo Docker Desktop y completando la configuración inicial. A continuación, use Visual Studio Code para crear la imagen de Docker para el servicio de recomendaciones Miyagi. Una vez creada la imagen, verifíquela y ejecútela en Docker. Configure el puerto host y acceda a la aplicación localmente mediante la URL proporcionada.
 
-1. Regrese a la ventana de **Visual Studio Code** y navegue a la **carpeta miyagi** y expanda **servicios (1)/servicio de recomendación (2)/dotnet (3)**, haga clic derecho en dotnet en el menú en cascada, seleccione **Abrir en la terminal integrada (4)**.
+1. Regrese a la ventana de **Visual Studio Code** y navegue a la **carpeta Miyagi** y expanda **servicios (1)/servicio de recomendación (2)/dotnet (3)**, haga clic derecho en dotnet en el menú en cascada, seleccione **Abrir en la terminal integrada (4)**.
 
-   ![](./Media/aks-04.png)
+   ![](./Media/sp24.png)
 
 1. Ejecute el siguiente comando para crear una **imagen de Docker**
 
@@ -193,24 +192,24 @@ En esta tarea, creará y ejecutará localmente el contenedor Docker del servicio
    
    ![](./Media/docker-recommend.png)
 
-### Tarea 4: Enviar la Imagen Docker del servicio de Recomendación a Azure Container registry
+## Tarea 4: Enviar la Imagen Docker del servicio de Recomendación a Azure Container registry
 
 En esta tarea, enviará la imagen de Docker del servicio de recomendaciones Miyagi a Azure Container Registry (ACR). Esto implica iniciar sesión en Azure Portal, etiquetar la imagen de Docker con el nombre de ACR y, a continuación, enviarla a ACR.
 
-1. Vuelva a la ventana **Visual Studio Code** y navegue a **miyagi/services/recommendation-service/dotnet** haga clic derecho en dotnet y el menú contextual seleccione **Abrir en la Terminal Integrada**.
+1. Vuelva a la ventana **Visual Studio Code** y navegue a **Miyagi/services(1)/recommendation-service(2)/dotnet(3)** haga clic derecho en dotnet y el menú contextual seleccione **Abrir en la Terminal Integrada(4)**.
 
-   ![](./Media/aks-04.png)
+   ![](./Media/sp55.png)
 
 
 1. Ejecute el siguiente comando para iniciar sesión en el **Portal de Azure**.
 
-    ```
-    az login
-    ```
+   ```
+   az login
+   ```
 
 1. Esto lo redirigirá a la **Página de Inicio de sesión de Microsoft Azure**, seleccione su cuenta de Azure **<inject key="AzureAdUserEmail"></inject>**, y regrese a **Visual Studio Code**.
 
-   ![](./Media/azure-account-select.png)
+   ![](./Media/sp23.png)
 
 1. Ejecute el siguiente comando para iniciar sesión en **Azure Container Registry (ACR)** usando la CLI de Azure.
    
@@ -238,9 +237,9 @@ En esta tarea, enviará la imagen de Docker del servicio de recomendaciones Miya
 
    > **Nota**: El comando **docker push <inject key="AcrLoginServer" enableCopy="false"/>/miyagi-recommendation:latest** carga la imagen de Docker especificada, etiquetada con el nombre de Azure Container Registry (ACR), en el ACR. Esto hace que la imagen esté disponible en el ACR para su implementación y uso en diversos servicios de Azure.
 
-1. Vuelva a la ventana **Visual Studio Code** y navegue a **miyagi(1)/ui/typescript (2)** haga clic derecho, en el menú contextual seleccione **Abrir en la Terminal Integrada (3)**.
+1. Vuelva a la ventana **Visual Studio Code** y navegue a **Miyagi(1)/ui/typescript (2)** haga clic derecho, en el menú contextual seleccione **Abrir en la Terminal Integrada (3)**.
 
-   ![](./Media/image-rg-25.png)
+   ![](./Media/sp18.png)
 
 1. Ejecute el siguiente comando para agregar la etiqueta.
 
@@ -305,11 +304,18 @@ En esta tarea, implementará los servicios Miyagi UI y Recomendación en los pod
 
 <validation step="e8c4db10-7879-482c-a538-de23b5f3eba3" />
 
-# Laboratorio 3.2: Explorar y Verificar la interfaz de usuario de Miyagi y el servicio de Recomendación contenedorizados en AKS
+## Laboratorio 3.2: Explorar y Verificar la interfaz de usuario de Miyagi y el servicio de Recomendación contenedorizados en AKS
 
-En este laboratorio, explorará la implementación y verificación de los servicios de interfaz de usuario y recomendación de Miyagi en Azure Kubernetes Service (AKS). Las tareas implican probar las API y acceder a la interfaz de usuario mediante puntos de conexión de Ingress, lo que garantiza su correcto funcionamiento en el entorno de AKS.
+En este laboratorio, explorarás el despliegue y la verificación de los servicios Miyagi UI y Recommendation en Azure Kubernetes Service (AKS).
+Las tareas incluyen probar las API y acceder a la interfaz de usuario (UI) mediante los endpoints de Ingress, garantizando el funcionamiento correcto dentro del entorno de AKS.
 
-### Tarea 1: Explorar el servicio de recomendaciones en AKS con Ingress Endpoint
+## Objetivos del laboratorio
+Podrás completar las siguientes tareas:
+
+- Tarea 1: Explorar el servicio de Recommendation en AKS utilizando el endpoint de Ingress.
+- Tarea 2: Explorar la aplicación Miyagi en AKS utilizando el endpoint de Ingress.
+
+## Tarea 1: Explorar el servicio de recomendaciones en AKS con Ingress Endpoint
 
 1. Para probar la API, ejecute el siguiente comando para obtener las direcciones IP del servicio:
 
@@ -326,7 +332,7 @@ En este laboratorio, explorará la implementación y verificación de los servic
    
    ![](./Media/service-swagger.png)
    
-### Tarea 2: Explorar la aplicación Miyagi en AKS con Ingress Endpoint
+## Tarea 2: Explorar la aplicación Miyagi en AKS con Ingress Endpoint
 
 1. Para probar la interfaz de usuario, ejecute el siguiente comando para obtener las direcciones IP del servicio:
    ```
