@@ -260,3 +260,8 @@ En esta tarea, configurará Azure AI Search importando datos de CosmosDB a un í
 En esta práctica de laboratorio, aprendió a configurar y ejecutar el ejemplo de Semantic Kernel integrando el SDK en su proyecto, configurando proveedores de LLM, definiendo plugins y ejecutando el código. Además, adquirió conocimientos sobre la configuración de Azure AI Search, incluyendo la creación o selección de un índice, la configuración de campos, la configuración de Semantic Kernel para interactuar con Azure, la definición de plugins y la prueba de la integración para capacidades de búsqueda mejoradas.
 
 ### You have completed this lab.
+
+### Conclusión
+
+Al completar “Crea aplicaciones inteligentes con Microsoft Copilot Stack y Azure OpenAI”, adquirirás los conocimientos y la experiencia práctica necesarios para diseñar e implementar soluciones impulsadas por IA utilizando el Copilot Stack de Microsoft.
+Comprenderás cómo aplicar de manera efectiva la IA Generativa, los patrones RAG y el Semantic Kernel en escenarios empresariales reales, lo que te permitirá crear copilotos inteligentes y con conciencia de contexto que mejoren la productividad, optimicen los flujos de trabajo y ofrezcan experiencias de usuario personalizadas.
