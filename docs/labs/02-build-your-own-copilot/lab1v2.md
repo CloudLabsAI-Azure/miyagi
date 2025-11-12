@@ -14,7 +14,7 @@ Podrás completar las siguientes tareas:
 - Tarea 5: Persistir embeddings en Azure AI Search
 - Tarea 6: Explorar la Aplicación Miyagi y el servicio de Recomendación mediante Personalización
 
-### Tarea 1: Configurar la aplicación miyagi
+## Tarea 1: Configurar la aplicación miyagi
 
 En esta tarea, configurará la aplicación Miyagi actualizando configuraciones específicas en Visual Studio Code. Esto implica reemplazar los valores de marcador de posición (placeholder) en los archivos de configuración con los valores reales de varios recursos de Azure para garantizar la conectividad y el funcionamiento correctos.
 
@@ -28,9 +28,9 @@ En esta tarea, configurará la aplicación Miyagi actualizando configuraciones e
    
 1. En **Visual Studio Code**, de la barra de menú seleccione **Archivo (1) > Abrir carpeta (2)**.
 
-   ![](./Media/image-rg-02.png)
+   ![](./Media/sp15.png)
 
-1. Dentro del **Explorador de Archivos**, navegue hasta **C:\LabFiles\miyagi** seleccione **miyagi** **(1)** y haga clic en **Seleccionar carpeta (2)**
+1. Dentro del **Explorador de Archivos**, navegue hasta **C:\LabFiles\miyagi** seleccione **miyagi** **(1)** y haga clic en **Seleccionar carpeta (2)**.
 
    ![](./Media/select-miyagi-folder.png)
 
@@ -38,13 +38,13 @@ En esta tarea, configurará la aplicación Miyagi actualizando configuraciones e
 
    ![](./Media/image-rg-18.png) 
    
-1. Expanda el directorio **miyagi > ui > typescript** y verifique que el archivo **.env** está presente. 
+1. Expanda el directorio **miyagi > ui\typescript (1)** y verifique que el archivo **.env (2)** está presente. 
 
    ![](./Media/miyagi-image-16.png) 
 
-1. Expanda el directorio **miyagi/services/recommendation-service/dotnet** y verifique que el archivo **appsettings.json** está presente.
+1. Expanda el directorio **Miyagi/services(1)/recommendation-service(2)/dotnet(3)** y verifique que el archivo **appsettings.json(4)** está presente.
 
-   ![](./Media/open-appsettings.png)
+   ![](./Media/sp16.png)
   
 1. En el archivo **appsettings.json** reemplace los siguientes valores para las variables siguientes.
 
@@ -93,13 +93,13 @@ En esta tarea, configurará la aplicación Miyagi actualizando configuraciones e
 
 <validation step="209e971c-dc3f-486b-b7c7-1096724301f7" />
 
-### Tarea 2: Comprender la implementación del servicio de Recomendación
+## Tarea 2: Comprender la implementación del servicio de Recomendación
 
 El servicio de recomendación implementa el patrón RAG utilizando el SDK de Semantic Kernel. Los detalles de la implementación se capturan en el notebook (cuaderno) de Jupyter en la carpeta miyagi/sandbox/usecases/rag/dotnet. Puede abrir el cuaderno en VS Code y ejecutar las celdas para comprender los detalles paso a paso de cómo se implementa el servicio de Recomendación. Preste especial atención a cómo se implementa el patrón RAG utilizando Semantic Kernel. Seleccione el kernel como .NET Interactive en la esquina superior derecha del cuaderno.
 
-1. En Visual Studio Code, navegue a la carpeta **miyagi (1)** y expanda la carpeta **sandbox (2)/usecases (3)/rag (4)/dotnet (5)** y seleccione **Getting-started.ipynb (6)**.
+1. En Visual Studio Code, navegue a la carpeta **Miyagi (1)** y expanda la carpeta **sandbox (2)/usecases (3)/rag (4)/dotnet (5)** y seleccione **Getting-started.ipynb (6)**.
 
-   ![](./Media/getting-start-01.png)
+   ![](./Media/sp17.png)
 
 1. **Ejecute el cuaderno celda por celda** (ya sea usando Ctrl + Enter para permanecer en la misma celda o con Shift + Enter par avanzar a la siguiente celda) y observe los resultados de la ejecución de cada celda.
   
@@ -116,11 +116,11 @@ El servicio de recomendación implementa el patrón RAG utilizando el SDK de Sem
 
 <validation step="560130f4-fca1-49e1-98a6-97ec61155364" />
 
-### Tarea 3: Ejecutar el servicio de recomendaciones localmente
+## Tarea 3: Ejecutar el servicio de recomendaciones localmente
 
 En esta tarea, ejecutará el servicio de recomendación localmente utilizando Visual Studio Code para compilar y ejecutar el servicio en la terminal y luego verificará su funcionalidad accediendo a la página Swagger en el navegador.
 
-1. Para abrir una nueva terminal, navegue a **miyagi (1)/services (2)/recommendation-service (3)/dotnet (4)** y haga clic derecho en **dotnet**. En el menú en cascada, seleccione **Abrir en terminal integrado (5)**.
+1. Para abrir una nueva terminal, navegue a **Miyagi (1)/services (2)/recommendation-service (3)/dotnet (4)** y haga clic derecho en **dotnet**. En el menú en cascada, seleccione **Abrir en terminal integrado (5)**.
 
     ![](./Media/task4-1.png)
 
@@ -144,13 +144,13 @@ En esta tarea, ejecutará el servicio de recomendación localmente utilizando Vi
    ![](./Media/miyagi2.png)
 
 
-### Tarea 4: Ejecutar el frontend de Miyagi localmente
+## Tarea 4: Ejecutar el frontend de Miyagi localmente
 
 En esta tarea, ejecutará la interfaz de Miyagi localmente instalando las dependencias con npm y yarn, y luego iniciará el servidor de desarrollo. Verificará su funcionalidad accediendo al servidor de desarrollo local desde el navegador.
 
-1. Para abrir una nueva terminal, navegue a la carpeta **miyagi (1)**, luego expanda **ui** y haga clic derecho en la carpeta **ui/typescript (2)**, en el menú en cascada seleccione **Abrir en la terminal integrada (3)**.
+1. Para abrir una nueva terminal, navegue a la carpeta **Miyagi (1)**, luego expanda **ui** y haga clic derecho en la carpeta **ui/typescript (2)**, en el menú en cascada seleccione **Abrir en la terminal integrada (3)**.
 
-   ![](./Media/image-rg-25.png)
+   ![](./Media/sp18.png)
 
 1. Ejecute el siguiente comando para instalar las dependencias
    
@@ -181,15 +181,15 @@ En esta tarea, ejecutará la interfaz de Miyagi localmente instalando las depend
    > **[!IMPORTANTE]**
    > No cierre VS Code ya que necesitará que el host local se ejecute para tareas futuras.
 
-### Tarea 5: Persistir embeddings en Azure AI Search
+## Tarea 5: Persistir embeddings en Azure AI Search
 
 En esta tarea, conservará las incorporaciones en Azure AI Search ejecutando una solicitud POST en Swagger UI, verificando la ejecución y luego confirmando la creación del índice en Azure Portal.
 
-1. Vuelva a la página **swagger UI**, desplácese hasta la sección **Memory**, haga clic en **POST /dataset** para ampliar y haga clic en **Try it out**.
+1. Vuelva a la página **swagger UI**, desplácese hasta la sección **Memory**, haga clic en **POST /dataset (1)** para ampliar y haga clic en **Try it out (2)**.
 
-   ![](./Media/swaggerUI-memory.png)
+   ![](./Media/sp19.png)
 
-1. Reemplace el siguiente **código** con el siguiente código y haga clic en **Execute**.
+1. Reemplace el siguiente **código (1)** con el siguiente código y haga clic en **Execute (2)**.
 
      ```
      {
@@ -203,7 +203,7 @@ En esta tarea, conservará las incorporaciones en Azure AI Search ejecutando una
       }
       ```
 
-      ![](./Media/swaggerUI-Execution.png)
+      ![](./Media/sp20.png)
       
 1. En la página **swagger UI**, desplácese hasta la sección **Responses** revise que se ha ejecutado exitosamente verificando que el código de estado es **200**.
 
@@ -211,11 +211,11 @@ En esta tarea, conservará las incorporaciones en Azure AI Search ejecutando una
 
 1. Regrese a la pestaña **Portal de Azure**, en el cuadro Buscar recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **AI Search (1)** y luego seleccione **Búsqueda de IA (2)** en Servicios.
 
-    ![](./Media/ai-search1.png)    
+    ![](./Media/sp21.png)    
 
 1. En la pestaña **Fundición de IA | Búsqueda de IA**, seleccione **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![](./Media/select-ai-search-service.png)
+   ![](./Media/sp22.png)
 
 1. En la pestaña **acs-<inject key="DeploymentID" enableCopy="false"/>** del servicio Search, haga clic en **Índices** **(1)** en Administración de búsquedas y revise que **miyagi-embeddings** **(2)** ha sido creado.   
 
@@ -230,31 +230,31 @@ En esta tarea, conservará las incorporaciones en Azure AI Search ejecutando una
 
 <validation step="32fe7dd9-0728-4b16-b975-374eb199044d" />
    
-### Tarea 6: Explorar la Aplicación Miyagi y el servicio de Recomendación mediante Personalización
+## Tarea 6: Explorar la Aplicación Miyagi y el servicio de Recomendación mediante Personalización
 
 En esta tarea, personalizará el servicio de recomendaciones de la aplicación Miyagi seleccionando un asesor financiero y revisando las recomendaciones. Después, revisará los registros en Visual Studio Code y detendrá los servicios.
 
 1. Vuelva a la página de la interfaz de usuario del **servicio de recomendación** y haga clic en el botón **personalize**.
 
-    ![](./Media/service-personalize.png)
+   ![](./Media/service-personalize.png)
 
 2. En la página **Personalize**, seleccione su **asesor financiero favorito (1)** y elija **GPT-4 (2)** para el **Reasoning Engine** en el menú desplegable, luego haga clic en **Personalize (3)**.
 
-    ![](./Media/miyagi-image126.png)
+   ![](./Media/miyagi-image126.png)
 
 3. Debería ver las recomendaciones del servicio de recomendación en el widget Top Stocks.
 
-    ![](./Media/financial-advisor-output.png) 
+   ![](./Media/financial-advisor-output.png) 
 
 4. Navegue a **Visual Studio Code** y haga clic en **dotnet** desde la terminal, puede revisar los registros.
 
-    ![](./Media/terminal-output.png)    
+   ![](./Media/terminal-output.png)    
 
 5. Una vez que revise los registros, presione **Ctrl + C** para detener la página **swagger UI**.
 
 6. Desde la **Terminal** seleccione la terminal **Node**, presione **Ctrl + C** para detener la página de la interfaz de usuario del **servicio de recomendación**.
 
-    ![](./Media/miyagi-image31.png)
+   ![](./Media/miyagi-image31.png)
 
 7. Ahora, haga clic en **Siguiente** en la esquina inferior derecha para pasar a la página siguiente.
 
