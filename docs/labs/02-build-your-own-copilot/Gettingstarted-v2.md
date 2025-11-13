@@ -52,9 +52,9 @@ La arquitectura de este laboratorio incluye los siguientes componentes clave:
 
 ## Comenzando con el Laboratorio
 
-Una vez configurado el ambiente, su navegador cargará una máquina virtual (JumpVM), utilice esta máquina virtual durante todo el taller para realizar el laboratorio. Puede ver el número en la parte inferior de la guía de laboratorio para cambiar a diferentes ejercicios en la guía de laboratorio.
+Una vez configurado el ambiente, su navegador cargará una máquina virtual (LabVM), utilice esta máquina virtual durante todo el taller para realizar el laboratorio. Puede ver el número en la parte inferior de la guía de laboratorio para cambiar a diferentes ejercicios en la guía de laboratorio.
 
-   ![](./Media/environment-1.png)
+   ![](./Media/sp48.png)
 
 ### Máquina Virtual y Guía de Laboratorio
 
@@ -64,7 +64,7 @@ Su máquina virtual es su herramienta principal durante el taller. La guía de l
 
 Para comprender mejor los recursos y credenciales de su laboratorio, diríjase a la pestaña **Ambiente**.
 
-   ![](./Media/2025-05-23-1.png)
+   ![](./Media/sp49.png)
    
    > Verá el valor SUFFIX en la pestaña **Ambiente**; úselo dondequiera que vea SUFFIX o DeploymentID en los pasos del laboratorio.
 
@@ -72,7 +72,7 @@ Para comprender mejor los recursos y credenciales de su laboratorio, diríjase a
 
 Para mayor comodidad, puede abrir la guía de laboratorio en una ventana separada seleccionando el botón **Ventana dividida** en la esquina superior derecha.
 
-   ![](./Media/2025-05-23-2.png)
+   ![](./Media/sp50.png)
 
 ## Administre su máquina virtual
 
@@ -84,7 +84,7 @@ Puede iniciar, detener o reiniciar su máquina virtual según sea necesario desd
 
 Para ajustar el nivel de zoom de la página del entorno, haga clic en el icono **A↕ : 100%**, ubicado junto al temporizador en el entorno de laboratorio.
 
-   ![](./Media/labzoom-2.png)
+   ![](./Media/sp51.png)
 
 ## Iniciar Sesión en el Portal de Azure
 
@@ -100,7 +100,7 @@ Para ajustar el nivel de zoom de la página del entorno, haga clic en el icono *
 
    ![](./Media/11-10-24(13).png)   
 
-1. En JumpVM, haga clic en el acceso directo al Portal de Azure del navegador Microsoft Edge, el cual se ha creado en el escritorio.
+1. En LabVM, haga clic en el acceso directo al Portal de Azure del navegador Microsoft Edge, el cual se ha creado en el escritorio.
 
    ![](./Media/10-10-25.png)
 
@@ -108,19 +108,19 @@ Para ajustar el nivel de zoom de la página del entorno, haga clic en el icono *
 
    * **Correo electrónico/Nombre de usuario**: **<inject key="AzureAdUserEmail"></inject>**
 
-     ![](./Media/sign-in.png)
+     ![](./Media/sp1.png)
      
 1. Ahora ingrese la siguiente contraseña y haga clic en **Iniciar sesión**.
    
    * **Contraseña**: **<inject key="AzureAdUserPassword"></inject>**
 
-     ![](./Media/tap-password.png)
+     ![](./Media/sp2.png)
 
      > **Nota**: Si se le solicita MFA, siga los pasos resaltados en - [Pasos para continuar con la configuración de MFA si la opción "Preguntar más tarde" no está visible](#Pasos-para-continuar-con-la-configuración-de-MFA-si-la-opción-Preguntar-más-tarde-no-está-visible)  
    
 1. Si ve la ventana emergente **¿Permanecer conectado?**, seleccione **No**.
 
-   ![](./Media/stay-logged-in.png)
+   ![](./Media/sp3.png)
 
 1. Si aparece una ventana emergente **Bienvenido a Microsoft Azure**, seleccione **Cancelar** para omitir el recorrido.
 

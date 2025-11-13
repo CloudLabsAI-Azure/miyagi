@@ -11,7 +11,7 @@ Podrás completar las siguientes tareas:
 - Tarea 1: Configurar y Ejecutar el Ejemplo de Semantic Kernel.
 - Tarea 2: Configurar Azure AI Search.
 
-### Tarea 1: Configurar y Ejecutar el Ejemplo de Semantic Kernel
+## Tarea 1: Configurar y Ejecutar el Ejemplo de Semantic Kernel
 
 En esta tarea, configurará el plugin de Semantic Kernel en Visual Studio Code, creará una aplicación de automatización del hogar en C# con Azure OpenAI y compilará y ejecutará la aplicación para interactuar con ella.
 
@@ -33,7 +33,7 @@ En esta tarea, configurará el plugin de Semantic Kernel en Visual Studio Code, 
 
 5. De vuelta en **Visual Studio Code** en el **Panel Functions**, haga clic en el **ícono Comenzar** **(1)** y siga el asistente para **Create a new app** **(2)** con la función semántica y guárdela.
 
-   ![](./Media/sematic-kernal-file-select.png)
+   ![](./Media/miyagi-image95.png)
 
 6. Elija **Semantic Kernel: C# Home Automation**
 
@@ -211,13 +211,13 @@ En esta tarea, configurará el plugin de Semantic Kernel en Visual Studio Code, 
 
 20. Alternativamente, puede plantear cualquier pregunta en la terminal.
 
-### Tarea 2: Configurar Azure CognAIitive Search
+## Tarea 2: Configurar Azure CognAIitive Search
 
 En esta tarea, configurará Azure AI Search importando datos de CosmosDB a un índice de búsqueda llamado "realestate-us-sample-index". Personalizará el índice y creará un indexador llamado "realestate-us-sample-indexer" para sincronizar los datos. Finalmente, verificará la funcionalidad de búsqueda consultando los datos de "Seattle".
 
 1. Vuelva a la pestaña **Portal de Azure**,  en el cuadro "Buscar recursos, servicios y documentos (G+/)" en la parte superior del portal, escriba **Búsqueda de IA (1)** y, a continuación, seleccione **Búsqueda de IA (2)** en la sección "Servicios".
 
-    ![](./Media/ai-search1.png)    
+    ![](./Media/sp41.png)    
 
 1. En la pestaña **Fundición de IA | Búsqueda de IA**, seleccione **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
@@ -225,23 +225,23 @@ En esta tarea, configurará Azure AI Search importando datos de CosmosDB a un í
 
 1. En la pestaña Información general del servicio Search, haga clic en **Importar datos**.
 
-    ![](./Media/import-data1.png)    
+    ![](./Media/sp42.png)    
    
-1. En el menú desplegable, establezca el **Origen de Datos** en **Muestras**, seleccione **CosmosDB hotels-sample**, y haga clic en **Siguiente : Agregar aptitudes cognitivas (opcional)**.
+1. En el menú desplegable, establezca el **Origen de Datos** en **Muestras(1)**, seleccione **CosmosDB hotels-sample(2)**, y haga clic en **Siguiente : Agregar aptitudes cognitivas (opcional)(3)**.
 
-   ![](./Media/import-data2.png)
+   ![](./Media/sp43.png)
    
 1. En **aptitudes cognitivas** deje todo con los valores predeterminados y haga clic en **Omitir hasta: Personalizar índice de destino**.
 
-    ![](./Media/import-data5.png)
+    ![](./Media/sp44.png)
 
-1. En **Personalizar índice de destino**, establezca el nombre del índice como **realestate-us-sample-index** y haga clic en **Siguiente: Crear indizador**.
+1. En **Personalizar índice de destino**, establezca el nombre del índice como **realestate-us-sample-index(1)** y haga clic en **Siguiente: Crear indizador(2)**.
 
-   ![](./Media/import-data3.png)
+   ![](./Media/sp45.png)
 
-1. En **Crear un indizador**, cambie el nombre del indizador a **realestate-us-sample-indexer** y haga clic en **Enviar**.
+1. En **Crear un indizador**, cambie el nombre del indizador a **realestate-us-sample-indexer(1)** y haga clic en **Enviar(2)**.
 
-   ![](./Media/import-data4.png)
+   ![](./Media/sp46.png)
 
 1. En la pestaña **Fundición de IA | Búsqueda de IA**, seleccione **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
@@ -249,7 +249,7 @@ En esta tarea, configurará Azure AI Search importando datos de CosmosDB a un í
    
 1. En el panel de navegación izquierdo, en **Administración de búsqueda** select **Índices (1)** y haga clic en **realestate-us-sample-index (2)**.
 
-    ![](./Media/miyagi-image108.png)
+    ![](./Media/sp47.png)
 
 1. Haga clic en **realestate-us-sample-index**, en la barra de búsqueda ingrese **Seattle (1)** y haga clic en **Buscar (2)** para ver el **Resultado**.
 
@@ -260,3 +260,8 @@ En esta tarea, configurará Azure AI Search importando datos de CosmosDB a un í
 En esta práctica de laboratorio, aprendió a configurar y ejecutar el ejemplo de Semantic Kernel integrando el SDK en su proyecto, configurando proveedores de LLM, definiendo plugins y ejecutando el código. Además, adquirió conocimientos sobre la configuración de Azure AI Search, incluyendo la creación o selección de un índice, la configuración de campos, la configuración de Semantic Kernel para interactuar con Azure, la definición de plugins y la prueba de la integración para capacidades de búsqueda mejoradas.
 
 ### You have completed this lab.
+
+### Conclusión
+
+Al completar “Crea aplicaciones inteligentes con Microsoft Copilot Stack y Azure OpenAI”, adquirirás los conocimientos y la experiencia práctica necesarios para diseñar e implementar soluciones impulsadas por IA utilizando el Copilot Stack de Microsoft.
+Comprenderás cómo aplicar de manera efectiva la IA Generativa, los patrones RAG y el Semantic Kernel en escenarios empresariales reales, lo que te permitirá crear copilotos inteligentes y con conciencia de contexto que mejoren la productividad, optimicen los flujos de trabajo y ofrezcan experiencias de usuario personalizadas.
