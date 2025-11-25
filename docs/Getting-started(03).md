@@ -97,7 +97,7 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
    
    * **Password**: **<inject key="AzureAdUserPassword"></inject>**
 
-     ![](../docs/labs/02-build-your-own-copilot/Media/miyagi-image3.png)
+     ![](../docs/labs/02-build-your-own-copilot/Media/pwrd1.png)
    
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 

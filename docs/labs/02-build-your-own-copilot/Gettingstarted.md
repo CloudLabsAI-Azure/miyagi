@@ -20,25 +20,25 @@ In this Lab, verification and retrieval of specific values, including End Point,
 
         ![](./Media/gg-1-2.png)
 
-      - In the **Overview** **(1)** page, click on **Go to Azure AI Foundry portal** (2).
+      - In the **Overview** **(1)** page, click on **Go to Foundry portal** (2).
 
-         ![](./Media/n2.png) 
+         ![](./Media/S1.png) 
    
-      - In the **Azure AI Foundry**, select **Deployments (1)**, under the Shared Resources section.
+      - In the **Microsoft Foundry**, select **Deployments (1)**, under the Shared Resources section.
 
-      - In the **Deployments** blade of Azure AI Studio, click on **gpt-4** model name **(2)** and verify the **deployment name** of gpt-4 model **(3)**.
+      - In the **Deployments** blade of Azure AI Studio, click on **gpt-4.1** model name **(2)** and verify the **deployment name** of gpt-4.1 model **(3)**.
 
-          ![](./Media/n3.png)
+          ![](./Media/S02.png)
         
-          ![](./Media/gg-1-5.png)
+          ![](./Media/S3.png)
       
       -  Navigate back to the **Deployment (1)** page
 
-      - In the Deployments blade of Azure AI Foundry, click on **text-embedding-ada-002 model name (2)** and verify the **deployment name** of **text-embedding-ada-002 model**.
+      - In the Deployments blade of Microsoft Foundry, click on **text-embedding-ada-002 model name (2)** and verify the **deployment name** of **text-embedding-ada-002 model (3)**.
         
-         ![](./Media/n5.png)
+         ![](./Media/S4.png)
 
-         ![](./Media/gg-1-7.png)
+         ![](./Media/S5.png)
 
 1. To verify the values for **endpoint** and **apiKey** follow the below steps:
 
