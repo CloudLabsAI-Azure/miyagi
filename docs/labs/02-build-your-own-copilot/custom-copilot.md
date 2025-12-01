@@ -42,7 +42,7 @@ In this task, you will retrieve the Azure OpenAI Service values by accessing the
 
    > **Note**: If you don't see the left side navigation pane, click on the **Hamburger** icon in the top left corner.
 
-   ![](./Media/lop-03.png) 
+   ![](./Media/lop-03.png)
 
 1. From the **Overview (1)** page, click on **Go to Foundry portal (2)**.
    
@@ -50,10 +50,11 @@ In this task, you will retrieve the Azure OpenAI Service values by accessing the
 
 1. Go to **Deployments (1)** in the left navigation pane, click on the names of your AI model to copy them, and paste them into Notepad **(2)**.
     
-    ![](./Media/dec2025-build-custom-copilot-7.png)
+   ![](./Media/dec2025-build-custom-copilot-7.png)
 
-    > **Note**: Click on the **Expand** button, if you don't see the left side navigation pane.
-    ![](./Media/dec2025-build-custom-copilot-8.png)     
+   > **Note**: Click on the **Expand** button, if you don't see the left side navigation pane.
+
+     ![](./Media/dec2025-build-custom-copilot-8.png)     
 
 ### Task 2: Cloning the Chat-Copilot GitHub Repo
 
