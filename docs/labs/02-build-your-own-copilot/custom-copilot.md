@@ -1,6 +1,6 @@
 # Lab: Build Custom Copilot Application using Azure AI Foundry
 
-### Estimated Duration: 60 minutes
+## Estimated Duration: 60 minutes
 
 ## Lab Overview 
 
@@ -30,37 +30,38 @@ In this task, you will retrieve the Azure OpenAI Service values by accessing the
 
 1. In the Azure Portal, search for **OpenAI (1)** and select **Azure OpenAI (2)**
    
-    ![](./Media/cp1.png)
+    ![](./Media/dec2025-build-custom-copilot-3.png)
 
-1. Select the **Azure OpenAI** resource created.
+1. Select the pre-created **Azure OpenAI** resource named **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](./Media/data1.png)  
+    ![](./Media/dec2025-build-custom-copilot-4.png)  
 
 1. Select **Keys and Endpoints (1)** from the left pane. Copy **Key 1 (2)** and **Endpoint (3)**, then store them in Notepad.
    
-    ![](./Media/data2.png)
+    ![](./Media/dec2025-build-custom-copilot-5.png)
 
-   > **Note**: If you dont see the Left side Navigation pane, click on the **three horizontal line** in the top left corner.
+   > **Note**: If you don't see the left side navigation pane, click on the **Hamburger** icon in the top left corner.
 
    ![](./Media/lop-03.png) 
 
-1. From the **Overview (1)** page, click on **Go to Azure AI Foundry portal (2)**.
+1. From the **Overview (1)** page, click on **Go to Foundry portal (2)**.
    
-    ![](./Media/br1.png)
+    ![](./Media/dec2025-build-custom-copilot-6.png)
 
 1. Go to **Deployments (1)** in the left navigation pane, click on the names of your AI model to copy them, and paste them into Notepad **(2)**.
     
-    ![](./Media/cp2.png)
+    ![](./Media/dec2025-build-custom-copilot-7.png)
 
-    > **Note**: Click on the **Expand** button, if you dont see the left side navigation pane.         
+    > **Note**: Click on the **Expand** button, if you don't see the left side navigation pane.
+    ![](./Media/dec2025-build-custom-copilot-8.png)     
 
 ### Task 2: Cloning the Chat-Copilot GitHub Repo
 
 In this task, you will clone the Chat-Copilot GitHub repository by using Git commands to download the code to your local machine for further exploration and development.
 
-1. In the LabVM, click on **Start**, from the start menu search for **Powershell (1)** and select **Windows PowerShell (2)** and then open PowerShell as an administrator.
+1. In the LabVM, click on **Start**, from the start menu search for **Powershell (1)** and right click on **Windows PowerShell (2)** and then choose **Run as administrator (3)** to open PowerShell as an administrator.
 
-    ![](./Media/cp3.png)  
+    ![](./Media/dec2025-build-custom-copilot-9.png)  
    
 1. Navigate to the directory `C:/Users/azureuser` by running the below command.
  
@@ -81,7 +82,7 @@ In this task, you will clone the Chat-Copilot GitHub repository by using Git com
 
    ![](./Media/cp5.png)
 
-1. Select **CHAT-COPILOT (1)** and click **Select Folder (2)**.
+1. Select **CHAT-COPILOT (1)** and click **Select folder (2)**.
 
    ![](./Media/cp6.png)
 
@@ -134,8 +135,10 @@ In this task, you will configure and run the Chat Copilot app locally by setting
    | CompletionModel:{DEPLOYMENT_NAME}      | **<inject key="CompletionModel" enableCopy="true"/>** |
    | EmbeddingModel:{DEPLOYMENT_NAME}       | **<inject key="EmbeddingModel" enableCopy="true"/>**  |
 
-   >**Note:** If a Security warning pop-up window appears, choose **Yes**
-   >
+   >**Note:** If a Security warning pop-up window appears, choose **Yes**.
+
+     ![](./Media/dec2025-build-custom-copilot-10.png)
+
    >**Note:** The code should look similar to the image below:
 
      ![](./Media/cp9.png)
@@ -146,6 +149,8 @@ In this task, you will configure and run the Chat Copilot app locally by setting
    .\Start-Backend.ps1
    ```
    > **Note:** It may take a around 5 minutes for Yarn packages to install on the first run, wait untill the command run successfully.
+
+     ![](./Media/dec2025-build-custom-copilot-11.png)
  
 1. Open another tab in **Edge**, in the browser window paste the following link, and you should see a confirmation message: `Healthy`.
  
@@ -156,12 +161,12 @@ In this task, you will configure and run the Chat Copilot app locally by setting
   
      ![](./Media/data9.png)
     
-1. In the LabVM, click on **Start**, from the start menu search for **PowerShell 7 (1)** and select for **PowerShell 7 (2)**.
+1. In the LabVM, click on **Start**, from the start menu search for **PowerShell 7 (1)** and select for **PowerShell 7 (x64) (2)**.
 
    ![](./Media/cp10.png)
  
 1. Run the following command to change the path.
- 
+
    ```
    cd C:\Users\azureuser\chat-copilot\scripts\
    ```
@@ -172,7 +177,7 @@ In this task, you will configure and run the Chat Copilot app locally by setting
    Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
    ```
  
-1. The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic. If promted **Do you want to change the execution policy?,** enter **A** and hit **Enter**.
+1. The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic. If prompted **Do you want to change the execution policy?,** enter **A** and hit **Enter**.
  
 1. Configure **Chat Copilot** by running the following command.
  
@@ -186,7 +191,7 @@ In this task, you will configure and run the Chat Copilot app locally by setting
 
 1. Once the deployment of the script is executed successfully it will redirect to `http://localhost:3000/` Chat CoPilot in **Edge** browser.
  
-   >**Note:** Please wait for 3-4 mins for the browser to load
+   >**Note:** Please wait for 3-4 mins for the browser to load.
   
 1. You will get an output similar to this for the frontend:
 
@@ -223,7 +228,7 @@ In this task, you will learn how to chat with your own documents in the Chat Cop
 
     ![](./Media/cp13.png)
 
-1. Once it is uploaded, Naviagte to the **Chat (1)** tab then provide the below prompt **(2)** then click **send (3)** button and then check how the response is generated by Copilot.
+1. Once it is uploaded, navigate to the **Chat (1)** tab then provide the below prompt **(2)** then click **send (3)** button and then check how the response is generated by Copilot.
 
     ```
     How to operate Android Auto in Porche Taycan? Give step-by-step instructions.
@@ -255,10 +260,8 @@ In this task, you will learn how to chat with your own documents in the Chat Cop
 
 In this lab, you retrieved Azure OpenAI Service values, cloned the Chat-Copilot GitHub repository, set up the environment with required dependencies, ran the Chat Copilot app locally, and interacted with your documents within the app.
 
-
-### You have succesfully completed the lab
-
 ## Conclusion
 
 By completing the Build Custom Copilot Application using Azure AI Foundry lab, you gained hands-on experience in setting up and running a Chat Copilot application locally. You explored Azure OpenAI Service integration, cloned and configured the Chat-Copilot repository, installed necessary dependencies, and executed the application. Additionally, you learned to upload documents and interact with them through Copilot, observing how AI-generated responses are derived and validated with citations. This lab enhanced your practical understanding of building AI-powered applications and managing document-driven interactions.
 
+## You have successfully completed the lab

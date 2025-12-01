@@ -1,6 +1,6 @@
 # Build Custom Copilot Application using Azure AI Foundry
 
-### Overall Estimated Duration: 60 minutes
+## Overall Estimated Duration: 60 minutes
 
 ## Overview
 
@@ -83,7 +83,7 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
    ![](../docs/labs/02-build-your-own-copilot/Media/yagi-3.png)
 
-1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email or username, and click on **Next**. 
+1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email or username and click on **Next**. 
 
    * **Email/Username**: **<inject key="AzureAdUserEmail"></inject>**
 
@@ -99,48 +99,6 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
    ![](../docs/labs/02-build-your-own-copilot/Media/miyagi-image4.png)
 
-### Steps to Proceed with MFA Setup if the "Ask Later" Option is Not Visible
-
-1. If **Action required** pop-up window appears, click on **Next**.
-   
-   ![](../docs/labs/02-build-your-own-copilot/Media/dpg11.png)
-
-1. On **Start by getting the app** page, click on **Next**.
-
-1. Click on **Next** again.
-
-1. In **android**, go to the play store and Search for **Microsoft Authenticator** and Tap on **Install**.
-
-   ![](../docs/labs/02-build-your-own-copilot/Media/dpg12.png)
-
-    >Note: For iOS, open the App Store and repeat the steps.
-
-    >Note: Skip if already installed.
-
-1. Open the app and tap on **Scan a QR code**.
-
-1. Scan the QR code visible on the screen **(1)** and click on **Next (2)**.
-
-   ![](../docs/labs/02-build-your-own-copilot/Media/dpg13.png)
-
-1. Enter the digit displayed on the Screen in the Authenticator app on your mobile and tap on **Yes**.
-
-1. Once the notification is approved, click on **Next**.
-
-   ![](../docs/labs/02-build-your-own-copilot/Media/dpg14.png)
-
-1. Click on **Done**.
-
-1. If prompted to stay signed in, you can click **"No"**.
-
-1. Tap on **Finish** in the Mobile Device.
-
-   > NOTE: While logging in again, enter the digits displayed on the screen in the **Authenticator app** and click on Yes.
-
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
-
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.   
-
 1. If a **Welcome to Microsoft Azure** popup window appears, select **Cancel** to skip the tour.
 
     ![](../docs/labs/02-build-your-own-copilot/Media/miyagi-image5.png)
@@ -155,10 +113,10 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
 1. In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource groups, verify the resources present in it.
 
-   ![](../docs/labs/02-build-your-own-copilot/Media/resources-page.png)
+   ![](../docs/labs/02-build-your-own-copilot/dec2025-build-custom-copilot-1.png)
 
- > [!IMPORTANT]<br>
- > **For a smoother experience during the hands-on lab, it's important to thoroughly review both the instructions and the accompanying notes. This will help you navigate through the tasks with ease and confidence.**
+   > [!IMPORTANT]<br>
+   > **For a smoother experience during the hands-on lab, it's important to thoroughly review both the instructions and the accompanying notes. This will help you navigate through the tasks with ease and confidence.**
 
 ## Support Contact
 
@@ -169,8 +127,8 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com.
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on Next from the lower right corner to move on to the next page.
+Now, click on **Next** from the lower right corner to move on to the next page.
 
-![](../docs/labs/02-build-your-own-copilot/Media/cpg5.png)
+![](../docs/labs/02-build-your-own-copilot/dec2025-build-custom-copilot-2.png)
 
 ## Happy Learning!!
