@@ -1,6 +1,6 @@
 # Build Intelligent Apps with Microsoft's Copilot Stack & Azure OpenAI
 
-### Overall Estimated Duration: 2 Hours 30 Minutes
+### Overall Estimated Duration: 2 Hours
 
 ## Overview
 
@@ -44,13 +44,23 @@ The architecture for this lab involves several key components:
 
 # Getting Started with the Lab
 
-1. After the environment has been set up, your browser will load a virtual machine (JumpVM) and use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises in the lab guide.
+Welcome to your Build Intelligent Apps with Microsoft's Copilot Stack & Azure OpenAI workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+
+## Accessing Your Lab Environment
+
+After the environment has been set up, your browser will load a virtual machine (JumpVM) and use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises in the lab guide.
 
    ![](../docs/labs/02-build-your-own-copilot/Media/ggg-0-1.png)
- 
-1. To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address. You can also open the Lab Guide in a separate and full window by selecting the **Split Window** from the lower right corner. Also, you can start, stop, and restart virtual machines from the **Resources** tab.
 
-    ![](../docs/labs/02-build-your-own-copilot/Media/gettingstartedpagenew2-v2.png)
+### Virtual Machine & Lab Guide
+ 
+Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+
+## Exploring Your Lab Resources
+
+To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address. You can also open the Lab Guide in a separate and full window by selecting the **Split Window** from the lower right corner. Also, you can start, stop, and restart virtual machines from the **Resources** tab.
+
+   ![](../docs/labs/02-build-your-own-copilot/Media/gettingstartedpagenew2-v2.png)
    
    > You will see the SUFFIX value on the **Environment** tab; use it wherever you see SUFFIX or DeploymentID in lab steps.
 
@@ -60,7 +70,7 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
 
 ![](../docs/labs/02-build-your-own-copilot/Media/gg-0-2.png)
  
-## Login to the Azure Portal
+## Let's Get Started with Azure Portal
 
 1. Minimize the **Docker Desktop** by click on **Minimize** button.
 

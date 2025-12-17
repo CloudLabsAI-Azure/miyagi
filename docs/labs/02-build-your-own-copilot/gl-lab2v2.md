@@ -33,7 +33,7 @@ In this task, you will set up the configuration for the Miyagi app by installing
 
    ![](./Media/image-rg-02.png)
 
-1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi** select **miyagi**(1) click on **Select folder(2)**
+1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi** select **miyagi (1)** click on **Select folder (2)**
 
    ![](./Media/image-rg(003).png)
 
@@ -41,10 +41,14 @@ In this task, you will set up the configuration for the Miyagi app by installing
 
    ![](./Media/image-rg-18.png) 
    
-1. Expand **miyagi>ui** directory and verify that **.env.** The file is present. 
+1. Expand **miyagi>ui>typescript** directory and verify that **.env.** file is present.
 
-1. Expand **miyagi/services/recommendation-service/dotnet** directory and verify that **appsettings.json** file is present.
-  
+   ![](./Media/L2T1S5.png)
+
+1. Open **miyagi folder** and expand **services (1)/recommendation-service (2)/dotnet (3)** directory and verify that **appsettings.json (4)** file is present.
+
+   ![](./Media/L2T1S6.png)
+
 1. In the **appsettings.json** file, replace the following values for the variables below.
 
    | **Variables**                | **Values**                                                    |
@@ -66,7 +70,9 @@ In this task, you will set up the configuration for the Miyagi app by installing
    
 1. Once after updating the values, kindly save the file by pressing **CTRL + S**.
 
-1. Navigate to **miyagi/sandbox/usecases/rag/dotnet** and verify **.env** file is present.
+1. In the **miyagi** folder, expand **sandbox (1)/usecases (2)/rag (3)/dotnet (4)** and verify **.env (5)** file is present.
+
+   ![](./Media/miyagi-image(111).png)
   
 1. In the **.env** file, replace the following values for the variables below.
 
@@ -170,9 +176,9 @@ In this task, you will learn how to persist embeddings in Azure AI Search by con
 
 1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **miyagi-embeddings** **(2)** has been created.   
 
-    ![](./Media/search-service.png)
+   ![](./Media/L2T5S6.png)
 
-    > **Note**: Please click on the refresh button till you view the **Document Count**.
+   > **Note**: Please click on the refresh button till you view the **Document Count**.
 
 1. Once you have viewed the indexes in AI Search, navigate back to VS Code and  press **Ctrl + C** to stop the **swagger UI** page for the node terminal.
 
@@ -198,7 +204,9 @@ In this task, you will build Docker images for the Recommendation service by cre
 
 1. In the **Tell us about the work you do** window, click on **Skip**.
 
-1. In VS Code, navigate to **miyagi/services/recommendation-service/dotnet**, right-click on dotnet in the cascading menu, and select **Open in Integrated Terminal**.
+1. Navigate back to **Visual studio code** window and navigate to **miyagi folder** and expand **services (1)/recommendation-service (2)/dotnet (3)** right - click on dotnet in cascading menu, select **Open in integrated Terminal (4)**.
+
+   ![](./Media/aks-04.png)
 
 1. Run the following command to build a **Docker image**.
 
@@ -246,45 +254,47 @@ In this task, you will build Docker images for the Recommendation service by cre
 
 In this task, you'll push Miyagi-recommendation images to ACR. 
 
-1. Navigate back to the **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in Integrated Terminal**
+1. Navigate back to the **Visual studio code** window and navigate to **miyagi folder** and expand **services (1)/recommendation-service (2)/dotnet (3)** right - click on dotnet in cascading menu, select **Open in integrated Terminal (4)**.
+
+    ![](./Media/aks-04.png)
 
 1. Run the following command to log in to the **Azure portal**.
 
-   > **Note**: Please replace **[username]** with **<inject key="AzureAdUserEmail" enableCopy="true"/>**, and **[password]** with **<inject key="AzureAdUserPassword" enableCopy="true"/>**.
+   ```
+   az login
+   ```
 
-    ```
-    az login -u [username] -p [password]
-    ```
+1. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **Visual studio code**.
 
-    **Note:** If you face error as **az is not recognized**, please run this command **Install-Module -Name Az -Repository PSGallery -Force** and try reopening the vs code.
+   ![](./Media/azurelogin.png)
     
 1. Run the following command to log in to an **Azure Container Registry (ACR)** using the Azure CLI.
-
-   > **Note**: Please replace **[ACRname]** and **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
    
    ```
-   az acr login -n [ACRname] -u [uname] -p [password]
+   az acr login -n <inject key="AcrUsername" enableCopy="true"/> 
    ```
 
    ![](./Media/task2-5.png)
+
+   >**Note**: The command **az acr login -n <inject key="AcrLoginServer" enableCopy="false"/>** logs you into an Azure Container Registry (ACR) instance. It authenticates your session with the specified Azure Container Registry, allowing you to push and pull container images to and from the registry.   
     
 1. Run the following command to add the tag.
 
-   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
+   ```
+   docker tag miyagi-recommendation:latest <inject key="AcrLoginServer" enableCopy="true"/>/miyagi-recommendation:latest
+   ```
 
-   ```
-   docker tag miyagi-recommendation:latest [ACRname]/miyagi-recommendation:latest
-   ```
+   >**Note**: The command **docker tag miyagi-recommendation:latest <inject key="AcrLoginServer" enableCopy="false"/>/miyagi-recommendation:latest** tags a local Docker image with a new name that includes the Azure Container Registry (ACR) name. By tagging the image this way, you prepare it to be pushed to the specified Azure Container Registry.
 
 1. Run the following command to push the image to the container registry.
 
-   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
-
    ```
-   docker push [ACRname]/miyagi-recommendation:latest
+   docker push <inject key="AcrLoginServer" enableCopy="true"/>/miyagi-recommendation:latest
    ```
 
    ![](./Media/task2-6.png)
+   
+   >**Note**: The command **docker push <inject key="AcrLoginServer" enableCopy="false"/>/miyagi-recommendation:latest** uploads the specified Docker image, which has been tagged with the Azure Container Registry (ACR) name, to the ACR. This makes the image available in the ACR for deployment and use in various Azure services.   
 
 ## Task 6: Create a Container app for recommendation-service 
 
@@ -359,4 +369,6 @@ In this lab, you have accomplished the following:
 - Created a container app for the Recommendation service to enable cloud deployment.
 - Verified the Recommendation service using Swagger to ensure correct API functionality.
 
-### You have successfully completed the lab
+### Now click on **Next** from the lower right corner to move to the next page.
+
+![](./Media/n8.png)
