@@ -1,6 +1,6 @@
-# Build Custom Copilot Application using Azure AI Foundry
+# Build Custom Copilot Application using Microsoft Foundry
 
-## Overall Estimated Duration: 60 minutes
+## Overall Estimated Duration: 60 Minutes
 
 ## Overview
 
@@ -47,14 +47,8 @@ The architecture for this lab involves several key components:
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-![](../docs/labs/02-build-your-own-copilot/Media/cpg1upd.png)
+![](../docs/labs/02-build-your-own-copilot/Media/new/vm.png)
 
-## Lab Guide Zoom In/Zoom Out
- 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
-
-![](../docs/labs/02-build-your-own-copilot/Media/lop-01.png)
- 
 ## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
@@ -63,41 +57,47 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![](../docs/labs/02-build-your-own-copilot/Media/cpg2upd.png)
+![](../docs/labs/02-build-your-own-copilot/Media/new/env2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![](../docs/labs/02-build-your-own-copilot/Media/cpg3upd.png)
+![](../docs/labs/02-build-your-own-copilot/Media/new/split.png)
 
 ## Managing Your Virtual Machine
  
-Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+Feel free to **Start**, **Stop**, or **Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![](../docs/labs/02-build-your-own-copilot/Media/cpg4upd.png)
+![](../docs/labs/02-build-your-own-copilot/Media/new/res.png)
+
+## Lab Guide Zoom In/Zoom Out
+ 
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+![](../docs/labs/02-build-your-own-copilot/Media/new/zoom.png)
 
 ## Login to the Azure Portal
 
-1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser, which is created on the desktop.
+1. In the **Lab VM**, click on the **Azure portal** shortcut of the Microsoft Edge browser, which is created on the desktop.
 
-   ![](../docs/labs/02-build-your-own-copilot/Media/yagi-3.png)
+   ![](../docs/labs/02-build-your-own-copilot/Media/new/azure.png)
 
-1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email or username and click on **Next**. 
+1. On the Sign in to Microsoft Azure tab, you will see the login screen. Enter the following email/username, and click on **Next (2)**:
+ 
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**
 
-   * **Email/Username**: **<inject key="AzureAdUserEmail"></inject>**
-
-     ![](../docs/labs/02-build-your-own-copilot/Media/miyagi-image2.png)
+     ![](../docs/labs/02-build-your-own-copilot/Media/new/email.png)
      
-1. Now enter the following password and click on **Sign in**.
-   
-   * **Password**: **<inject key="AzureAdUserPassword"></inject>**
+1. Now enter the following temporary password and click on **Sign in (2)**.
+ 
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
 
-     ![](../docs/labs/02-build-your-own-copilot/Media/miyagi-image3.png)
+     ![](../docs/labs/02-build-your-own-copilot/Media/new/pass.png)
    
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
-   ![](../docs/labs/02-build-your-own-copilot/Media/miyagi-image4.png)
+   ![](../docs/labs/02-build-your-own-copilot/Media/new/stay.png)
 
 1. If a **Welcome to Microsoft Azure** popup window appears, select **Cancel** to skip the tour.
 
@@ -127,8 +127,8 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com.
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on **Next** from the lower right corner to move on to the next page.
+Now, click on **Next >>** from the lower right corner to move on to the next page.
 
-![](../docs/labs/02-build-your-own-copilot/dec2025-build-custom-copilot-2.png)
+![](../docs/labs/02-build-your-own-copilot/Media/new/next.png)
 
 ## Happy Learning!!
