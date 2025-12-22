@@ -1,4 +1,4 @@
-# Build Custom Copilot Application using Azure AI Foundry
+# Build Custom Copilot Application using Microsoft Foundry
 
 ## Overall Estimated Duration: 60 Minutes
 
