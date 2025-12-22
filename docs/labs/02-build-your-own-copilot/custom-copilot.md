@@ -1,6 +1,6 @@
-# Lab: Build Custom Copilot Application using Azure AI Foundry
+# Lab: Build Custom Copilot Application using Microsoft Foundry
 
-## Estimated Duration: 60 minutes
+## Estimated Duration: 60 Minutes
 
 ## Lab Overview 
 
@@ -36,9 +36,9 @@ In this task, you will retrieve the Azure OpenAI Service values by accessing the
 
     ![](./Media/dec2025-build-custom-copilot-4.png)  
 
-1. Select **Keys and Endpoints (1)** from the left pane. Copy **Key 1 (2)** and **Endpoint (3)**, then store them in Notepad.
+1. From the left navigation pane, expand **Resource Management (1)**, select **Keys and Endpoints (2)**. Copy **Key 1 (3)** and **Endpoint (4)**, then store them in Notepad.
    
-    ![](./Media/dec2025-build-custom-copilot-5.png)
+    ![](./Media/new/1.png)
 
    > **Note**: If you don't see the left side navigation pane, click on the **Hamburger** icon in the top left corner.
 
@@ -50,7 +50,7 @@ In this task, you will retrieve the Azure OpenAI Service values by accessing the
 
 1. Go to **Deployments (1)** in the left navigation pane, click on the names of your AI model to copy them, and paste them into Notepad **(2)**.
     
-   ![](./Media/dec2025-build-custom-copilot-7.png)
+   ![](./Media/new/2.png)
 
    > **Note**: Click on the **Expand** button, if you don't see the left side navigation pane.
 
@@ -77,9 +77,11 @@ In this task, you will clone the Chat-Copilot GitHub repository by using Git com
 
     ![](./Media/cp4.png)
 
-1. Open Visual Studio Code from the LabVM Desktop and click on `File (1) > Open folder (2)`.
+1. Open **Visual Studio Code** from the **LabVM** Desktop.
 
-   ![](./Media/vscode.png)
+   ![](./Media/new/3.png)
+
+1. click on `File (1) > Open folder (2)`.
 
    ![](./Media/cp5.png)
 
@@ -138,7 +140,7 @@ In this task, you will configure and run the Chat Copilot app locally by setting
 
    >**Note:** If a Security warning pop-up window appears, choose **Yes**.
 
-     ![](./Media/dec2025-build-custom-copilot-10.png)
+     ![](./Media/new/4.png)
 
    >**Note:** The code should look similar to the image below:
 
@@ -151,7 +153,7 @@ In this task, you will configure and run the Chat Copilot app locally by setting
    ```
    > **Note:** It may take a around 5 minutes for Yarn packages to install on the first run, wait untill the command run successfully.
 
-     ![](./Media/dec2025-build-custom-copilot-11.png)
+     ![](./Media/new/5.png)
  
 1. Open another tab in **Edge**, in the browser window paste the following link, and you should see a confirmation message: `Healthy`.
  
@@ -263,6 +265,6 @@ In this lab, you retrieved Azure OpenAI Service values, cloned the Chat-Copilot 
 
 ## Conclusion
 
-By completing the Build Custom Copilot Application using Azure AI Foundry lab, you gained hands-on experience in setting up and running a Chat Copilot application locally. You explored Azure OpenAI Service integration, cloned and configured the Chat-Copilot repository, installed necessary dependencies, and executed the application. Additionally, you learned to upload documents and interact with them through Copilot, observing how AI-generated responses are derived and validated with citations. This lab enhanced your practical understanding of building AI-powered applications and managing document-driven interactions.
+By completing the Build Custom Copilot Application using Microsoft Foundry lab, you gained hands-on experience in setting up and running a Chat Copilot application locally. You explored Azure OpenAI Service integration, cloned and configured the Chat-Copilot repository, installed necessary dependencies, and executed the application. Additionally, you learned to upload documents and interact with them through Copilot, observing how AI-generated responses are derived and validated with citations. This lab enhanced your practical understanding of building AI-powered applications and managing document-driven interactions.
 
 ## You have successfully completed the lab
