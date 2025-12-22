@@ -219,9 +219,9 @@ In this exercise, you will chat with your own documents by uploading files to th
 
 In this task, you will learn how to chat with your own documents in the Chat Copilot application by uploading files, configuring the document processing, and interacting with the integrated chat interface for personalized responses.
 
-1. Navigate back to the WebApp. Click on the **Documents (1)** tab at the top and click on **Upload (2)** and select **+ New local chat document (3).**
+1. Navigate back to the WebApp. Select **Documents (1)**  from the top menu bar, click on **Upload (2)** and select **+ New local chat document (3).**
 
-    ![](./Media/data13.png)  
+    ![](./Media/new/6.png)  
 
 1. Navigate to `C:\Labfiles\Documents` **(1)** to upload the three pdfs. Select the three files **(2)** and click **Open. (3)**
 
@@ -245,7 +245,7 @@ In this task, you will learn how to chat with your own documents in the Chat Cop
     ```
     ![](./Media/ch13.png)
 
-     >**Note**: If you get any error while sending the second prompt, related to exceeded Token rate limit. Please wait for 5-10 seconds and then send the prompt.
+     >**Note**: If you get any error while sending the second prompt, related to exceeded Token rate limit. Please wait for 5-10 seconds, reload the webapp by pressing **F5** and then re-send the prompt.
 
       ![](./Media/cp15.png)     
    
@@ -253,11 +253,11 @@ In this task, you will learn how to chat with your own documents in the Chat Cop
 
 1. Click on the **Edit** button on the left to rename.
 
-    ![](./Media/cp16.png)
+    ![](./Media/new/7.png)
 
 1. Give any name you prefer **(1)** and then click on right mark **(2)**.    
 
-    ![](./Media/cp17.png)
+    ![](./Media/new/8.png)
 
 ## Summary
 
