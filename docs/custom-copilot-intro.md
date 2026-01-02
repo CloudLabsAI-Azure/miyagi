@@ -41,7 +41,7 @@ The architecture for this lab involves several key components:
 - **Chat Copilot App**: A sample application that integrates Azure OpenAI and AI Search to generate insights and citations based on your data.
 - **GitHub Repository**: Contains the source code and dependencies for configuring and running the Chat Copilot app locally.
 
-## Getting Started with the Lab
+# Getting Started with the Lab
 
 ## Accessing Your Lab Environment
  
@@ -67,9 +67,9 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 ## Managing Your Virtual Machine
  
-Feel free to **Start**, **Stop**, or **Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start**, **Stop**, or **Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![](../docs/labs/02-build-your-own-copilot/Media/new/res.png)
+![](../docs/labs/02-build-your-own-copilot/Media/new/resources-0201.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -114,9 +114,6 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 1. In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource groups, verify the resources present in it.
 
    ![](../docs/labs/02-build-your-own-copilot/dec2025-build-custom-copilot-1.png)
-
-   > [!IMPORTANT]<br>
-   > **For a smoother experience during the hands-on lab, it's important to thoroughly review both the instructions and the accompanying notes. This will help you navigate through the tasks with ease and confidence.**
 
 ## Support Contact
 
