@@ -2,11 +2,11 @@
 
 ## Estimated Duration: 60 Minutes
 
-## Lab Overview 
+## Overview 
 
 In this lab, you'll run Chat Copilot locally after retrieving Azure OpenAI Service values from the Azure portal. By cloning the Chat-Copilot GitHub repo and setting up dependencies, you'll configure and execute the application. Uploading documents enables interaction with Copilot, which generates responses based on their content, complete with citations for validation. This exercise provides hands-on experience in utilizing Chat Copilot with your own data, managing documents and sessions within the application.
 
-## Lab Objectives
+## Objectives
 
 - Exercise 1: Run the Chat Copilot App Locally
 
@@ -19,7 +19,6 @@ In this lab, you'll run Chat Copilot locally after retrieving Azure OpenAI Servi
 
    - Task 1: Chat with your own documents in the Chat Copilot Application
 
- 
 ## Exercise 1: Run the Chat Copilot App Locally
 
 In this exercise, you will run the Chat Copilot app locally by setting up the environment, installing dependencies, and launching the application for testing and interaction.
@@ -32,7 +31,7 @@ In this task, you will retrieve the Azure OpenAI Service values by accessing the
    
     ![](./Media/dec2025-build-custom-copilot-3.png)
 
-1. Select the pre-created **Azure OpenAI** resource named **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**.
+1. On the **Microsoft Foundry | Azure OpenAI** page, select the pre-created **Azure OpenAI** resource named **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**.
 
     ![](./Media/dec2025-build-custom-copilot-4.png)  
 
@@ -93,9 +92,12 @@ In this task, you will clone the Chat-Copilot GitHub repository by using Git com
 
     ![](./Media/cp7.png)
 
-1. Review the files.
+1. Review the files in the CHAT-COPILOT folder.
 
-   ![](./Media/ch4.png)  
+   ![](./Media/ch4.png)
+
+   >**Note:** You can close any reommendations you get in the VS Code.
+   >   ![](./Media/recom-0201.png)
 
 ### Task 3: Setting up the Environment
 
@@ -120,6 +122,8 @@ In this task, you will set up the environment for the Chat-Copilot project by in
     ![](./Media/cp8.png)   
 
    >**Note:** If you receive an error that the script is not digitally signed or cannot execute on the system, you may need to change the execution policy or unblock the script.
+ 
+   >**Note:** You can use the following command if you receive any error related to execution policy `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` and then rerun the above step. 
 
 ### Task 4: Configure and run the Chat Copilot App locally
 
@@ -155,7 +159,7 @@ In this task, you will configure and run the Chat Copilot app locally by setting
 
      ![](./Media/new/5.png)
  
-1. Open another tab in **Edge**, in the browser window paste the following link, and you should see a confirmation message: `Healthy`.
+1. Once you get the **Build Succeeded** message in the above command, open another tab in **Edge**, in the browser window paste the following link, and you should see a confirmation message: `Healthy`.
  
    ```powershell
    http://localhost:40443/healthz
