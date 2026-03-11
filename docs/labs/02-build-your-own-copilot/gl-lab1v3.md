@@ -22,17 +22,17 @@ In this lab, you will configure the Miyagi app by setting up the environment, in
 
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
 
-   ![](./Media/vs.png)
+   ![](./Media/img-05.png)
 
    >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
 
    ![](./Media/image-rg-01.png)
    
-1. In **Visual Studio Code** from menu bar select **File(1)>open folder(2)**.
+1. In **Visual Studio Code** from menu bar select **File(1)** > **open folder(2)**.
 
    ![](./Media/image-rg-02.png)
 
-1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi** select **miyagi**(1) click on **Select folder(2)**
+1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi** select **miyagi** (1) and click on **Select folder (2)**
 
    ![](./Media/image-rg(003).png)
 
@@ -40,7 +40,7 @@ In this lab, you will configure the Miyagi app by setting up the environment, in
 
    ![](./Media/image-rg-18.png) 
    
-1. Expand **miyagi>ui** directory and verify that **.env.** The file is present. 
+1. Expand **miyagi > ui** directory and verify that **.env** file is present. 
 
 1. Expand **miyagi/services/recommendation-service/dotnet** directory and verify that **appsettings.json** file is present.
   
@@ -93,7 +93,7 @@ In this lab, you will configure the Miyagi app by setting up the environment, in
 
 In this lab, you will explore the implementation of the Recommendation service, focusing on its algorithms and data processing methods to deliver personalized suggestions.
 
-Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
+Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as **.NET Interactive** in the top right corner of the notebook.
 
 1. In the Visual Studio Code, navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**
 
@@ -133,7 +133,7 @@ In this lab, you will set up the environment, install necessary dependencies, an
     dotnet run
     ```
 
-   **Note**: Let the command run; meanwhile, you can proceed with the next step.
+   > **Note**: Let the command run; meanwhile, you can proceed with the next step.
 
 1. Open another tab in Edge, in the browser window, paste the following link
 
@@ -141,14 +141,14 @@ In this lab, you will set up the environment, install necessary dependencies, an
    http://localhost:5224/swagger/index.html 
    ```
 
-   **Note**: Refresh the page continuously until you get the Swagger page for the recommendation service as depicted in the image below.
+   > **Note**: Refresh the page continuously until you get the Swagger page for the recommendation service as depicted in the image below.
 
    ![](./Media/miyagi2.png)
 
 
 ## Task 4: Run miyagi frontend locally
 
-1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
+1. Navigate back to the VS code, open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
 
    ![](./Media/image-rg-25.png)
 
@@ -160,7 +160,7 @@ In this lab, you will set up the environment, install necessary dependencies, an
     yarn dev
     ```
 
-   **Note**: Let the command run; meanwhile, you can proceed with the next step.
+   > **Note**: Let the command run; meanwhile, you can proceed with the next step.
 
 1. Open another tab in Edge, and  browse the following
 
@@ -168,9 +168,11 @@ In this lab, you will set up the environment, install necessary dependencies, an
    http://localhost:4001
    ```
 
-   **Note**: Refresh the page continuously until you get Miyagi app running locally as depicted in the image below.
+   > **Note**: Refresh the page continuously until you get Miyagi app running locally as depicted in the image below.
                        
    ![](./Media/b1.png)
+
+   > **Note**: If you encounter any pop-up error, close it and proceed to the next task.
    
 ## Task 5: Persist embeddings in Azure AI Search
 
@@ -202,9 +204,9 @@ In this lab, you will set up the environment, install necessary dependencies, an
 
     ![](./Media/ai-search1.png)    
 
-1. In **Azure AI services | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
+1. In **Microsoft Foundry | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **miyagi-embeddings** **(2)** has been created.   
+1. In **acs-<inject key="DeploymentID" enableCopy="false"/>**, from the left navigation menu click on **Indexes** **(1)** under **Search management**, and review the **miyagi-embeddings** **(2)** has been created.   
 
     ![](./Media/search-service.png)
 
@@ -237,7 +239,7 @@ In this lab, you will set up the environment, install necessary dependencies, an
 
 1. Once you view the logs, press **Ctrl + C** to stop the **swagger UI** page.
 
-1.  From the **Terminal** select **Node** terminal, press **Ctrl + C** to stop the **recommendation service** ui page.
+1.  From the **Terminal** select **node** terminal, press **Ctrl + C** to stop the **recommendation service** ui page.
 
 ## Summary
 
