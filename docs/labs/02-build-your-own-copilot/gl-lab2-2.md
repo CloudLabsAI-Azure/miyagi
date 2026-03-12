@@ -18,35 +18,11 @@ In this lab, you will complete the following tasks:
 
 In this task, you will verify the Recommendation service running in the Container App by personalizing recommendations based on user preferences and testing the service's responses.
 
-1. In the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Container Apps (1)**, and then select **Container Apps (2)** under services.
-
-   ![](./Media/container-app-select.png)
-
-1. In the **Container Apps** blade, select **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**.
-
-   ![](./Media/container-ca-miyagi.png)
-
-1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** page, from the left navigation pane select **Ingress** **(1)** under Networking session and click on **Endpoints** **(2)** URL link.
-
-   ![](./Media/gg-4-1.png)
-
-   > **Note**: If you don't see endpoints, open Azure Cloud Shell and run the following command.
-
-   > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**.
-
-   > ```sh
-   > az containerapp ingress enable \
-   >   --name ca-miyagi-rec-[DID] \
-   >   --resource-group miyagi-rg-[DID] \
-   >   --type external \
-   >   --target-port 8080
-   > ```
-
 1. Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**, and click on **Log Stream** under **Monitoring** from the left menu.
 
-    ![](./Media/logstream.png)
+    ![](./Media/img-13.png)
    
-      ![](./Media/containerapps-logsstream.png)
+      ![](./Media/img-14.png)
    
      > **Note** : Please click on **Refresh** for the logs to show up .
 
@@ -111,17 +87,17 @@ In this task, you will verify the Recommendation service running in the Containe
 
    > **Note**: Please ignore the 500 error and move on to the next task.
 
-1. Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>|Log stream**, review the **logs**.
+1. Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>| Log stream**, review the **logs**.
 
 ## Task 2: Update Container App Recommendation service URL for Miyagi UI
 
 In this task, you will update the Container App Recommendation service URL for the Miyagi UI by modifying the configuration settings to ensure seamless integration between the front end and the service.
 
-1. Once you have completed the review of the logs, click on **Ingress** **(1)** under **Settings** and copy the **Endpoints** **(2)** URL link.
+1. Once you have completed the review of the logs, click on **Ingress** **(1)** under **Networking** and copy the **Endpoints** **(2)** URL link.
 
-   ![](./Media/miyag-recc-web.png)
+   ![](./Media/img-15.png)
 
-1. Navigate back to **Visual Studio Code**, navigate to **miyagi>ui\typescript>.env.** and replace existing code for **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** with copied for **Endpoints** and save the file 
+1. Navigate back to **Visual Studio Code**, then go to **miyagi > ui\typescript > .env**. Replace the existing value for **NEXT_PUBLIC_RECOMMENDATION_SERVICE_URL** with the copied **Endpoints** value, and save the file.
 
    ![](./Media/cntr4.png)
 
@@ -139,7 +115,7 @@ In this task, you will access the Recommendation Service running on Azure Contai
     yarn dev
     ```
 
-   **Note**: Let the command run; meanwhile, you can proceed with the next step.
+   > **Note**: Let the command run; meanwhile, you can proceed with the next step.
 
 1. Open another tab in Edge, and  browse the following
 
@@ -150,6 +126,8 @@ In this task, you will access the Recommendation Service running on Azure Contai
     > **Note**: Refresh the page continuously until you get the Miyagi app running locally as depicted in the image below.
                        
     ![](./Media/b1.png)
+
+    > **Note:** If you encounter any pop-up error, close it and proceed to the next task.
 
 1. In the to the **recommendation service** ui page, and click on **Personalize** button.
 
@@ -165,9 +143,9 @@ In this task, you will access the Recommendation Service running on Azure Contai
 
 1. Navigate back to the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App, from the left-side menu select **Log stream** under Monitoring, and you can go through the logs.
 
-    ![](./Media/continer-app-logstream.png)
+    ![](./Media/img-16.png)
 
-    > **Note**: Navigate back to VS Code, from the Terminal select Node terminal, and press Ctrl + C to stop the recommendation service ui page.
+1. Navigate back to VS Code, from the Terminal select Node terminal, and press **Ctrl + C** to stop the recommendation service ui page.
 
 ## Summary
 
