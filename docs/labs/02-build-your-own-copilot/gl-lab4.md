@@ -1,7 +1,5 @@
 # Lab 1: Bringing your own data with Azure AI Search
 
-### Estimated Duration: 120 minutes
-
 ## Lab objectives 
 
 In this lab, you'll run Chat Copilot locally after retrieving Azure OpenAI Service values from the Azure portal. By cloning the Chat-Copilot GitHub repo and setting up dependencies, you'll configure and execute the application. Uploading documents enables interaction with Copilot, which generates responses based on their content, complete with citations for validation. This exercise provides hands-on experience in utilizing Chat Copilot with your own data, managing documents and sessions within the application.
@@ -26,31 +24,23 @@ In this lab, you will run the Chat Copilot app locally by setting up the environ
 
 In this task, you will retrieve the Azure OpenAI Service values by accessing the service configuration, querying the API, and ensuring the correct integration of parameters for your application.
 
-1. In the Azure Portal, search for **OpenAI** and select **Azure OpenAI**
+1. In the Azure Portal, search for **OpenAI (1)** and select **Azure OpenAI (2)**
    
-    ![](./Media/sql-1.png)
+    ![](./Media/img-1090.png)
 
-1. Select the Azure OpenAI resource created.
+1. On the **Microsoft Foundry | Azure OpenAI** page, select the **Azure OpenAI** resource that was created.
 
-    ![](./Media/data1.png)  
+    ![](./Media/img-111.png)  
 
-1. Select the **Keys and Endpoints (1)** from the left pane. Copy the **Key1 (2)** and **Endpoint (3)**, the store them in Notepad.
+1. Select **Keys and Endpoints (1)** from the left pane under **Resource Management**. Copy **Key 1 (2)** and the **Endpoint (3)**, and store them in Notepad.
    
     ![](./Media/data2.png)
 
-   > **Note**: If you don't see the Left side Navigation pane, click on the **three horizontal lines** in the top left corner.
-
-   ![](./Media/data3.png) 
-
-1. From the Overview page, click on **Go to Azure AI Foundry portal**.
+1. On **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**, from the **Overview (1)** page, click **Go to Foundry portal (2)**.
    
-    ![](./Media/n2.png)
+    ![](./Media/img-112.png)
 
-1. "Close" button on the "Discover an even better Azure AI experience" pop-up to dismiss it.
-
-    ![](./Media/take_tour-1.png)
-
-1. Go to **Deployments** in the left navigation pane, click on the names of your AI model to copy them, and paste them into Notepad.
+1. Go to **Deployments** in the left navigation pane under **Shared resources**. Click the names of your AI models to copy them, and paste them into Notepad.
     
     ![](./Media/deploy-name.png)
 
@@ -60,7 +50,7 @@ In this task, you will retrieve the Azure OpenAI Service values by accessing the
 
 In this task, you will clone the Chat-Copilot GitHub repository by using Git commands to download the code to your local machine for further exploration and development.
 
-1. In the LabVM, click on **Start**, from the start menu search and select **PowerShell** and pen PowerShell as an administrator.
+1. On the **LabVM**, click **Start**, search for **PowerShell**, and open **PowerShell** as an administrator.
 
     ![](./Media/data5.png)  
    
@@ -92,7 +82,7 @@ In this task, you will clone the Chat-Copilot GitHub repository by using Git com
 
 In this task, you will set up the environment for the Chat-Copilot project by installing necessary dependencies, configuring environment variables, and preparing the development environment for local execution.
 
-1. Open PowerShell as an administrator on your local machine. You need to have PowerShell Core 6+ installed, which is different from the default PowerShell installed on Windows.
+1. Open **PowerShell** as an administrator on your local machine. Ensure that **PowerShell Core 6+** is installed, as it is different from the default PowerShell that comes with Windows.
 
    ![](./Media/data5.png)
 
@@ -114,18 +104,11 @@ In this task, you will set up the environment for the Chat-Copilot project by in
 
 In this task, you will configure and run the Chat Copilot app locally by setting up the environment, adjusting configuration files, and launching the application for testing and development.
 
-1. Configure Chat Copilot by running the following command. You can use the Azure OpenAI Service Name, Key, Endpoint, and the already deployed model names that you noted down in the previous steps or use the values from the below mentioned table.
+1. Run the following command to configure **Chat Copilot**.
    
    ```
-   .\Configure.ps1 -AIService {AI_SERVICE} -APIKey {API_KEY} -Endpoint {AZURE_OPENAI_ENDPOINT} -CompletionModel {DEPLOYMENT_NAME} -EmbeddingModel {DEPLOYMENT_NAME}
+   .\Configure.ps1 -AIService AzureOpenAI -APIKey <inject key="OpenAIKey" enableCopy="true"/> -Endpoint <inject key="OpenAIEndpoint" enableCopy="true"/> -CompletionModel <inject key="CompletionModel" enableCopy="true"/> -EmbeddingModel <inject key="EmbeddingModel" enableCopy="true"/>
    ```
-   | **Variables**                          | **Values**                                            |
-   | ---------------------------------------| ------------------------------------------------------|
-   | API_KEY                                | **<inject key="OpenAIKey" enableCopy="true"/>**       |
-   | AI_SERVICE                             | **AzureOpenAI**| 
-   | AZURE_OPENAI_ENDPOINT                  | **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
-   | CompletionModel:{DEPLOYMENT_NAME}      | **<inject key="CompletionModel" enableCopy="true"/>** |
-   | EmbeddingModel:{DEPLOYMENT_NAME}       | **<inject key="EmbeddingModel" enableCopy="true"/>**  |
 
    >**Note:** If a Security warning pop-up window appears, choose **Yes**
    >
@@ -133,14 +116,14 @@ In this task, you will configure and run the Chat Copilot app locally by setting
 
      ![](./Media/data8.png)
 
-1. Run Chat Copilot locally. This step starts the **backend API** application. frontend
+1. Run **Chat Copilot** locally. This step starts the **backend API** and **frontend** applications.
  
    ```powershell
    .\Start-Backend.ps1
    ```
    > **Note:** It may take a few minutes for Yarn packages to install on the first run.
  
-1. Open another tab in **Edge**, in the browser window, paste the following link, and you should see a confirmation message: `Healthy`.
+1. Open another tab in **Edge**, in the browser window, paste the following link, and you should see a confirmation message:  `Healthy`.
  
    ```powershell
    http://localhost:40443/healthz
@@ -165,7 +148,7 @@ In this task, you will configure and run the Chat Copilot app locally by setting
    Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
    ```
  
-1. The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic. If prompted **Do you want to change the execution policy?,** enter **A** and hit **Enter**.
+1. The execution policy helps protect you from running untrusted scripts. Changing the execution policy may expose you to security risks described in the **about_Execution_Policies** help topic. If prompted with **“Do you want to change the execution policy?”**, enter **A** and press **Enter**.
  
 1. Configure **Chat Copilot** by running the following command.
  
@@ -173,7 +156,7 @@ In this task, you will configure and run the Chat Copilot app locally by setting
    .\Start-Frontend.ps1
    ```
 
-1. Once the deployment of the script is executed successfully, it will redirect to `http://localhost:3000/` Chat CoPilot in **Edge** browser.
+1. Once the deployment of the script is executed successfully, it will redirect to `http://localhost:3000/` Chat Copilot in **Edge** browser.
  
    >**Note:** Please wait for 2-3 minutes for the browser to load
   
@@ -204,7 +187,7 @@ In this task, you will learn how to chat with your own documents in the Chat Cop
 
     ![](./Media/data13.png)  
 
-1. Navigate to C:\Labfiles\Documents to upload the 3 PDFs. Select the 3 files and click **Open.**
+1. Navigate to `C:\Labfiles\Documents` to upload the 3 PDFs. Select the 3 files and click **Open.**
 
     ![](./Media/ch10.png)
 
@@ -221,10 +204,12 @@ In this task, you will learn how to chat with your own documents in the Chat Cop
     Give detailed information on Apple CarPlay.
     ```
     ![](./Media/ch13.png)
-   
-1. The response not only answered the question based on the content found in these documents, but it also included citations (1) to that content to validate the accuracy of the information. When you click on an annotation, the app jumps right to the page of the document (2) that goes into the comparison of the plans, so that we can read more or do additional validation on the accuracy of the answer under the citation section.
 
-1. Click on the **Edit** button on the left to rename.
+    >**Note:** If you receive an error stating **“token limit exceeded,”** wait for a few minutes and try again.
+   
+1. The response not only answers the question based on the content found in the documents, but also includes citations **(1)** to validate the accuracy of the information. When you click on a citation, the app navigates directly to the relevant page of the document **(2)** that compares the plans, allowing you to read more or further verify the accuracy of the answer under the **Citation** section.
+
+1. Click the **Edit** button on the left to rename the item.
 
 ## Summary
 

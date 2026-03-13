@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 - Task 7: Verify Recommendation Service using Swagger
 - Task 8: Provision API Management Service 
 
-### Duration: 60 minutes
+### Duration: 50 minutes
 
 ## Task 1: Set up configuration for Miyagi app
 
