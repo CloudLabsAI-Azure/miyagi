@@ -1,4 +1,4 @@
-# Lab 2: Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI
+# Lab 2: Explore and Verify the Containerized Recommendation Service in Azure Container App using Local Miyagi UI
 
 ## Lab Scenario
 
@@ -8,27 +8,27 @@ In this lab, you will explore and verify the containerized Recommendation Servic
 
 In this lab, you will complete the following tasks:
 
-- Task 1: Verify the Recommendation service running in the Container App by Personalizing
+- Task 1: Verify the Recommendation service running in the Container App by personalizing
 - Task 2: Update Container App Recommendation service URL for Miyagi UI
 - Task 3: Access Recommendation Service running on Azure Container Apps from Local Miyagi-UI
 
-## Task 1: Verify the Recommendation service running in the Container App by Personalizing
+## Task 1: Verify the Recommendation service running in the Container App by personalizing
 
 In this task, you will verify the Recommendation service running in the Container App by personalizing recommendations based on user preferences and testing the service's responses.
 
-1. Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**, and click on **Log Stream** under **Monitoring** from the left menu.
+1. Navigate back to the container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**, and click on **Log Stream** under **Monitoring** from the left menu.
 
     ![](./Media/img-13.png)
    
       ![](./Media/img-14.png)
    
-     > **Note** : Please click on **Refresh** for the logs to show up .
+     > **Note** : Click **Refresh** for the logs to appear.
 
-1. Navigate back to **Miyagi Recommendations** page, scroll down to the **Recommendations**, click on **POST /personalize** expansion, and click on **Try it out**.
+1. Navigate back to **Miyagi Recommendations** page, scroll down to **Recommendations**, click on the **POST /personalize** expansion, and click on **Try it out**.
 
    ![](./Media/continer-recommendations.png)
 
-1. Replace the provided **JSON code** below and click on **Execute**.
+1. Replace the provided **JSON code** below, and click on **Execute**.
 
    ```
    {
@@ -79,7 +79,7 @@ In this task, you will verify the Recommendation service running in the Containe
 
       ![](./Media/recomme-parameter-body.png)
 
-1. In the **Miyagi Recommendations** page, scroll down to the Responses session review that it has been executed successfully by checking the code status is **200**, and review the **Response body** section.
+1. In the **Miyagi Recommendations** page, scroll down to the Responses section and review that it has been executed successfully by verifying that the status code is **200**, and review the **Response body** section.
 
    ![](./Media/recommendations-parameter-output.png)
 
@@ -91,11 +91,11 @@ In this task, you will verify the Recommendation service running in the Containe
 
 In this task, you will update the Container App Recommendation service URL for the Miyagi UI by modifying the configuration settings to ensure seamless integration between the front end and the service.
 
-1. Once you have completed the review of the logs, click on **Ingress** **(1)** under **Networking** and copy the **Endpoints** **(2)** URL link.
+1. Once you have completed the review of the logs, click on **Ingress** **(1)** under **Networking** and copy the **Endpoints** **(2)** URL.
 
    ![](./Media/img-15.png)
 
-1. Navigate back to **Visual Studio Code**, then go to **miyagi > ui\typescript > .env**. Replace the existing value for **NEXT_PUBLIC_RECOMMENDATION_SERVICE_URL** with the copied **Endpoints** value, and save the file.
+1. Navigate back to **Visual Studio Code**, then go to **miyagi > ui\typescript > .env**. Replace the existing value for **NEXT_PUBLIC_RECOMMENDATION_SERVICE_URL** with the copied **Endpoints** URL, and save the file.
 
    ![](./Media/cntr4.png)
 
@@ -103,7 +103,7 @@ In this task, you will update the Container App Recommendation service URL for t
 
 In this task, you will access the Recommendation Service running on Azure Container Apps from your local Miyagi UI by configuring API endpoints and ensuring proper network connectivity.
 
-1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
+1. Open a new terminal by navigating to **miyagi/ui**. Right-click on **ui/typescript**, and in the cascading menu select **Open in Integrated Terminal**.
 
    ![](./Media/image-rg-25.png)
 
@@ -115,19 +115,19 @@ In this task, you will access the Recommendation Service running on Azure Contai
 
    > **Note**: Let the command run; meanwhile, you can proceed with the next step.
 
-1. Open another tab in Edge, and  browse the following
+1. Open another tab in Edge, and  browse the following URL:
 
    ```
    http://localhost:4001
    ```
 
-    > **Note**: Refresh the page continuously until you get the Miyagi app running locally as depicted in the image below.
+    > **Note**: Refresh the page until the Miyagi app runs locally as depicted in the image below.
                        
     ![](./Media/b1.png)
 
     > **Note:** If you encounter any pop-up error, close it and proceed to the next task.
 
-1. In the to the **recommendation service** ui page, and click on **Personalize** button.
+1. Navigate to the **Recommendation Service** UI page, and click on **Personalize** button.
 
     ![](./Media/service-personalize.png)
 
@@ -139,11 +139,11 @@ In this task, you will access the Recommendation Service running on Azure Contai
 
    ![](./Media/financial-advisor-output.png)
 
-1. Navigate back to the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App, from the left-side menu select **Log stream** under Monitoring, and you can go through the logs.
+1. Navigate back to the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App, from the left-side menu, select **Log stream** under **Monitoring**, and you can go through the logs.
 
     ![](./Media/img-16.png)
 
-1. Navigate back to VS Code, from the Terminal select Node terminal, and press **Ctrl + C** to stop the recommendation service ui page.
+1. Navigate back to VS Code, from the **Terminal**, select the **Node** terminal, and press **Ctrl + C** to stop the recommendation service UI.
 
 ## Summary
 

@@ -2,14 +2,14 @@
 
 ## Lab scenario
 
-In this lab, you'll be verifying and creating APIs in the deployed API Management service to update the Docker image for the Recommendation service. The revision of the Recommendation service from the Container App encapsulates the meticulous approach to maintaining and optimizing containerized applications within the project's scope.
+In this lab, you'll be verifying and creating APIs in the deployed **API Management Service** to update the Docker image for the Recommendation service. The revision of the Recommendation Service from the Container App reflects a meticulous approach to maintaining and optimizing containerized applications within the project's scope.
 
 ## Lab objectives 
 In this lab, you will complete the following tasks:
 
 - Task 1: Verify the API Management Service and create an API with Operations
-- Task 2: Update the Recommendation Service configuration to access Azure Open AI through APIM
-- Task 3: Verify that the Recommendation service accesses Azure Open AI through APIM
+- Task 2: Update the Recommendation Service configuration to access Azure OpenAI through APIM
+- Task 3: Verify that the Recommendation Service accesses Azure OpenAI through APIM
 
 ## Task 1: Verify the API Management Service and create an API with Operations
 
@@ -19,7 +19,7 @@ In this task, you will verify the API Management Service and create an API with 
 
    ![](./Media/lab3-t1-s1.png)
 
-1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **APIs** **(1)** under APIs from the left menu and select **HTTP** **(2)** under Define a new API to create an HTTP API.
+1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click **APIs** **(1)** under **APIs** section from the left menu and select **HTTP** **(2)** under Define a new API to create an HTTP API.
 
    ![](./Media/lab3-t1-s2.png)
 
@@ -35,11 +35,11 @@ In this task, you will verify the API Management Service and create an API with 
 
    ![](./Media/img-10-01-01.png)
 
-1. Once the **HTTP API pane** is created, select **miyagi-api** **(1)** API from the list, select **Settings** **(2)**, scroll down to Subscription part **Uncheck** **(3)** the Subscription required and click on **Save** **(4)**.
+1. Once the **HTTP API** is created, select **miyagi-api** **(1)** API from the list, select **Settings** **(2)**, scroll down to the **Subscription** section **Uncheck** **(3)** Subscription required and click on **Save** **(4)**.
 
    ![](./Media/miyagi-RR.png)
 
-1. In the **miyagi-api**, select **Design** **(1)**, and click on **+  Add operation** **(2)** fill the following details in **Frontend** and click on **Save** **(6)**.
+1. In the **miyagi-api**, select **Design** **(1)**, and click on **+  Add operation** **(2)** fill in the following details in **Frontend** and click on **Save** **(6)**.
 
    | **Parameter**           | **Values**                                            | 
    | ------------------------| ------------------------------------------------------| 
@@ -49,7 +49,7 @@ In this task, you will verify the API Management Service and create an API with 
 
    ![](./Media/opertation-completions.png)
 
-1. Once the **completions** operation created successfully, click on **+  Add operation** **(1)** fill the following details in **Frontend** and click on **Save** **(6)**.
+1. Once the **completions** operation is created successfully, click on **+  Add operation** **(1)** fill in the following details in **Frontend** and click on **Save** **(6)**.
 
    | **Parameter**           | **Values**                                            | 
    | ------------------------| ------------------------------------------------------| 
@@ -68,11 +68,11 @@ In this task, you will verify the API Management Service and create an API with 
 
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at CloudCloudlabs-support@spektrasystems.com.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 <validation step="d54f179b-7f83-4002-a3f5-d52f7c632b72" />
    
-## Task 2: Update the Recommendation Service configuration to access Azure Open AI through APIM
+## Task 2: Update the Recommendation Service configuration to access Azure OpenAI through APIM
 
 In this task, you will update the Recommendation Service configuration to access Azure OpenAI through API Management by modifying settings and implementing necessary authentication to enable seamless communication.
 
@@ -80,11 +80,11 @@ In this task, you will update the Recommendation Service configuration to access
 
       ![](./Media/lab3-t2-s1.png)
 
-1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** to **API Gateway URL**, which you have copied in Task-1 Step-7, and press Ctrl + S to save the file.
+1. In the `appsettings.json` file, replace the **endpoint** value from **OpenAI resource endpoint** to **API Gateway URL**, which you copied in Task-1 Step-7, and press Ctrl + S to save the file.
 
       ![](./Media/lab3-t2-s2.png)
 
-1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in Integrated Terminal**.
+1. Open a new terminal by navigating to **miyagi/services/recommendation-service/dotnet** and right-click and, in the cascading menu, select **Open in Integrated Terminal**.
 
       ![](./Media/task4-1.png)
 
@@ -114,7 +114,7 @@ In this task, you will update the Recommendation Service configuration to access
 
 <validation step="d1631c75-22e6-4fcc-a09d-c037ab0c0eb5" />
 
-## Task 3: Verify that the Recommendation service accesses Azure Open AI through APIM
+## Task 3: Verify that the Recommendation Service accesses Azure OpenAI through APIM
 
 In this task, you will verify that the Recommendation Service successfully accesses Azure OpenAI through API Management by testing the API calls and ensuring that responses are correctly received and processed.
 
@@ -126,7 +126,7 @@ In this task, you will verify that the Recommendation Service successfully acces
 
    ![](./Media/lab2-11.png)
 
-1. Open a new terminal: by navigating  **Miyagi** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
+1. Open a new terminal by navigating to **Miyagi** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
 
    ![](./Media/image-rg-25.png)
 
@@ -140,31 +140,31 @@ In this task, you will verify that the Recommendation Service successfully acces
 
    > **Note**: Let the command run; meanwhile, you can proceed with the next step.
 
-1. Open another tab in Edge, and  browse the following
+1. Open another tab in Edge, and browse the following URL:
 
    ```
    http://localhost:4001
    ```
 
-   > **Note**: Refresh the page continuously until you get the Miyagi app running locally as depicted in the image below.
+   > **Note**: Refresh the page continuously until the Miyagi app runs locally as depicted in the image below.
                        
    ![](./Media/b1.png)
 
    > **Note:** If you encounter any pop-up error, close it and proceed to the next step.
 
-1. In the **personalize** page, select your **financial advisor** from the drop-down, and click on **Personalize**.
+1. On the **Personalize** page, select your **financial advisor** from the drop-down, and click on **Personalize**.
 
    ![](./Media/financial-advisor.png)  
 
-1. You should see the recommendations from the recommendation service in the Top Stocks widget.
+1. You should see the recommendations from the **Recommendation Service** in the **Top Stocks** widget
 
    ![](./Media/financial-advisor-output.png) 
 
-1. Navigate to the **Visual Studio Code**, and click on **dotnet** from the terminal, and you can go through the logs.
+1. Navigate to the **Visual Studio Code**, and select the **dotnet** terminal, and you can go through the logs.
 
    ![](./Media/recommend-log.png)
 
-1. From the Terminal, select **Node** terminal, press **Ctrl + C** to stop the recommendation service ui page.
+1. From the Terminal, select **Node** terminal, press **Ctrl + C** to stop the recommendation service UI.
 
 ## Summary
  
@@ -172,6 +172,6 @@ In this lab, you have accomplished the following:
 
 - Verified the API Management Service and created an API successfully.
 - Updated the Recommendation Service configuration for Azure OpenAI access.
-- Verified that the Recommendation service successfully accesses Azure OpenAI.
+- Verified that the Recommendation Service successfully accesses Azure OpenAI.
 
 ### You have successfully completed the lab
