@@ -24,7 +24,7 @@ In this Lab, verification and retrieval of specific values, including End Point,
 
          ![](./Media/S1.png) 
    
-      - In the **Microsoft Foundry| Azure OpenAI**, from teh left navigation menu, select **Deployments (1)**, under the **Shared Resources** section.
+      - In the **Microsoft Foundry | Azure OpenAI**, from teh left navigation menu, select **Deployments (1)**, under the **Shared Resources** section.
 
       - In the **Deployments** blade of Foundry portal, click on **gpt-4.1** model name **(2)** and verify the **deployment name** of gpt-4.1 model **(3)**.
 

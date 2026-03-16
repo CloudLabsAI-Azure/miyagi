@@ -1,9 +1,7 @@
-# Lab 1: Containerizing Recommendation service to Azure Container Apps
-
-### Estimated Duration: 60 minutes
+# Lab 1: Containerizing Recommendation Service to Azure Container Apps
 
 ## Lab scenario
-In this Lab, you'll explore the process of containerizing a recommendation service and deploying it to Azure Container Apps. Containerization has become a key strategy in modern application development and deployment, providing a consistent and reproducible environment across various stages of the software development lifecycle. Azure Container Apps, part of Microsoft's Azure cloud platform, offers a managed container service that enables developers to deploy and scale containerized applications seamlessly.  
+In this lab, you'll explore the process of containerizing a recommendation service and deploying it to Azure Container Apps. Containerization has become a key strategy in modern application development and deployment, providing a consistent and reproducible environment across various stages of the software development lifecycle. Azure Container Apps, part of Microsoft's Azure cloud platform, offers a managed container service that enables developers to deploy and scale containerized applications seamlessly.  
 
 ## Lab objectives
 
@@ -23,17 +21,17 @@ In this task, you will set up the configuration for the Miyagi app by installing
 
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
 
-   ![](./Media/vs.png)
+   ![](./Media/img-05.png)
 
-   >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
+   >**Note** If **"Join us in making promt-flow extension better!"** window appears, click on **No,thanks**.
 
    ![](./Media/image-rg-01.png)
    
-1. In **Visual Studio Code** from menu bar select **File(1)>open folder(2)**.
+1. In **Visual Studio Code**, from the menu bar select **File (1) > Open Folder (2)**.
 
    ![](./Media/image-rg-02.png)
 
-1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi** select **miyagi (1)** click on **Select folder (2)**
+1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi**, select **miyagi (1)**, and click **Select folder (2)**.
 
    ![](./Media/image-rg(003).png)
 
@@ -41,7 +39,7 @@ In this task, you will set up the configuration for the Miyagi app by installing
 
    ![](./Media/image-rg-18.png) 
    
-1. Expand **miyagi>ui>typescript** directory and verify that **.env.** file is present.
+1. Expand **miyagi > ui > typescript** directory and verify that **.env** file is present.
 
    ![](./Media/L2T1S5.png)
 
@@ -68,9 +66,9 @@ In this task, you will set up the configuration for the Miyagi app by installing
 
       ![](./Media/appsetting-update.png)
    
-1. Once after updating the values, kindly save the file by pressing **CTRL + S**.
+1. After updating the values, save the file by pressing **CTRL + S**.
 
-1. In the **miyagi** folder, expand **sandbox (1)/usecases (2)/rag (3)/dotnet (4)** and verify **.env (5)** file is present.
+1. In the **miyagi** folder, expand **sandbox (1)/usecases (2)/rag (3)/dotnet (4)** and verify that the **.env (5)** file is present.
 
    ![](./Media/miyagi-image(111).png)
   
@@ -89,34 +87,35 @@ In this task, you will set up the configuration for the Miyagi app by installing
 
 1. Once after updating the values, kindly save the file by pressing **CTRL + S**.
 
-1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in Integrated Terminal**.
+1. Open a new terminal by navigating to **miyagi/services/recommendation-service/dotnet**. Right-click and, in the cascading menu, select **Open in Integrated Terminal**.
 
     ![](./Media/task4-1.png)
 
-1. Run the following command to run the recommendation service locally
+1. Run the following commands to start the recommendation service locally.
+
     ```
     dotnet build
     dotnet run
     ```
 
-   **Note**: Let the command run; meanwhile, you can proceed with the next step.
+   > **Note**: Let the command run; meanwhile, you can proceed with the next step.
 
-1. Open another tab in Edge, in the browser window, paste the following link
+1. Inside the Edge browser, open another tab and paste the following link
 
    ```
    http://localhost:5224/swagger/index.html 
    ```
 
-   **Note**: Refresh the page continuously until you get the Swagger page for the recommendation service as depicted in the image below.
+   > **Note**: Refresh the page continuously until you get the Swagger page for the recommendation service as depicted in the image below.
 
    ![](./Media/miyagi2.png)
 
 
-## Task 2: Run miyagi frontend locally
+## Task 2: Run Miyagi frontend locally
 
 In this task, you will run the Miyagi app locally by starting the development server and verifying its functionality in your browser.
 
-1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
+1. Open a new terminal by navigating to **miyagi/ui**. Right-click on **ui/typescript**, and in the cascading menu select **Open in Integrated Terminal**.
 
    ![](./Media/image-rg-25.png)
 
@@ -128,23 +127,25 @@ In this task, you will run the Miyagi app locally by starting the development se
     yarn dev
     ```
 
-   **Note**: Let the command run; meanwhile, you can proceed with the next step.
+   > **Note**: Let the command run; meanwhile, you can proceed with the next step.
 
-1. Open another tab in Edge, and  browse the following
+1. Open another tab in Edge, and browse to the following URL:
 
    ```
    http://localhost:4001
    ```
 
-   **Note**: Refresh the page continuously until you get the Miyagi app running locally as depicted in the image below.
+   > **Note**: Refresh the page continuously until the Miyagi app runs locally as depicted in the image below.
                        
    ![](./Media/b1.png)
+
+   > **Note:** If you encounter any pop-up error, close it and proceed to the next task.
    
 ## Task 3: Persist embeddings in Azure AI Search
 
 In this task, you will learn how to persist embeddings in Azure AI Search by configuring the necessary settings and utilizing APIs for efficient data storage and retrieval.
 
-1. Navigate back to the **swagger UI** page, scroll to **Memory** session, click on **POST /datasets** for expansion, and click on **Try it out**.
+1. Navigate back to the **swagger UI** page, scroll to the **Memory** session, click on **POST /datasets** for expansion, and click on **Try it out**.
 
    ![](./Media/swaggerUI-memory.png)
 
@@ -164,7 +165,7 @@ In this task, you will learn how to persist embeddings in Azure AI Search by con
 
       ![](./Media/swaggerUI-Execution.png)
       
-1. In the **swagger UI** page, scroll down to the **Responses** section, review that it has been executed successfully by checking the code status is **200**.
+1. In the **swagger UI** page, scroll down to the **Responses** section, review that it has been executed successfully by verifying that the status code is **200**.
 
     ![](./Media/swaggerUI-Responses.png)
 
@@ -172,15 +173,15 @@ In this task, you will learn how to persist embeddings in Azure AI Search by con
 
     ![](./Media/ai-search1.png)    
 
-1. In **Azure AI services | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
+1. In **Microsoft Foundry | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **miyagi-embeddings** **(2)** has been created.   
+1. In the **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, from the left navigation menu, click **Indexes (1)** under **Search management**, and verify that the **miyagi-embeddings (2)** index has been created.  
 
    ![](./Media/L2T5S6.png)
 
-   > **Note**: Please click on the refresh button till you view the **Document Count**.
+   > **Note**: PClick the refresh button until the **Document Count** appears.
 
-1. Once you have viewed the indexes in AI Search, navigate back to VS Code and  press **Ctrl + C** to stop the **swagger UI** page for the node terminal.
+1. Once you have viewed the indexes in AI Search, navigate back to VS Code and  press **Ctrl + C** to stop the **Swagger UI** in the Node terminal.
 
 1. From the **Terminal** select **dotnet** terminal, press **Ctrl + C** to stop the **recommendation service** ui page.
 
@@ -188,9 +189,9 @@ In this task, you will learn how to persist embeddings in Azure AI Search by con
 
 In this task, you will build Docker images for the Recommendation service by creating a Dockerfile and using it to package the application for consistent deployment.
 
-1. Open the **Docker** Application from the Lab VM desktop by double-clicking on it.
+1. On the **Windows VM**, select **Start (1)**, then double-click the **Docker Desktop (2)** application to open it.
 
-   ![](./Media/docker1.png)
+   ![](./Media/img-08.png)
 
     > **Note**: If Docker Desktop is already opened, then proceed with step 4.
    
@@ -198,13 +199,20 @@ In this task, you will build Docker images for the Recommendation service by cre
 
    ![](./Media/docker2.png)
 
-1. In the **Welcome to Docker Desktop** window, click on **Continue without signing in**.
+1. In the **Welcome to Docker** window, click on **Skip**.
 
-   ![](./Media/without-signin.png)
+   ![](./Media/img-09.png)
+
+   >**Note:** If you still encounter the **WSL update failed** error, click **Quit**, then open **PowerShell** as an administrator and run the following command:
+   >
+   > ```powershell
+   > wsl --update
+   > ```
+   > On the **Docker Desktop** page, select **Try again** until the Docker engine starts.
 
 1. In the **Tell us about the work you do** window, click on **Skip**.
 
-1. Navigate back to **Visual studio code** window and navigate to **miyagi folder** and expand **services (1)/recommendation-service (2)/dotnet (3)** right - click on dotnet in cascading menu, select **Open in integrated Terminal (4)**.
+1. Navigate back to **Visual Studio Code** window and navigate to **miyagi folder** and expand **services (1)/recommendation-service (2)/dotnet (3)** right - click on dotnet in cascading menu, select **Open in integrated Terminal (4)**.
 
    ![](./Media/aks-04.png)
 
@@ -228,11 +236,11 @@ In this task, you will build Docker images for the Recommendation service by cre
 
 1. Navigate back to **Docker desktop**, from the left pane select **Images**.
 
-   ![](./Media/docker7.png)
+   ![](./Media/img-10.png)
 
-1. In the **Images** blade, notice **miyagi-recommendation(1)** image is created, select **run(2)** icon .
+1. In the **Images** blade, notice **miyagi-recommendation (1)** image is created, select the **Run (2)** icon.
 
-   ![](./Media/docker13.png)
+   ![](./Media/img-11.png)
 
 1. In the **Run a new container** window, select the dropdown arrow.
 
@@ -252,9 +260,9 @@ In this task, you will build Docker images for the Recommendation service by cre
 
 ## Task 5: Push the Docker Image of the Recommendation service to the Container registry
 
-In this task, you'll push Miyagi-recommendation images to ACR. 
+In this task, you'll push the **miyagi-recommendation** images to **ACR**. 
 
-1. Navigate back to the **Visual studio code** window and navigate to **miyagi folder** and expand **services (1)/recommendation-service (2)/dotnet (3)** right - click on dotnet in cascading menu, select **Open in integrated Terminal (4)**.
+1. Navigate back to the **Visual Studio Code** window and navigate to **miyagi folder** and expand **services (1)/recommendation-service (2)/dotnet (3)** right-click on dotnet in cascading menu, select **Open in integrated Terminal (4)**.
 
     ![](./Media/aks-04.png)
 
@@ -264,9 +272,11 @@ In this task, you'll push Miyagi-recommendation images to ACR.
    az login
    ```
 
-1. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **Visual studio code**.
+1. This will redirect to **Microsoft login page**, select **Work or school account**, enter the username **<inject key="AzureAdUserEmail"></inject>** and password **<inject key="AzureAdUserPassword"></inject>**.
 
-   ![](./Media/azurelogin.png)
+1. On the **Sign in to all apps, websites, and services on this device?** pop-up select **No, this app only**.
+
+1. Navigate back to **Visual Studio Code**, and in the terminal press **Enter** when prompted to select the subscription.
     
 1. Run the following command to log in to an **Azure Container Registry (ACR)** using the Azure CLI.
    
@@ -298,61 +308,53 @@ In this task, you'll push Miyagi-recommendation images to ACR.
 
 ## Task 6: Create a Container app for recommendation-service 
 
-In this task, you'll be creating a container app for the recommendation.
+In this task, you'll create a container app for the recommendation service.
 
 1. Run the following command to create a **Container App environment**.
 
-   > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>** and **[Region]** with **<inject key="Region" enableCopy="true"/>**.
-
    ```
-   az containerapp env create --name env-miyagi-[DID] --resource-group miyagi-rg-[DID] --location [Region]
+   az containerapp env create --name env-miyagi-<inject key="DeploymentID" enableCopy="true"/> --resource-group miyagi-rg-<inject key="DeploymentID" enableCopy="true"/> --location <inject key="Region" enableCopy="true"/>
    ```
 
 1. Run the following command to create **Container App**.
 
-   > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**, **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
-
    ```
-   az containerapp create --name ca-miyagi-rec-[DID] --resource-group miyagi-rg-[DID] --image [ACRname]/miyagi-recommendation:latest --environment env-miyagi-[DID] --registry-server [ACRname] --registry-username [uname] --registry-password [password]
+   az containerapp create --name ca-miyagi-rec-<inject key="DeploymentID" enableCopy="true"/> --resource-group miyagi-rg-<inject key="DeploymentID" enableCopy="true"/> --image <inject key="AcrLoginServer" enableCopy="true"/>/miyagi-recommendation:latest --environment env-miyagi-<inject key="DeploymentID" enableCopy="true"/> --registry-server <inject key="AcrLoginServer" enableCopy="true"/> --registry-username <inject key="AcrUsername" enableCopy="true"/> --registry-password <inject key="AcrPassword" enableCopy="true"/>
    ```
 
 1. Run the following command to enable **Container App ingress**.
-
-   > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**
    
    ```
-   az containerapp ingress enable -n ca-miyagi-rec-[DID] -g miyagi-rg-[DID] --type external --allow-insecure --target-port 8080
+   az containerapp ingress enable -n ca-miyagi-rec-<inject key="DeploymentID" enableCopy="true"/> -g miyagi-rg-<inject key="DeploymentID" enableCopy="true"/> --type external --allow-insecure --target-port 8080
    ```
 
 ## Task 7: Verify Recommendation Service using Swagger
 
 In this task, you will verify the Recommendation Service using Swagger by accessing the API documentation, testing endpoints, and ensuring proper functionality of the service.
 
-1. In the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Container Apps (1)**, and then select **Container Apps (2)** under services.
+1. Navigate back to the **Azure Portal** page, in the **Search resources, services, and docs (G+/)** box at the top of the portal, enter **Container Apps (1)**, and then select **Container Apps (2)** under services.
 
    ![](./Media/container-app-select.png)
 
 1. In the **Container Apps** blade, select **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![](./Media/container-ca-miyagi.png)
+   ![](./Media/img-12.png)
 
-1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** page, from left navigation pane select **Ingress** **(1)** under Networking session and click on **Endpoints** **(2)** URL link.
+1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** page, from the left navigation pane, select **Ingress** **(1)** under **Networking** and click on **Endpoints** **(2)** URL link.
 
    ![](./Media/gg-4-1.png)
 
-   > **Note**: If you don't see endpoints, open Azure Cloud Shell and run the following command.
-
-   > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**.
+   > **Note**: If you don't see **Endpoints**, open Azure Cloud Shell and run the following command.
 
    > ```sh
    > az containerapp ingress enable \
-   >   --name ca-miyagi-rec-[DID] \
-   >   --resource-group miyagi-rg-[DID] \
+   >   --name ca-miyagi-rec-<inject key="DeploymentID" enableCopy="true"/> \
+   >   --resource-group miyagi-rg-<inject key="DeploymentID" enableCopy="true"/> \
    >   --type external \
    >   --target-port 8080
    > ```
 
-1. You can view the **Miyagi Recommendation service** website running through the Container Apps.
+1. You can view the **Miyagi Recommendation Service** website running through the Container Apps.
 
    ![](./Media/online-output-recommendation.png)    
 
@@ -364,11 +366,11 @@ In this lab, you have accomplished the following:
 - Configured the Miyagi app to ensure proper functionality and integration.
 - Successfully ran the Miyagi frontend locally for testing and interaction.
 - Persisted embeddings in Azure AI Search for efficient data retrieval.
-- Built Docker images for the Recommendation service to facilitate deployment.
+- Built Docker images for the Recommendation Service to facilitate deployment.
 - Pushed the Docker image of the Recommendation service to the container registry for storage.
 - Created a container app for the Recommendation service to enable cloud deployment.
 - Verified the Recommendation service using Swagger to ensure correct API functionality.
 
 ### Now click on **Next** from the lower right corner to move to the next page.
 
-![](./Media/n8.png)
+![](./Media/img-07.png)
