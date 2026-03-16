@@ -93,9 +93,23 @@ In this lab, you will explore the implementation of the Recommendation service, 
 
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select the kernel as **.NET Interactive** in the top right corner of the notebook.
 
-1. In the Visual Studio Code, navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**
+1. In the Visual Studio Code, navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**.
 
    ![](./Media/image-rg-23.png)
+
+1. In **Visual Studio Code**, open the terminal by pressing **CTRL+J**, and run the following command to verify the installation of **.NET version 10.x.x**.
+
+   ```
+   dotnet --version
+   ```
+
+1. After verifying the version, run the following command to install the **.NET Interactive** extension.
+
+   ```
+   code --install-extension ms-dotnettools.dotnet-interactive-vscode --force
+   ```
+
+   > **Note:** The installation may take some time. Please wait **10–15 minutes**, then reopen **Visual Studio Code** to verify whether the kernel has been installed.
 
 1. **Execute the notebook cell by cell** (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
   
