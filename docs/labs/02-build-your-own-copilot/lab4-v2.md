@@ -12,7 +12,6 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 You will be able to complete the following tasks:
 
 - Task 1: Configure and Run the Semantic Kernel Sample
-- Task 2: Configure Azure AI Search
 
 ### Task 1: Configure and Run the Semantic Kernel Sample
 
@@ -30,9 +29,17 @@ In this task, you will configure the Semantic Kernel plugin in Visual Studio Cod
 
    ![](./Media/miyagi-image93.png)
 
-1. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **Visual studio code**.
+1. This will redirect to **Microsoft Sign in page**, Enter the following email, and click on **Next**. 
 
-   ![](./Media/azurelogin.png)
+   - **Email/Username**: **<inject key="AzureAdUserEmail"></inject>**
+
+    ![](./Media/miyagi-image2.png)
+
+1. Now, provide the following password and click on **Sign in**.
+   
+   - **Temporary Access Pass:**: **<inject key="AzureAdUserPassword"></inject>**
+
+     ![](./Media/GS4.png)
 
 1. If you get **Sign in to all apps and websites on this device?** window, select **No, this app only**.
 
@@ -46,7 +53,7 @@ In this task, you will configure the Semantic Kernel plugin in Visual Studio Cod
 
     ![](./Media/kkernal1.png)
 
-1. Browse the location `C:\LabFiles` **(1)** and **Select location for new app** **(2)**.
+1. Browse the location `C:\LabFiles` **(1)** and click on **Select location for new app** **(2)**.
 
    ![](./Media/miyagi-image97.png)
 
@@ -220,51 +227,9 @@ In this task, you will configure the Semantic Kernel plugin in Visual Studio Cod
 
 1. Alternatively, you can pose any question to in the terminal.
 
-### Task 2: Configure Azure AI Search
-
-In this task, you'll configure Azure AI Search by importing data from CosmosDB into a search index named "realestate-us-sample-index". You customize the index and create an indexer named "realestate-us-sample-indexer" to synchronize data. Finally, you verify the search functionality by querying data for "Seattle".
-
-1. Navigate back to the **Azure portal** tab, in Search resources, services and docs (G+/) box at the top of the portal, enter **AI Search (1)**, and then select **AI Search (2)** under services.
-
-    ![](./Media/miyagi-image25.png)
-
-1. In **Microsoft Foundry | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
-
-    ![](./Media/Lab5-Task2-1.png)
-
-1. In the overview tab of the search service, click on the **Import data**.
-
-    ![](./Media/miyagi-image103.png)
-   
-1. From the drop-down select **Data Source** as **Samples (1)**, select the **CosmosDB hotels-sample (2)**, and click on **Next : Add cognitive skills (Optional) (3)**.
-
-   ![](./Media/miyagi-image104.png)
-   
-1. In **Cognitive skills** leave as default and click on **Skip to: Customize target index**.
-
-    ![](./Media/miyagi-image105.png)
-   
-1. In the **Customize target index**, Enter the index name as **realestate-us-sample-index** **(1)** and click on **Next: Create an indexer** **(2)**.
-
-   ![](./Media/miyagi-image106.png)
-   
-1. In the **Create an indexer**, change the indexer name as **realestate-us-sample-indexer (1)** and click on **Submit (2)**.
-
-   ![](./Media/miyagi-image107.png)
-   
-1. From the left navigation pane under navigate back to **Search management**, and select **Indexes (1)** then click on **realestate-us-sample-index (2)**.
-
-    ![](./Media/L5T2S9.png)
-
-    > **Note**: Please click on **Refresh** if the index is not yet visible.
-
-1. Click on **realestate-us-sample-index** in the search bar enter **Seattle (1)** and click on **Search (2)** then view thw **Result (3)**.
-
-   ![](./Media/miyagi-image(109).png)
-
 ### Summary
 
-In this lab, you learned how to configure and run the Semantic Kernel sample by integrating the SDK into your project, setting up LLM providers, defining plugins, and executing the code. Additionally, you gained knowledge on configuring Azure AI Search, including creating or selecting an index, setting up fields, configuring Semantic Kernel to interact with Azure, defining plugins, and testing the integration for enhanced search capabilities.
+In this lab, you learned how to configure and run the Semantic Kernel sample by integrating the SDK into your project, setting up LLM providers, defining plugins, and executing the code.
 
 ### You have successfully completed this lab.
 
