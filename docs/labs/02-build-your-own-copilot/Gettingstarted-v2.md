@@ -104,27 +104,22 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![](./Media/gettingstartpage3.png)
 
-1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email or username, and click on **Next**. 
+1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email, and click on **Next**. 
 
    * **Email/Username**: **<inject key="AzureAdUserEmail"></inject>**
 
      ![](./Media/miyagi-image2.png)
      
-1. Now enter the following password and click on **Sign in**.
+1. Now, provide the following password and click on **Sign in**.
    
-   * **Password**: **<inject key="AzureAdUserPassword"></inject>**
+   * **Temporary Access Pass:**: **<inject key="AzureAdUserPassword"></inject>**
 
      ![](./Media/GS4.png)
 
-        > **Note**: If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if Ask Later Option is Not Visible](#steps-to-proceed-with-mfa-setup-if-ask-later-option-is-not-visible)
    
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
    ![](./Media/miyagi-image4.png)
-
-1. If a **Welcome to Microsoft Azure** popup window appears, select **Cancel** to skip the tour.
-
-    ![](./Media/miyagi-image5.png)
    
 1. Now that you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
@@ -138,7 +133,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![](./Media/miyagi-image8.png)
 
-> [!IMPORTANT]<br>
+> [IMPORTANT]<br>
 > **For a smoother experience during the hands-on lab, it's important to thoroughly review both the instructions and the accompanying notes. This will help you navigate through the tasks with ease and confidence.**
 
 This hands-on-lab will guide you to create intelligent systems with Microsoft's Copilot stack, leveraging Generative AI and RAG patterns for enhanced productivity and personalized experiences.

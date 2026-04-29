@@ -54,7 +54,7 @@ In this task, you will deploy the Miyagi recommendation and UI services to an Az
     >**Note**: Upon successful execution of the above commands. The Kubernetes will read the YAML file and apply its configurations to the cluster. It will create miyagi-recommendation- 
     service and miyagi-ui
  
-1. Once the services have been deployed run the below command and keep track of the service's **external IPs**. It could take a few minutes for the **external IPs** to appear so wait a few minutes before running the command.
+1. Once the services have been deployed run the below command and keep track of the service's **external IPs**. It could take a few minutes for the **external IPs** to appear. So, wait for few minutes before running the command.
 
    ```
    kubectl get svc
@@ -62,13 +62,15 @@ In this task, you will deploy the Miyagi recommendation and UI services to an Az
 
    ![](./Media/external-ip.png)
 
-1. Next navigate to **miyagi folder** and expand **services (1)/recommendation-service (2)/dotnet (3)** and open **appsettings.json (4)** file.
+1. Next, navigate to **miyagi folder** and expand **services (1)/recommendation-service (2)/dotnet (3)** and open **appsettings.json (4)** file.
 
    ![](./Media/aks-02.png)
    
-1. Copy the **miyagi-ui** External IP address from the console and paste it in the **CorsAllowedOrigins** section formatted as an **http://** endpoint and save the file by **Ctrl + S**.
+1. Copy the **miyagi-ui** External IP address from the terminal output and add it in the **CorsAllowedOrigins** section formatted as an **http://** endpoint and save the file by **Ctrl + S**.
 
-   ![](./Media/ui-cors.png)
+   >**NOTE:** Make sure to add comma after "https://localhost" and then add the External IP address in next line.
+
+   ![](./Media/Lab3-Task1-1.png)
 
 1. Next navigate to **miyagi/ui/typescript (1)** and open the **.env (2)** file. 
 
@@ -102,15 +104,19 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
    
     >**Note**: Please ensure that the Docker engine is in a running state before proceeding to the next step.
 
-1. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click in cascading menu, select **Open in Integrated Terminal**.
+1. Navigate back to **Visual studio code** window and navigate to  **miyagi folder (1)**, then expand **ui (2)** and right-click on **ui/typescript (3)** folder , in cascading menu select **Open in integrated Terminal (4)**.
+
+   ![](./Media/image-rg-25.png)
+
+1. Run the following command to build a new docker image.
 
    ```
    docker build . -t miyagi-ui      
    ```
 
-   > **Note**: Please wait as this command may require some time to complete.
+   > **Note**: Please wait for 5-10 minutes as this command may require some time to complete. If it takes more time, stop the command by clicking on **Ctrl+C** and re-run the command again.
 
-   > **Note**: this command reads instructions from the Dockerfile, processes them to create a Docker image based on those instructions, and then tags the resulting image with the name miyagi-ui.
+   > **Note**: This command reads instructions from the Dockerfile, processes them to create a Docker image based on those instructions, and then tags the resulting image with the name miyagi-ui.
    
 1. Run the following command to get the newly created image.
 
@@ -154,13 +160,14 @@ In this task, you will build and run the Miyagi recommendation service Docker co
 
 1. Run the following command to build a **Docker image**.
 
+   > **Note:** Please wait for 5-10 minutes as this command may require some time to complete. If it takes more time, stop the command by clicking on **Ctrl+C** and re-run the command again.
+
    ```
    docker build . -t miyagi-recommendation      
    ```
 
    ![](./Media/task2-1.png)
 
-   > **Note**: Please wait as this command may require some time to complete.
 
 1. Run the following command to get the newly created **Docker image**.
 
@@ -238,7 +245,9 @@ In this task, you will push the Docker image of the Miyagi recommendation servic
 
    >**Note**: The command **docker push <inject key="AcrLoginServer" enableCopy="false"/>/miyagi-recommendation:latest** uploads the specified Docker image, which has been tagged with the Azure Container Registry (ACR) name, to the ACR. This makes the image available in the ACR for deployment and use in various Azure services.
    
-1. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click in cascading menu, select **Open in integrated Terminal**.
+1. Navigate back to **Visual studio code** window and navigate to  **miyagi folder (1)**, then expand **ui** and right-click on **ui/typescript (2)** folder , in cascading menu select **Open in integrated Terminal (3)**.
+
+   ![](./Media/image-rg-25.png)
 
 1. Run the following command to add the tag.
 
@@ -288,7 +297,7 @@ In this task, you will deploy the Miyagi UI and Recommendation services to Azure
 
 1. The applications should now be deployed. To verify run the below command and you should see both pods in a running state.
 
-   >**Note**: It could take a few minutes for the output to appear, so wait a few minutes before running the command.
+   >**Note**: It could take few minutes for the output to appear, so wait for few minutes before running the command.
    
    ```
    kubectl get pods

@@ -34,6 +34,10 @@ In this task, you will configure the Semantic Kernel plugin in Visual Studio Cod
 
    ![](./Media/azurelogin.png)
 
+1. If you get **Sign in to all apps and websites on this device?** window, select **No, this app only**.
+
+    ![](./Media/Lab5-Task1-1.png)
+
 1. Navigate back to the **Visual Studio Code** From the **Functions panel**, click on the **Get started icon** **(1)** and follow the wizard to **Create a new app** **(2)** with the semantic function.
 
    ![](./Media/miyagi-image95.png)
@@ -166,6 +170,8 @@ In this task, you will configure the Semantic Kernel plugin in Visual Studio Cod
     ```
     ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions
     ```
+
+    ![](./Media/lab5-Task1-2.png)
     
 1. Configure an Azure OpenAI endpoint by Opening a New **Terminal** click on **(...) (1)** next to **View** menu and select **Terminal (2)** > **New Terminal (3)**.
 
@@ -222,9 +228,9 @@ In this task, you'll configure Azure AI Search by importing data from CosmosDB i
 
     ![](./Media/miyagi-image25.png)
 
-1. In **AI Foundry | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
+1. In **Microsoft Foundry | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](./Media/L5T2S2.png)
+    ![](./Media/Lab5-Task2-1.png)
 
 1. In the overview tab of the search service, click on the **Import data**.
 

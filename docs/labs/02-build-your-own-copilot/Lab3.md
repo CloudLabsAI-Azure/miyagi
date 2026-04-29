@@ -39,7 +39,7 @@ In this task, you'll be setting up an HTTP API within Azure API Management to in
 
    ![](./Media/miyagi-image56.png)
 
-1. Once API is created, click on **Overview** **(1)** then copy the **Gateway URL** **(2)** of API Management service. Record the **URL** you require in the upcoming task.
+1. Once API is created, click on **Overview** **(1)** and then, copy the **Gateway URL** **(2)** of API Management service. Keep the **URL** handy as you need to use it in the upcoming task.
 
     ![](./Media/L4T1S4.png)
 
@@ -64,7 +64,7 @@ In this task, you'll be setting up API policies, defining roles and subscription
    ![](./Media/api-05.png)
    
 
-1. In the popup of **Import from OpenAPI specification** paste the below link in the OpenAPI specification **textbox** **(1)** , and then click **import** **(2)**. 
+1. In the popup of **Import from OpenAPI specification**, paste the below link in the OpenAPI specification **textbox** **(1)**, and then click **Import** **(2)**. 
 
    ```
    https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cognitiveservices/data-plane/AzureOpenAI/inference/stable/2023-05-15/inference.json
@@ -76,11 +76,11 @@ In this task, you'll be setting up API policies, defining roles and subscription
    
     ![](./Media/miyagi-image60.png)
    
-1. In the **api-key** API navigate to the **Settings** **(1)** tab, and update the Web service URL **<inject key="OpenAIEndpoint" enableCopy="true"/>** **(2)**.
+1. In the **api-key** API, navigate to the **Settings** **(1)** tab, and update the Web service URL **<inject key="OpenAIEndpoint" enableCopy="true"/>** **(2)**.
 
    ![](./Media/miyagi-image161n.png)
 
-1. Scroll to the update the subscription key **Header Name** to **api-key** **(1)** and click on **Save** **(2)**.
+1. Scroll down and update the subscription key **Header Name** to **api-key** **(1)** and click on **Save** **(2)**.
 
    ![](./Media/miyagi-image61.png)
 
@@ -100,7 +100,7 @@ In this task, you'll be setting up API policies, defining roles and subscription
 
    ![](./Media/miyagi-image64.png)
 
-1. Once the subscription is **AOAI Test** created click the **three dots** **(1)** next to **AOAI Test** and then click **Show/hide keys** **(2)**. Copy the **Primary key** **(3)** key and save it for later.
+1. Once the subscription **AOAI Test** is created, click the **three dots** **(1)** next to **AOAI Test** and then click **Show/hide keys** **(2)**. Copy the **Primary key** **(3)** key and save it for later.
 
    ![](./Media/miyagi-image(65).png)
 
@@ -157,10 +157,10 @@ In this task, you'll be setting up API policies, defining roles and subscription
 1. Scroll down to the **Request body** section **(1)**, replace the existing code with the code below, and click on **Send** **(2)**.
 
    ```
-   {"model":"gpt-4","messages":[{"role":"user","content":"Hello! What does an API Management Service in Azure do?"}]}
+   {"model":"gpt-4.1","messages":[{"role":"user","content":"Hello! What does an API Management Service in Azure do?"}]}
    ```
 
-   ![](./Media/new-api-body.png)
+   ![](./Media/Lab4-Task2-1.png)
 
 1. Scroll down the response and you should see a `200` response and a message back from your OpenAI service.
 
@@ -274,7 +274,7 @@ In this task, you'll be setting up Event Hub logging for API Management, configu
 
    ![](./Media/miyagi-image86.png)
 
-1. In the **Event Hubs Instance** of **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>**, from the left menu select **Shared access policies** **(1)** under **Settings**, click on **apimLoggerAccessPolicy** **(2)** and copy the **Primary connection string** **(3)** paste it in a notepad.
+1. In the **Event Hubs Instance** of **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>**, from the left menu, select **Shared access policies** **(1)** under **Settings**, click on **apimLoggerAccessPolicy** **(2)** and copy the **Primary connection string** **(3)** paste it in a notepad.
 
    ![](./Media/primaryconnectionstring.png)
 
@@ -301,7 +301,9 @@ In this task, you'll be setting up Event Hub logging for API Management, configu
 
    ![](./Media/miyagi-image121.png)
 
-1. In the menu bar notepad select **Files** and click on **Save As**.
+1. In the menu bar of notepad select **Files (1)** and click on **Save As (2)**.
+
+   ![](./Media/Lab4-Task5-1.png)
 
 1. In the **Save As** navigate to the `C:\LabFiles\miyagi` **(1)** path, enter the file name **aoai-logger.bicep** **(2)**, Save as type to **All Files** **(3)** and click on **Save** **(4)**.
 
@@ -355,9 +357,9 @@ In this task, you'll be setting up Event Hub logging for API Management, configu
 
       ![](./Media/miyagi-image88.png)
 
-1. Next open the **Miyagi UI** in a separate browser tab click **Personalize** and select your **Favorite Financial Advisor (1)** and choose **GPT-4 (2)** for the **Reasoning Engine** from the dropdown menu, then click on **Personalize (3)**. repeat the same step by selecting different **Favorite Financial Advisor** 6 - 7 times to generate additional logs.
+1. Next, open the **Miyagi UI** in a separate browser tab click **Personalize** and select your **Favorite Financial Advisor (1)** and choose **GPT-4.1 (2)** for the **Reasoning Engine** from the dropdown menu, then click on **Personalize (3)**. repeat the same step by selecting different **Favorite Financial Advisor** 6 - 7 times to generate additional logs.
 
-    ![](./Media/miyagi-image126.png)
+    ![](./Media/Lab2-Task6-1.png)
 
     >**Note**: Please ensure that the localhost is running in the VS code or else follow the steps in **Page 4 - Lab 2 - Task 4 - Steps 1 & 2**
 
@@ -374,6 +376,8 @@ In this task, you'll be setting up Event Hub logging for API Management, configu
     ![](./Media/miyagi-image90.png)
 
 1. Click on **Test Query** and in the Event Hub query, you should see log information for the tokens used.
+
+   >**NOTE:** Wait for few minutes and try again if you don't get any log information.
 
     ![](./Media/miyagi-image91.png)
 

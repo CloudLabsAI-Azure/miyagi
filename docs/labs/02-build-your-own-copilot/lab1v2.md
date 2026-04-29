@@ -23,7 +23,7 @@ In this task, you will configure the Miyagi application by updating specific set
 
    ![](./Media/vs-01.png)
 
-   >**Note**: If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
+   >**Note**: If **Join us in making promt-flow extension better!** window prompted, please click on **No,thanks**.
 
    ![](./Media/image-rg-01.png)
    
@@ -31,9 +31,9 @@ In this task, you will configure the Miyagi application by updating specific set
 
    ![](./Media/image-rg-02.png)
 
-1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi** select **miyagi (1)** click on **Select folder (2)**
+1. Within **File Explorer**, navigate to **C:\LabFiles\ (1)**, select **miyagi (2)** folder and click on **Select Folder (3)**.
 
-   ![](./Media/image-rg(003).png)
+   ![](./Media/Lab2-Task1-1.png)
 
 1. In **Visual Studio Code**, click on **Yes, I trust the authors** when **Do you trust the authors of the files in this folder?** window prompted.
 
@@ -149,7 +149,7 @@ In this task, you will run the recommendation service locally by using Visual St
 
 In this task, you will run the miyagi frontend locally by installing dependencies using npm and yarn and then starting the development server. You will verify its functionality by accessing the local development server in the browser.
 
-1. To open a new terminal, navigate to  **miyagi folder (1)**, then expand **ui (2)** and right-click on **ui/typescript (3)** folder , in cascading menu select **Open in integrated Terminal (4)**.
+1. To open a new terminal, navigate to  **miyagi folder (1)**, then expand **ui** and right-click on **ui/typescript (2)** folder , in cascading menu select **Open in integrated Terminal (3)**.
 
    ![](./Media/image-rg-25.png)
 
@@ -238,15 +238,17 @@ In this task, you'll personalize the Miyagi App's Recommendation service by sele
 
     ![](./Media/miyagi-image28.png)
 
-1. In the **Personalize** page, select your **Favorite Financial Advisor (1)** and choose **GPT-4 (2)** for the **Reasoning Engine** from the dropdown menu, then click on **Personalize (3)**.
+1. In the **Personalize** page, select your **Favorite Financial Advisor (1)** and choose **GPT-4.1 (2)** for the **Reasoning Engine** from the dropdown menu, then click on **Personalize (3)**.
 
-   ![](./Media/miyagi-image126.png)
+   ![](./Media/Lab2-Task6-1.png)
 
 1. You should see the recommendations from the recommendation service in the Top Stocks widget.
 
    ![](./Media/miyagi-image30.png) 
 
 1. Navigate to the **Visual Studio Code**, and click on **dotnet** from the terminal, you can go through the logs.
+
+   >**Note:** Please note that the output provided in below screenshot can vary when performing the lab.
 
    ![](./Media/terminal-output.png)    
 
