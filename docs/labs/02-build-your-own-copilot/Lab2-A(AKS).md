@@ -114,7 +114,7 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
    docker build . -t miyagi-ui      
    ```
 
-   > **Note**: Please wait for 5-10 minutes as this command may require some time to complete. If it takes more time, stop the command by clicking on **Ctrl+C** and re-run the command again.
+   > **Note**: Please wait for 10-15 minutes as this command may require some time to complete. If it takes more time, stop the command by clicking on **Ctrl+C** and re-run the command again.
 
    > **Note**: This command reads instructions from the Dockerfile, processes them to create a Docker image based on those instructions, and then tags the resulting image with the name miyagi-ui.
    
@@ -160,7 +160,7 @@ In this task, you will build and run the Miyagi recommendation service Docker co
 
 1. Run the following command to build a **Docker image**.
 
-   > **Note:** Please wait for 5-10 minutes as this command may require some time to complete. If it takes more time, stop the command by clicking on **Ctrl+C** and re-run the command again.
+   > **Note:** Please wait for 10-15 minutes as this command may require some time to complete. If it takes more time, stop the command by clicking on **Ctrl+C** and re-run the command again.
 
    ```
    docker build . -t miyagi-recommendation      
@@ -256,6 +256,8 @@ In this task, you will push the Docker image of the Miyagi recommendation servic
    ```
 
 1. Run the following command to push the image to the container registry.
+
+   > **Note:** Please wait for 5-10 minutes as this command may require some time to complete.
 
    ```
    docker push <inject key="AcrLoginServer" enableCopy="true"/>/miyagi-ui:latest

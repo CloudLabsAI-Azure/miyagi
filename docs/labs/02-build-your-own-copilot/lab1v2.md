@@ -214,7 +214,7 @@ In this task, you will persist embeddings in Azure AI Search by executing a POST
 
     ![](./Media/miyagi-image25.png)
 
-1. In **AI Foundry | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
+1. In **Microsoft Foundry | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
     ![](./Media/L2T5S5.png)
    
@@ -222,7 +222,7 @@ In this task, you will persist embeddings in Azure AI Search by executing a POST
 
    ![](./Media/L2T5S6.png)
 
-   > **Note**: Please click on the refresh button still you can view the **Document Count**.
+   > **Note**: Please click on the refresh button until you can see the **Document Count** with numbers apart from 0 count.
 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
