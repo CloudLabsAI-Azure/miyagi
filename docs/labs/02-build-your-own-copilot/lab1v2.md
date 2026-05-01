@@ -220,7 +220,7 @@ In this task, you will persist embeddings in Azure AI Search by executing a POST
    
 1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **miyagi-embeddings** **(2)** has been created.   
 
-   ![](./Media/L2T5S6.png)
+   ![](./Media/L2T5S6-1.png)
 
    > **Note**: Please click on the refresh button until you can see the **Document Count** with numbers apart from 0 count.
 

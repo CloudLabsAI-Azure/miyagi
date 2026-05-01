@@ -2,6 +2,7 @@
 	{
 		"Name": "Build Intelligent Apps with Microsoft's Copilot stack & Azure OpenAI",
 		"Language": "English",
+		"BaseURL": "https://github.com/CloudLabsAI-Azure/miyagi/tree/main",
 		"Files": [
 			{
 				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/Gettingstarted-v2.md",
@@ -36,6 +37,7 @@
 	{
 		"Name": "Build Intelligent Apps with Microsoft's Copilot stack & Azure OpenAI",
 		"Language": "Spanish",
+		"BaseURL": "https://github.com/CloudLabsAI-Azure/miyagi/tree/localized-content",		
 		"Files": [
 			{
 				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/localized-content/docs/labs/02-build-your-own-copilot/Gettingstarted-v2.md",
@@ -70,6 +72,7 @@
 	{
 		"Name": "Build Intelligent Apps with Microsoft's Copilot stack & Azure OpenAI",
 		"Language": "Portuguese",
+		"BaseURL": "https://github.com/CloudLabsAI-Azure/miyagi/tree/Portuguese-Content",		
 		"Files": [
 			{
 				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/Portuguese-Content/docs/labs/02-build-your-own-copilot/Portueguese/Gettingstarted-v2.md",
