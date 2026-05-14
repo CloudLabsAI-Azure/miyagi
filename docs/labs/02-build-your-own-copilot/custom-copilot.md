@@ -1,4 +1,4 @@
-# Lab: Build Custom Copilot Application using Microsoft Foundry
+# Lab: Build a Custom Copilot Application using Microsoft Foundry
 
 ## Estimated Duration: 60 Minutes
 
@@ -9,14 +9,12 @@ In this lab, you'll run Chat Copilot locally after retrieving Azure OpenAI Servi
 ## Objectives
 
 - Exercise 1: Run the Chat Copilot App Locally
-
    - Task 1: Retrieving the Azure OpenAI Service values
    - Task 2: Cloning the Chat-Copilot GitHub Repo
    - Task 3: Setting up the Environment
    - Task 4: Configure and run the Chat Copilot App Locally
 
 - Exercise 2: Chat with your own documents
-
    - Task 1: Chat with your own documents in the Chat Copilot Application
 
 ## Exercise 1: Run the Chat Copilot App Locally
@@ -29,7 +27,7 @@ In this task, you will retrieve the Azure OpenAI Service values by accessing the
 
 1. In the Azure Portal, search for **OpenAI (1)** and select **Azure OpenAI (2)**
    
-    ![](./Media/dec2025-build-custom-copilot-3.png)
+    ![](./Media/E1T1S1-1405.png)
 
 1. On the **Microsoft Foundry | Azure OpenAI** page, select the pre-created **Azure OpenAI** resource named **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**.
 
@@ -40,20 +38,18 @@ In this task, you will retrieve the Azure OpenAI Service values by accessing the
     ![](./Media/new/1.png)
 
    > **Note**: If you don't see the left side navigation pane, click on the **Hamburger** icon in the top left corner.
-
-   ![](./Media/lop-03.png)
+   > ![](./Media/lop-03.png)
 
 1. From the **Overview (1)** page, click on **Go to Foundry portal (2)**.
    
     ![](./Media/dec2025-build-custom-copilot-6.png)
 
-1. Go to **Deployments (1)** in the left navigation pane, click on the names of your AI model to copy them, and paste them into Notepad **(2)**.
+1. Go to **Deployments (1)** in the left navigation pane, verify that you have two models deployed: **gpt4.1 and text-embedding-ada-002 (2)**
     
    ![](./Media/new/2.png)
 
-   > **Note**: Click on the **Expand** button, if you don't see the left side navigation pane.
-
-     ![](./Media/dec2025-build-custom-copilot-8.png)     
+   > **Note**: Click on the **Expand** button if you don't see the left side navigation pane.
+   >  ![](./Media/dec2025-build-custom-copilot-8.png)     
 
 ### Task 2: Cloning the Chat-Copilot GitHub Repo
 
@@ -63,7 +59,7 @@ In this task, you will clone the Chat-Copilot GitHub repository by using Git com
 
     ![](./Media/dec2025-build-custom-copilot-9.png)  
    
-1. Navigate to the directory `C:/Users/azureuser` by running the below command.
+1. Navigate to the directory `C:/Users/azureuser` by running the command below.
  
    ``` 
    cd C:/Users/azureuser
@@ -80,15 +76,19 @@ In this task, you will clone the Chat-Copilot GitHub repository by using Git com
 
    ![](./Media/new/3.png)
 
-1. click on `File (1) > Open folder (2)`.
+1. Close the Welcome to VS Code window.
+   
+    ![](./Media/E1T2S5a-1405.png)
 
-   ![](./Media/cp5.png)
+1. Close the Copilot chat window **(1)** in VS Code. Click on **Open folder (2)**.
+
+   ![](./Media/E1T2S6-1405.png)
 
 1. Select **CHAT-COPILOT (1)** and click **Select folder (2)**.
 
    ![](./Media/cp6.png)
 
-1. If the pop up appears for **Do you trust the authors of the file in this folder**, click on **Yes, I trust the authors.** 
+1. If the pop-up appears for **Do you trust the authors of the file in this folder**, click on **Yes, I trust the authors.** 
 
     ![](./Media/cp7.png)
 
@@ -96,7 +96,7 @@ In this task, you will clone the Chat-Copilot GitHub repository by using Git com
 
    ![](./Media/ch4.png)
 
-   >**Note:** You can close any reommendations you get in the VS Code.
+   >**Note:** You can close any recommendations you get in the VS Code.
    >   ![](./Media/recom-0201.png)
 
 ### Task 3: Setting up the Environment
@@ -107,7 +107,7 @@ In this task, you will set up the environment for the Chat-Copilot project by in
 
    ![](./Media/br2.png)
 
-1. Setup your environment by navigating to the scripts directory of chat-copilot using the command:
+1. Set up your environment by navigating to the scripts directory of chat-copilot using the command:
 
    ``` 
    cd C:\Users\azureuser\chat-copilot\scripts\
@@ -129,11 +129,12 @@ In this task, you will set up the environment for the Chat-Copilot project by in
 
 In this task, you will configure and run the Chat Copilot app locally by setting up the environment, adjusting configuration files, and launching the application for testing and development.
 
-1. Configure Chat Copilot by running the following command. You can use the Azure OpenAI Service Name, Key, Endpoint, and the already deployed model names that you noted down in the previous steps or use the values from the below mentioned table.
+1. Configure Chat Copilot by running the below mentioned command. Before executing the command, copy and paste the command in a notepad and update the Azure OpenAI Service Name, Key, Endpoint, and the already deployed model names. Use the values from the table below.  
    
    ```
    .\Configure.ps1 -AIService {AI_SERVICE} -APIKey {API_KEY} -Endpoint {AZURE_OPENAI_ENDPOINT} -CompletionModel {DEPLOYMENT_NAME} -EmbeddingModel {DEPLOYMENT_NAME}
    ```
+   
    | **Variables**                          | **Values**                                            |
    | ---------------------------------------| ------------------------------------------------------|
    | API_KEY                                | **<inject key="OpenAIKey" enableCopy="true"/>**       |
@@ -142,20 +143,22 @@ In this task, you will configure and run the Chat Copilot app locally by setting
    | CompletionModel:{DEPLOYMENT_NAME}      | **<inject key="CompletionModel" enableCopy="true"/>** |
    | EmbeddingModel:{DEPLOYMENT_NAME}       | **<inject key="EmbeddingModel" enableCopy="true"/>**  |
 
+   The updated command should look like the image below, then execute this command in the PowerShell terminal, which is already open.
+
+     ![](./Media/E1T4S1-1405.png)
+
+     ![](./Media/E1T4S1.2-1405.png)
+
    >**Note:** If a Security warning pop-up window appears, choose **Yes**.
 
      ![](./Media/new/4.png)
-
-   >**Note:** The code should look similar to the image below:
-
-     ![](./Media/cp9.png)
 
 1. Run Chat Copilot locally. This step starts the **backend API** application. frontend
  
    ```powershell
    .\Start-Backend.ps1
    ```
-   > **Note:** It may take a around 5 minutes for Yarn packages to install on the first run, wait untill the command run successfully.
+   > **Note:** It may take around 5 minutes for Yarn packages to install on the first run, wait untill the command run successfully.
 
      ![](./Media/new/5.png)
  
