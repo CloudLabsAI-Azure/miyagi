@@ -1,4 +1,4 @@
-# Lab: Build Custom Copilot Application using Microsoft Foundry
+# Lab: Build a Custom Copilot Application using Microsoft Foundry
 
 ## Estimated Duration: 60 Minutes
 
@@ -9,14 +9,12 @@ In this lab, you'll run Chat Copilot locally after retrieving Azure OpenAI Servi
 ## Objectives
 
 - Exercise 1: Run the Chat Copilot App Locally
-
    - Task 1: Retrieving the Azure OpenAI Service values
    - Task 2: Cloning the Chat-Copilot GitHub Repo
    - Task 3: Setting up the Environment
    - Task 4: Configure and run the Chat Copilot App Locally
 
 - Exercise 2: Chat with your own documents
-
    - Task 1: Chat with your own documents in the Chat Copilot Application
 
 ## Exercise 1: Run the Chat Copilot App Locally
@@ -29,7 +27,7 @@ In this task, you will retrieve the Azure OpenAI Service values by accessing the
 
 1. In the Azure Portal, search for **OpenAI (1)** and select **Azure OpenAI (2)**
    
-    ![](./Media/dec2025-build-custom-copilot-3.png)
+    ![](./Media/E1T1S1-1405.png)
 
 1. On the **Microsoft Foundry | Azure OpenAI** page, select the pre-created **Azure OpenAI** resource named **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**.
 
