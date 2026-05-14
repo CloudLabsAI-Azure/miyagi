@@ -99,9 +99,9 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![](../docs/labs/02-build-your-own-copilot/Media/new/stay.png)
 
-1. If a **Welcome to Microsoft Azure** popup window appears, select **Cancel** to skip the tour.
+1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe Later** to skip the tour.
 
-    ![](../docs/labs/02-build-your-own-copilot/Media/miyagi-image5.png)
+    ![](../docs/labs/02-build-your-own-copilot/Media/welcom-to-azure-1405.png)
    
 1. Now that you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
