@@ -1,10 +1,8 @@
 # Lab 1 - Run Miyagi App Locally
 
-### Estimated Duration: 90 minutes
-
 ## Overview
 
-In this lab, the focus is on configuring the Miyagi App for operational readiness. Subsequently, attention shifts to understanding the nuanced implementation of the Recommendation service. The practical phase involves executing the Recommendation service and deploying the Miyagi frontend locally for testing and development. A crucial step includes optimizing data retrieval efficiency by persisting embeddings in Azure AI Search. The project culminates with a broader exploration of the Miyagi App and Recommendation service, emphasizing a personalized user experience. This task-based approach ensures a systematic progression through the project intricacies, facilitating a comprehensive understanding and effective implementation.
+In this lab, the focus is on configuring the Miyagi App for operational readiness. Subsequently, attention shifts to understanding the nuanced implementation of the Recommendation service. The practical phase involves executing the Recommendation service and deploying the Miyagi frontend locally for testing and development. A crucial step is optimizing data retrieval efficiency by persisting embeddings in Azure AI Search. The project culminates with a broader exploration of the Miyagi App and Recommendation service, emphasizing a personalized user experience. This task-based approach ensures a systematic progression through the project intricacies, facilitating a comprehensive understanding and effective implementation.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -24,7 +22,7 @@ In this lab, you will configure the Miyagi app by setting up the environment, in
 
    ![](./Media/img-05.png)
 
-   >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
+   >**Note** If the **Join us in making promt-flow extension better!** window is prompted, click on **No,thanks**.
 
    ![](./Media/image-rg-01.png)
    
@@ -32,7 +30,7 @@ In this lab, you will configure the Miyagi app by setting up the environment, in
 
    ![](./Media/image-rg-02.png)
 
-1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi** select **miyagi** (1) and click on **Select folder (2)**
+1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi** select **miyagi** (1) and click **Select folder (2)**
 
    ![](./Media/image-rg(003).png)
 
@@ -63,7 +61,7 @@ In this lab, you will configure the Miyagi app by setting up the environment, in
 
       ![](./Media/appsetting-update.png)
    
-1. Once after updating the values, kindly save the file by pressing **CTRL + S**.
+1. Once the values are updated, save the file by pressing **CTRL + S**.
 
 1. Navigate to **miyagi/sandbox/usecases/rag/dotnet** and verify **.env** file is present.
   
@@ -93,23 +91,37 @@ In this lab, you will configure the Miyagi app by setting up the environment, in
 
 In this lab, you will explore the implementation of the Recommendation service, focusing on its algorithms and data processing methods to deliver personalized suggestions.
 
-Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as **.NET Interactive** in the top right corner of the notebook.
+Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select the kernel as **.NET Interactive** in the top right corner of the notebook.
 
-1. In the Visual Studio Code, navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**
+1. In the Visual Studio Code, navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**.
 
    ![](./Media/image-rg-23.png)
 
+1. In **Visual Studio Code**, open the terminal by pressing **CTRL+J**, and run the following command to verify the installation of **.NET version 10.x.x**.
+
+   ```
+   dotnet --version
+   ```
+
+1. After verifying the version, run the following command to install the **.NET Interactive** extension.
+
+   ```
+   code --install-extension ms-dotnettools.dotnet-interactive-vscode --force
+   ```
+
+   > **Note:** The installation may take some time. Please wait **10–15 minutes**, then reopen **Visual Studio Code** to verify whether the kernel has been installed.
+
 1. **Execute the notebook cell by cell** (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
   
-   > **Note**: Make sure **.Net Interactive** is in ready State, if not please wait for 15 to 20 seconds. Also, please do not click on the **Run All** option to execute all the cells at a time,e this may lead to exceeding in token limit that resulting in Error: 503 – Service unreachable. 
+   > **Note**: Make sure **.Net Interactive** is in ready State, if not please wait for 15 to 20 seconds. Also, please do not click on the **Run All** option to execute all the cells at a time,e this may lead to exceeding the token limit, resulting in the error: 503 – Service unreachable. 
 
       ![](./Media/run.png)
 
-   > **Note**: Ensure to install Python extensions before running the cells.
+   > **Note**: Ensure that the **Python extension** is installed before running the cells.
    
    > **Note**: Ensure to click on **Work or School Account** when a window opens and provide the username and password
    
-   > **Note**: In case of any issues or errors occur related to the exceeded call rate limit of your current OpenAI S0 pricing tier. Please wait for 15 to 20 seconds and re-run the cell
+   > **Note**: In case any issues or errors occur related to the exceeded call rate limit of your current OpenAI S0 pricing tier. Please wait for 15 to 20 seconds and re-run the cell
 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 
@@ -127,7 +139,8 @@ In this lab, you will set up the environment, install necessary dependencies, an
 
     ![](./Media/task4-1.png)
 
-1. Run the following command to run the recommendation service locally
+1. Run the following commands to start the recommendation service locally:
+
     ```
     dotnet build
     dotnet run
@@ -148,7 +161,7 @@ In this lab, you will set up the environment, install necessary dependencies, an
 
 ## Task 4: Run miyagi frontend locally
 
-1. Navigate back to the VS code, open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
+1. Navigate back to the VS code, Open a new terminal by navigating to **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
 
    ![](./Media/image-rg-25.png)
 
@@ -196,7 +209,7 @@ In this lab, you will set up the environment, install necessary dependencies, an
 
       ![](./Media/swaggerUI-Execution.png)
       
-1. In the **swagger UI** page, scroll down to the **Responses** section, review that it has been executed successfully by checking the code status is **200**.
+1. In the **swagger UI** page, scroll down to the **Responses** section, review that it has been executed successfully by verifying that the status code is **200**.
 
     ![](./Media/swaggerUI-Responses.png)
 
@@ -210,7 +223,7 @@ In this lab, you will set up the environment, install necessary dependencies, an
 
     ![](./Media/search-service.png)
 
-    > **Note**: Please click on the refresh button, you can still view the **Document Count**.
+    > **Note**: Click the refresh button to view the **Document Count**.
 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -221,7 +234,7 @@ In this lab, you will set up the environment, install necessary dependencies, an
 
 ## Task 6: Explore the Miyagi App and Recommendation service  by Personalizing
 
-1. Navigate back to the **recommendation service** ui page, and click on **Personalize** button.
+1. Navigate back to the **recommendation service** UI page, and click on **Personalize** button.
 
     ![](./Media/service-personalize.png)
 
@@ -250,6 +263,6 @@ In this lab, you have accomplished the following:
 - Launched the Recommendation service locally and verified its functionality.
 - Executed the Miyagi frontend locally to test user interactions.
 - Configured and stored embeddings in Azure AI Search successfully.
-- Personalized recommendations in Miyagi app, testing user preference responses.
+- Personalized recommendations in the Miyagi app and tested user preference responses.
 
 ### You have successfully completed the lab

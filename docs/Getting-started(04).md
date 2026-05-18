@@ -45,7 +45,7 @@ The architecture for this lab involves several key components:
  
 1. To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address. You can also open the Lab Guide in a separate and full window by selecting the **Split Window** from the lower right corner. Also, you can start, stop, and restart virtual machines from the **Resources** tab.
 
-    ![](../docs/labs/02-build-your-own-copilot/Media/gettingstartedpagenew2-v2.png)
+    ![](../docs/labs/02-build-your-own-copilot/Media/img-02-01.png)
    
    > You will see the SUFFIX value on the **Environment** tab; use it wherever you see SUFFIX or DeploymentID in lab steps.
 
@@ -53,13 +53,13 @@ The architecture for this lab involves several key components:
  
 To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
-![](../docs/labs/02-build-your-own-copilot/Media/gg-0-2.png)
+![](../docs/labs/02-build-your-own-copilot/Media/img-03.png)
  
 ## Login to the Azure Portal
 
 1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser, which is created on the desktop.
 
-   ![](../docs/labs/02-build-your-own-copilot/Media/gettingstartpage3.png)
+   ![](../docs/labs/02-build-your-own-copilot/Media/img-04.png)
 
 1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email or username, and click on **Next**. 
 
@@ -107,6 +107,6 @@ Learner Support Contacts:
 
 Now, click on Next from the lower right corner to move on to the next page.
 
-![](../docs/labs/02-build-your-own-copilot/Media/n8.png)
+![](../docs/labs/02-build-your-own-copilot/Media/img-10-010.png)
 
 ## Happy Learning!!
