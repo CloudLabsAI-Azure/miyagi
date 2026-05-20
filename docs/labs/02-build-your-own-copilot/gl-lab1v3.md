@@ -22,11 +22,11 @@ In this lab, you will configure the Miyagi app by setting up the environment, in
 
    ![](./Media/img-05.png)
 
-   >**Note** If the **Join us in making promt-flow extension better!** window is prompted, click on **No,thanks**.
+   >**Note** If the **Join us in making prompt-flow extension better!** window is prompted, click on **No, thanks**.
 
    ![](./Media/image-rg-01.png)
    
-1. In **Visual Studio Code** from menu bar select **File(1)** > **open folder(2)**.
+1. In **Visual Studio Code**, from the menu bar select **File (1)** > **Open folder (2)**.
 
    ![](./Media/image-rg-02.png)
 
@@ -63,7 +63,7 @@ In this lab, you will configure the Miyagi app by setting up the environment, in
    
 1. Once the values are updated, save the file by pressing **CTRL + S**.
 
-1. Navigate to **miyagi/sandbox/usecases/rag/dotnet** and verify **.env** file is present.
+1. Navigate to **miyagi/sandbox/usecases/rag/dotnet** and verify the **.env** file is present.
   
 1. In the **.env** file, replace the following values for the variables below.
 
@@ -78,7 +78,7 @@ In this lab, you will configure the Miyagi app by setting up the environment, in
    
    ![](./Media/env1new.png)
 
-1. Once after updating the values, kindly save the file by pressing **CTRL + S**.
+1. After updating the values, save the file by pressing **CTRL + S**.
 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -91,7 +91,7 @@ In this lab, you will configure the Miyagi app by setting up the environment, in
 
 In this lab, you will explore the implementation of the Recommendation service, focusing on its algorithms and data processing methods to deliver personalized suggestions.
 
-Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select the kernel as **.NET Interactive** in the top right corner of the notebook.
+The Recommendation service implements the RAG pattern using the Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select the kernel as **.NET Interactive** in the top right corner of the notebook.
 
 1. In the Visual Studio Code, navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**.
 
@@ -103,28 +103,82 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    dotnet --version
    ```
 
-1. After verifying the version, run the following command to install the **.NET Interactive** extension.
+1. Open the Extensions panel using **Ctrl+Shift+X (1)**, search under the **recommended section (2)** and manually install the following two extensions:
+ 
+   - **Python (3)** (by Microsoft)
+   - **Jupyter (4)** (by Microsoft)
 
+   ![](Media/ext01.png)
+
+1. Once installed, run the following commands in the terminal to set up the .NET Interactive kernel for Jupyter.
+ 
+   Install **.NET Interactive globally**:
+ 
+   ```powershell
+   dotnet tool install --global Microsoft.dotnet-interactive
    ```
-   code --install-extension ms-dotnettools.dotnet-interactive-vscode --force
+   
+   **Refresh the PATH** to make the tool available in the current terminal session:
+   
+   ```powershell
+   $env:PATH += ";$env:USERPROFILE\.dotnet\tools"
    ```
+   
+   **Install Jupyter** if it is not already present in the environment:
+   
+   ```powershell
+   python -m pip install jupyter
+   ```
+   
+   Register the .NET Interactive kernels with Jupyter:
+   
+   ```powershell
+   dotnet-interactive jupyter install
+   ```
+   
+   **Verify the kernels** were registered successfully:
+   
+   ```powershell
+   jupyter kernelspec list
+   ```
+ 
+   You should see `.net-csharp`, `.net-fsharp`, and `.net-powershell` listed in the output.
+ 
+   > **Close and reopen** Visual Studio Code to see the reflected changes.
+ 
+1. Authenticate with your Azure account by running the following command in the terminal:
+ 
+   ```powershell
+   az login
+   ```
+ 
+   A browser window will open prompting you to sign in. Select **Work or School Account** and provide your lab credentials.
+ 
+   ![](Media/az-login.png)
 
-   > **Note:** The installation may take some time. Please wait **10–15 minutes**, then reopen **Visual Studio Code** to verify whether the kernel has been installed.
-
+   Once signed in, verify the login was successful by running:
+   
+   ```none
+   az account show
+   ```
+   
+   You should see your subscription details printed in the terminal.
+ 
+1. Open the notebook file and select the appropriate kernel by clicking the **kernel selector** in the top-right corner of the notebook. Choose **Existing Jupyter Kernels -> .NET (C#)** for the notebook's language.
+ 
+   > **Note:** If the newly installed kernels do not appear in the kernel selector immediately, wait 15–20 seconds and try again.
+ 
 1. **Execute the notebook cell by cell** (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
   
-   > **Note**: Make sure **.Net Interactive** is in ready State, if not please wait for 15 to 20 seconds. Also, please do not click on the **Run All** option to execute all the cells at a time,e this may lead to exceeding the token limit, resulting in the error: 503 – Service unreachable. 
+> **Note**: Please do not click on the **Run All** option to execute all the cells at a time; this may lead to exceeding the token limit, resulting in the error: 503 – Service unreachable.
 
       ![](./Media/run.png)
 
    > **Note**: Ensure that the **Python extension** is installed before running the cells.
    
-   > **Note**: Ensure to click on **Work or School Account** when a window opens and provide the username and password
-   
    > **Note**: In case any issues or errors occur related to the exceeded call rate limit of your current OpenAI S0 pricing tier. Please wait for 15 to 20 seconds and re-run the cell
 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
@@ -135,7 +189,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 In this lab, you will set up the environment, install necessary dependencies, and run the Recommendation service locally to test and develop features effectively.
 
-1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in Integrated Terminal**.
+1. Open a new terminal by navigating to **miyagi/services/recommendation-service/dotnet** and right-clicking in the cascading menu to select **Open in Integrated Terminal**.
 
     ![](./Media/task4-1.png)
 
@@ -161,9 +215,11 @@ In this lab, you will set up the environment, install necessary dependencies, an
 
 ## Task 4: Run miyagi frontend locally
 
-1. Navigate back to the VS code, Open a new terminal by navigating to **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
+1. Navigate back to VS Code. Open a new terminal by navigating to **miyagi/ui** and right-clicking on **ui/typescript** in the cascading menu to select **Open in Integrated Terminal**.
 
    ![](./Media/image-rg-25.png)
+
+   You must be in the `C:\LabFiles\miyagi\ui\typescript` directory.
 
 1. Run the following command to install the dependencies
    
@@ -175,7 +231,7 @@ In this lab, you will set up the environment, install necessary dependencies, an
 
    > **Note**: Let the command run; meanwhile, you can proceed with the next step.
 
-1. Open another tab in Edge, and  browse the following
+1. Open another tab in Edge and browse to the following
 
    ```
    http://localhost:4001
@@ -252,7 +308,7 @@ In this lab, you will set up the environment, install necessary dependencies, an
 
 1. Once you view the logs, press **Ctrl + C** to stop the **swagger UI** page.
 
-1.  From the **Terminal** select **node** terminal, press **Ctrl + C** to stop the **recommendation service** ui page.
+1. From the terminal, select the Node terminal and press **Ctrl + C** to stop the Recommendation service UI page.
 
 ## Summary
 
